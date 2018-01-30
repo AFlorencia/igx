@@ -27,10 +27,8 @@ $sitename  = $this->params->get('sitename');
 						<img class="logo-img-big" src="<?php echo JUri::base(true) . '/' . $logoimage ?>" alt="<?php echo strip_tags($sitename) ?>" />
 								<?php if($logoimgsm) : ?>
 								<img class="logo-img-small" src="<?php echo JUri::base(true) . '/' . $logoimgsm ?>" alt="<?php echo strip_tags($sitename) ?>" />
-								<?php endif ?>									
-								
-										
-								<?php endif ?>					
+								<?php endif ?>	
+								<?php endif ?>	
 								
 								
 						
