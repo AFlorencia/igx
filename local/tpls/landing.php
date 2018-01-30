@@ -11,6 +11,11 @@
 * @Link:         http://t3-framework.org 
 *------------------------------------------------------------------------------
 */
+/* Landing page 
+
+
+
+*/
 
 defined('_JEXEC') or die;
 $app = JFactory::getApplication();

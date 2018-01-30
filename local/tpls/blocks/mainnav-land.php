@@ -30,8 +30,7 @@ $sitename  = $this->params->get('sitename');
 								<?php endif ?>									
 								
 										
-								<?php endif ?>
-								
+								<?php endif ?>					
 								
 								
 						
