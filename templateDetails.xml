@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.6" type="template" method="upgrade" client="site">
+	<name>t3_bs3_blank</name>
+	<version>16:47 p.m. 20/01/2018</version>
+	<creationDate>16:17 p.m. 10/07/2017</creationDate>
+	<author>JoomlArt.com</author>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>http://www.t3-framework.org</authorUrl>
+	<copyright>Copyright (C), J.O.O.M Solutions Co., Ltd. All Rights Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<t3>
+		<base>base-bs3</base>
+	</t3>
+	<description>
+		<![CDATA[
+		<div align="center">
+			<div class="alert alert-success" style="background-color:#2c3e50;border-color:transparent;color: #fff;padding: 1px 0;">
+				<a href="http://t3-framework.org/"><img src="http://intergraphix.com.ar/images/intergraphix-logo.png" alt="some_text" width="320" height="100"></a>
+				<h4><a href="http://t3-framework.org/" title="">Home</a> | <a href="http://demo.t3-framework.org/" title="">Demo</a> | <a href="http://t3-framework.org/documentation" title="">Document</a> | <a href="https://github.com/t3framework/t3/blob/master/CHANGELOG.md" title="">Changelog</a></h4>
+				
+				<p>Copyright 2004 - 2017 <a href='http://www.intergraphix.com.ar/' title='Visit Joomlart.com!'>Intergraphix Argentina</a>.</p>
+			</div>
+			<style>table.adminform{width: 100%;}</style>
+		</div>
+		]]>
+	</description>
+	<files>
+		<filename>templateDetails.xml</filename>	
+		<filename>thememagic.xml</filename>	
+	<filename>error.php</filename>
+		<folder>local/css</folder>
+		<folder>local/etc</folder>
+		<folder>local/html</folder>
+		<folder>local/less</folder>
+		<folder>local/tpls</folder>
+		
+        <folder>less</folder>
+        <folder>css</folder>
+	</files>
+	
+	<languages folder="language">
+			<language tag="en-GB">en-GB/en-GB.tpl_t3_bs3_blank.sys.ini</language>
+	
+	</languages>
+
+	<positions>
+		<position>languageswitcherload</position>
+		<position>head-search</position>
+		<position>mainnav</position>
+		<position>navhelper</position>
+		<position>breadcrumbs</position>
+		<position>off-canvas</position>
+		<position>sidebar-1</position>
+		<position>sidebar-2</position>
+		<position>mast-col</position>
+		<position>footer</position>
+		<position>home-0</position>
+		<position>home-1</position>
+		<position>home-2</position>
+		<position>home-3</position>
+		<position>home-4</position>
+		<position>home-5</position>
+		<position>position-0</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-6</position>
+		<position>position-7</position>
+		<position>position-8</position>
+		<position>position-9</position>
+		<position>position-10</position>
+		<position>position-11</position>
+		<position>position-12</position>
+		<position>position-13</position>
+		<position>position-14</position>
+		<position>position-15</position>
+		<position>footer-0</position>
+		<position>footer-1</position>
+		<position>footer-2</position>
+		<position>footer-3</position>
+		<position>footer-4</position>
+		<position>footer-5</position>
+		<position>footer-6</position>
+		<position>footer-7</position>
+		<position>footer-8</position>
+		<position>footer-9</position>
+		<position>footer-10</position>
+		<position>debug</position>
+		<position>full-width</position>
+		<position>full-width-3</position>
+		<position>full-width-2</position>
+		<position>spot-1</position>
+		<position>spot-2</position>
+		<position>spot-3</position>
+	</positions>
+
+<config>
+		<fields name="params" addfieldpath="/plugins/system/t3/includes/depend">
+
+		
+			<!-- Sample for add or disable template parameters -->
+			<!--fieldset name="menu_params" label="T3_PARAMS_MEGAMENU">
+				<field name="group_disable" type="t3depend" function="@group">
+					<option for="menu_as_bg" value="no">menu_as_bg</option>
+				</field>
+			</fieldset-->
+			
+			
+			
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="collection">http://update.joomlart.com/service/tracking/list.xml</server>
+	</updateservers>
+	
+		<languages folder="language">
+			<language tag="en-GB">en-GB/en-GB.tpl_t3_bs3_blank.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_t3_bs3_blank.sys.ini</language>
+	</languages>
+		
+</extension>

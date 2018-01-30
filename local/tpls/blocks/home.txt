@@ -1,0 +1,7 @@
+<?php if ($this->countModules('home')) : ?>
+<!-- HOME POSITION -->
+<div id="t3-section" class="wrap sections-wrap <?php $this->_c('home') ?>">
+	<jdoc:include type="modules" name="<?php $this->_p('home') ?>" style="T3section" />
+</div>
+<!-- //HOME POSITION -->
+<?php endif ?>
