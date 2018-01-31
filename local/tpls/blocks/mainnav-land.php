@@ -15,45 +15,34 @@ $navposition = $this->params->get('headertype');
 $sitename  = $this->params->get('sitename');
 ?>
 
+
 <!-- MAIN NAVIGATION -->
 <nav id="t3-mainnav" class="wrap navbar navbar-default t3-mainnav <?php echo $navbaralign.' '.$navposition; ?>">
 	<div class="container">
-
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
 		
 		<?php if ($this->getParam('addon_offcanvas_enable')) : ?>
 				<?php $this->loadBlock ('off-canvas') ?>
 			<?php endif ?>
-		<div class="logo-<?php echo $logotype, ($this->params->get('enable_logoimage_sm','1')  ? ' logo-sm' : ' logo-sm-hide') ?> <?php if($logosize =='12') echo 'text-center'; ?>">
+		<div class="logo-<?php echo $logotype, ($this->params->get('enable_logoimage_sm','1')  ? ' logo-sm' : ' logo-sm-hide') ?> ">
 				<a href="<?php echo JUri::base() ?>" title="<?php echo strip_tags($sitename) ?>">
 						<?php if($logotype == 'image'): ?>
 						<img class="logo-img-big" src="<?php echo JUri::base(true) . '/' . $logoimage ?>" alt="<?php echo strip_tags($sitename) ?>" />
 								<?php if($logoimgsm) : ?>
 								<img class="logo-img-small" src="<?php echo JUri::base(true) . '/' . $logoimgsm ?>" alt="<?php echo strip_tags($sitename) ?>" />
 								<?php endif ?>	
-								<?php endif ?>
-								
+								<?php endif ?>					
 						
 								<?php if($logotype == 'text'): ?>
 								<span class="sitename"><?php echo $sitename ?></span>
 									<?php if($showslogan =='1'): ?>
 								<small class="site-slogan-show"><?php echo $slogan ?></small>
 								<?php endif ?>				
-								<?php endif ?>
-										
+								<?php endif ?>										
 									</a>
-
 								</div>
-	
-			<?php if ($this->getParam('navigation_collapse_enable', 1) && $this->getParam('responsive', 1)) : ?>
-				<?php $this->addScript(T3_URL.'/js/nav-collapse.js'); ?>
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">
-					<i class="fa fa-bars"></i>
-				</button>
-			<?php endif ?>
-
-
+		
 		</div>
 		<?php if ($this->getParam('navigation_collapse_enable')) : ?>
 			<div class="t3-navbar-collapse navbar-collapse collapse"></div>
@@ -65,4 +54,5 @@ $sitename  = $this->params->get('sitename');
 			
 	</div>
 </nav>
+
 <!-- //MAIN NAVIGATION -->
