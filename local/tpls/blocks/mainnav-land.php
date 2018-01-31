@@ -21,6 +21,10 @@ $sitename  = $this->params->get('sitename');
 
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
+		
+		<?php if ($this->getParam('addon_offcanvas_enable')) : ?>
+				<?php $this->loadBlock ('off-canvas') ?>
+			<?php endif ?>
 		<div class="logo-<?php echo $logotype, ($this->params->get('enable_logoimage_sm','1')  ? ' logo-sm' : ' logo-sm-hide') ?> <?php if($logosize =='12') echo 'text-center'; ?>">
 				<a href="<?php echo JUri::base() ?>" title="<?php echo strip_tags($sitename) ?>">
 						<?php if($logotype == 'image'): ?>
@@ -49,9 +53,6 @@ $sitename  = $this->params->get('sitename');
 				</button>
 			<?php endif ?>
 
-			<?php if ($this->getParam('addon_offcanvas_enable')) : ?>
-				<?php $this->loadBlock ('off-canvas') ?>
-			<?php endif ?>
 
 		</div>
 		<?php if ($this->getParam('navigation_collapse_enable')) : ?>
