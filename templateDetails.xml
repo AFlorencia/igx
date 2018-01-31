@@ -29,6 +29,7 @@
 		<filename>templateDetails.xml</filename>	
 		<filename>thememagic.xml</filename>	
 	<filename>error.php</filename>
+	<folder>etc</folder>
 		<folder>local/css</folder>
 		<folder>local/etc</folder>
 		<folder>local/html</folder>
