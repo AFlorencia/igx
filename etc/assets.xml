@@ -93,7 +93,11 @@
 					</fieldset>
 			
 				
+<<<<<<< HEAD
  		<fieldset name="jsfunctions" label="JS Functions" addfieldpath="/plugins/system/t3/includes/depend">
+=======
+ 		<fieldset name="paramsonepage" label="JS Functions" addfieldpath="/plugins/system/t3/includes/depend">
+>>>>>>> c1a0371963213b5950420ecaa89ed2784fb36646
 			<field name="eqitems" type="text" label="Ajustar altos"/>
 			<field name="idbloque2" type="text" label="# Anchor bloque 2"/>
 			<field name="idbloque3" type="text" label="# Anchor bloque 3"/>
