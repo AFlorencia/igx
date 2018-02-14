@@ -109,5 +109,15 @@ $menu = $app->getMenu();
 
 </script>
 <?php } ?>
+<script>
+(function ($) {
+    $(document).ready(function(){
+    
+   $('.owl-item .spacer').matchHeight();
+      });
+    
+     
+	})(jQuery); 
+	</script>
 </body>
 </html>

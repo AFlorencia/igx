@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <assets>
+<scripts>
+		<file>js/scripts.js</file>
+	</scripts>
+	
+	<stylesheets>
+		<file>fonts/font-awesome/css/font-awesome.min.css</file>
+	</stylesheets>
 	<config>
 		<fields name="params" addfieldpath="/plugins/system/t3/includes/depend">
 
@@ -86,8 +93,8 @@
 					</fieldset>
 			
 				
-	<!-- 		<fieldset name="paramsonepage" label="Params One Page" addfieldpath="/plugins/system/t3/includes/depend">
-			<field name="idbloque1" type="text" label="# Anchor bloque 1"/>
+ 		<fieldset name="jsfunctions" label="JS Functions" addfieldpath="/plugins/system/t3/includes/depend">
+			<field name="eqitems" type="text" label="Ajustar altos"/>
 			<field name="idbloque2" type="text" label="# Anchor bloque 2"/>
 			<field name="idbloque3" type="text" label="# Anchor bloque 3"/>
 			<field name="idbloque4" type="text" label="# Anchor bloque 4"/>
@@ -99,7 +106,7 @@
 			
 			
 			
-			</fieldset> -->
+			</fieldset> 
 			
 		</fields>
 	</config>
