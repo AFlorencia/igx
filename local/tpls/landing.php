@@ -110,5 +110,4 @@ $menu = $app->getMenu();
 </script>
 <?php } ?>
 </body>
-
 </html>
