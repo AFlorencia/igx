@@ -9,11 +9,7 @@ defined('_JEXEC') or die;
 ?>
 
 <?php if ($this->countModules('navhelper')) : ?>
-	<!-- NAV HELPER -->
-	<div class="wrap t3-navhelper <?php $this->_c('navhelper') ?>">
-		<div class="container">
-			<jdoc:include type="modules" name="<?php $this->_p('navhelper') ?>" />
-		</div>
-	</div>
-	<!-- //NAV HELPER -->
+
+			<jdoc:include type="modules" name="<?php $this->_p('navhelper') ?>" style="spot" />
+		
 <?php endif ?>

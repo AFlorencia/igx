@@ -13,11 +13,13 @@ $slogan    = $this->params->get('slogan', '');
 $navbaralign = $this->params->get('menualign');
 $navposition = $this->params->get('headertype');
 $sitename  = $this->params->get('sitename');
+
 ?>
 
 
 <!-- MAIN NAVIGATION -->
-<nav id="t3-mainnav" class="wrap navbar navbar-default t3-mainnav <?php echo $navbaralign.' '.$navposition; ?>">
+<header class="nav">
+<nav id="t3-mainnav" class="wrap navbar navbar-default t3-mainnav navbar-fixed-top">
 	<div class="container">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
@@ -54,5 +56,5 @@ $sitename  = $this->params->get('sitename');
 			
 	</div>
 </nav>
-
+</header>
 <!-- //MAIN NAVIGATION -->

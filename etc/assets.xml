@@ -90,27 +90,17 @@
 				       value="0"
 				       global="0" default="0"><option value="1" >JYES</option><option value="0">JNO</option>   </field>
 		<field name="contacto" type="subform" formsource="templates/t3_bs3_blank/local/etc/columns.xml" multiple="true" label="Column" description="Columns" max="8" layout="joomla.form.field.subform.repeatable"/>
-					</fieldset>
-			
-				
-<<<<<<< HEAD
+					</fieldset>							
  		<fieldset name="jsfunctions" label="JS Functions" addfieldpath="/plugins/system/t3/includes/depend">
-=======
- 		<fieldset name="paramsonepage" label="JS Functions" addfieldpath="/plugins/system/t3/includes/depend">
->>>>>>> c1a0371963213b5950420ecaa89ed2784fb36646
 			<field name="eqitems" type="text" label="Ajustar altos"/>
-			<field name="idbloque2" type="text" label="# Anchor bloque 2"/>
+			<field name="anchorclass" type="text" label="Clase de los anchors"/>
 			<field name="idbloque3" type="text" label="# Anchor bloque 3"/>
 			<field name="idbloque4" type="text" label="# Anchor bloque 4"/>
 			<field name="idbloque5" type="text" label="# Anchor bloque 5"/>
 			<field name="idbloque6" type="text" label="# Anchor bloque 6"/>
 			<field name="idfooter" 	type="text" label="# Anchor footer"/>
 			<field name="idcomponent" 	type="text" label="# Anchor Component"/>
-			
-			
-			
-			
-			</fieldset> 
+		</fieldset> 
 			
 		</fields>
 	</config>

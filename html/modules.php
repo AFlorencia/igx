@@ -46,28 +46,39 @@ function modChrome_spot($module, &$params, &$attribs)
 	$bootstrapSize  = $params->get('bootstrap_size');
 	$moduleClass    = !empty($bootstrapSize) ? ' col-md-' . (int) $bootstrapSize . '' : '12';
 	$moduleClassSfx = htmlspecialchars($params->get('moduleclass_sfx'));
+	$isbox = htmlspecialchars($params->get('fullwidth'));
 
 	if (!empty ($module->content)) {
 		
 		
-		$html ="<div id=\"{$moduleId}\">";
+		$html ='<section id="'.$moduleId.'" class="main-box">';
+
+if ($isbox==='1'){
+	$html .= '<div class="container">';
+}
+else{
 	
-		$html .= "<{$moduleTag} class=\"t3-module module\" >" .
-					"<div class=\"module-inner\">" . $badge;
+	$html .= '<div class="container-fluid">';
+}
+		$html .= '<div class="content">';
+					
 
 		if ($module->showtitle != 0) {
-			$html .= "<div class=\"module-title\">";
-			$html .= "<div class=\"container\"><div class=\"row\"><div class=\"col-xs-12\">";
-			$html .= "<{$headerTag}>";
-			$html .="<span>{$module->title}</span>";
-			$html .= "</{$headerTag}>";
-				$html .= "</div></div></div>";
-			$html .= "</div>"; //id
+			$html .= '<div class="module-title">';
+		
+		
+			$html .='<'.$headerTag.'><span>'.$module->title.'</span></'.$headerTag.'>';
+		
+			$html .= '</div>';
 		}
-	$html .= "<div class=\"container\"><div class=\"row\">";
-		$html .= "<div class=\"module-ct {$moduleClassSfx}\">{$module->content}</div></div></{$moduleTag}>";
+
+
+
+	
+		$html .= '<div class="module-ct '.$moduleClassSfx.'">'.$module->content.'</div>';
 		$html .= "</div></div>";
-		$html .= "</div>"; //id
+
+		$html .= '</section>'; //id
 		echo $html;
 	}
 }
@@ -95,9 +106,6 @@ function modChrome_fullSpot($module, &$params, &$attribs)
 		echo $html;
 	}
 }
-
-
-
 
 function modChrome_t3modalB($module, &$params, &$attribs)
 {

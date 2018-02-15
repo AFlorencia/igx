@@ -84,23 +84,31 @@
 				       global="0" default="0"><option value="1" >JYES</option><option value="0">JNO</option>   </field>
 		<field name="contacto" type="subform" formsource="templates/t3_bs3_blank/local/etc/columns.xml" multiple="true" label="Column" description="Columns" max="8" layout="joomla.form.field.subform.repeatable"/>
 					</fieldset>
+
 			
-				
-	<!-- 		<fieldset name="paramsonepage" label="Params One Page" addfieldpath="/plugins/system/t3/includes/depend">
-			<field name="idbloque1" type="text" label="# Anchor bloque 1"/>
-			<field name="idbloque2" type="text" label="# Anchor bloque 2"/>
-			<field name="idbloque3" type="text" label="# Anchor bloque 3"/>
-			<field name="idbloque4" type="text" label="# Anchor bloque 4"/>
+		<fieldset name="paramsonepage" label="JS Settings" addfieldpath="/plugins/system/t3/includes/depend">
+			<field name="loadeqheights"  label="Cargar Equal Heights Script" type="radio"
+			      value="1" global="1" default="0"><option value="1" >JYES</option>
+					   <option value="0">JNO</option>
+					   </field>
+			<field name="eqheights" type="text" label="Elementos a igualar"/>
+			<field name="offsettop" type="text" label="Top distance"/>
+			<field name="Anchor class" type="text" label="Clase de los enlaces"/>
+		
 			<field name="idbloque5" type="text" label="# Anchor bloque 5"/>
 			<field name="idbloque6" type="text" label="# Anchor bloque 6"/>
 			<field name="idfooter" 	type="text" label="# Anchor footer"/>
 			<field name="idcomponent" 	type="text" label="# Anchor Component"/>
 			
-			
-			
-			
-			</fieldset> -->
+			</fieldset> 
 			
 		</fields>
 	</config>
+	<scripts>
+		<file>js/scripts.js</file>
+	</scripts>
+	
+	<stylesheets>
+		<file>fonts/font-awesome/css/font-awesome.min.css</file>
+	</stylesheets>
 </assets>

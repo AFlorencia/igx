@@ -9,6 +9,7 @@
 	  <field name="moduleID" type="text" default="" label="Nombre del Anchor" description="id para el link del menú que enlaza este módulo" />
  
             <field name="module-bg-color" type="text" default="" label="Color del fondo del módulo" description="color del fondo del módulo"/>
+            
     </fieldset>
 				
   </fields>
