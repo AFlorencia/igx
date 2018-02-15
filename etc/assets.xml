@@ -91,16 +91,14 @@
 				       global="0" default="0"><option value="1" >JYES</option><option value="0">JNO</option>   </field>
 		<field name="contacto" type="subform" formsource="templates/t3_bs3_blank/local/etc/columns.xml" multiple="true" label="Column" description="Columns" max="8" layout="joomla.form.field.subform.repeatable"/>
 					</fieldset>
-												
+
  		<fieldset name="jsfunctions" label="JS Functions" addfieldpath="/plugins/system/t3/includes/depend">
 			<field name="eqitems" type="text" label="Ajustar altos"/>
-
 			<field name="id-spot-top" type="text" label="# ID spot Top"/>
-			<field name="id-spot-bottom" type="text" label="# ID spot bottom"/>
-			<field name="id-spot-middle" type="text" label="# ID spot middle"/>
+			<field name="id-spot-bottom" type="text" label="# ID spot Bottom"/>
+			<field name="id-spot-middle" type="text" label="# ID spot Middle"/>
 		</fieldset> 
 			
 		</fields>
 	</config>
 </assets>
-

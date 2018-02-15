@@ -35,7 +35,7 @@ $anchorclass = $this->params->get('Anchor class');
 <body data-spy="scroll" data-target=".navbar">
 
 <div class="t3-wrapper"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
-<div class="topbar"><?php $this->loadBlock('header-spot'); ?></div>
+
 
 <?php $this->loadBlock('mainnav-land') ?>
  
