@@ -10,7 +10,7 @@
          		<field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
 						
             <field name="img" type="media" default="" label="CTA_IMG_LABEL" description="CTA_IMG_DESC" />
-            <field name="bgcolor" type="color" default="#333333" label="CTA_BGCOLOR_LABEL" description="CTA_BGCOLOR_DESC" />
+            <field name="bgcolor" type="text" default="#0000030" label="CTA_BGCOLOR_LABEL" description="CTA_BGCOLOR_DESC" />
             <field name="txtcolor" type="color" default="#ffffff" label="CTA_TXTCOLOR_LABEL" description="CTA_TXTCOLOR_DESC" />
             
             <field name="animation" type="list" default="fade"

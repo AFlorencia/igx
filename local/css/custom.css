@@ -27,23 +27,26 @@
     }
     
     .main-box {
-        height: 100vh;
-        background: red;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    #block1{
-        background: blue;
-    }
-    #block2{
-        background: red;
-    }
-    #block3{
-        background: green;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       width: 100vw;
+       padding: 0;
+       min-height: calc( 100vh - 66px );
+       background: #fff;
     }
 
-t3-mainnav .container {
+
+
+.t3-mainnav .container {
     display: flex;
-    align-items: center;
+    align-items: stretch;
+}
+
+body {
+    padding-top: 66px;
+}
+
+.t3-navbar {
+    display: flex;
 }

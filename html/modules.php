@@ -47,18 +47,22 @@ function modChrome_spot($module, &$params, &$attribs)
 	$moduleClass    = !empty($bootstrapSize) ? ' col-md-' . (int) $bootstrapSize . '' : '12';
 	$moduleClassSfx = htmlspecialchars($params->get('moduleclass_sfx'));
 	$isbox = htmlspecialchars($params->get('fullwidth'));
-
+	$moduleIntro    = $params->get('module-intro');
+  $bgImage        = $params->get('module-background');
+  $bgImageSize    = $params->get('module-background-size');
+  $bgImagePo      = $params->get('module-background-position','center center');
+  $moduleBg       = $bgImage ? 'style="background-image: url(' . JUri::base(true) . '/' . $bgImage . '); background-repeat: no-repeat; background-position: '.$bgImagePo.'; background-size: '.$bgImageSize.'"' : '';
 	if (!empty ($module->content)) {
 		
 		
-		$html ='<section id="'.$moduleId.'" class="main-box">';
+		$html ='<section id="'.$moduleId.'" class="main-box" '.$moduleBg.'>';
 
 if ($isbox==='1'){
 	$html .= '<div class="container">';
 }
 else{
 	
-	$html .= '<div class="container-fluid">';
+	$html .= '<div class="wrapper">';
 }
 		$html .= '<div class="content">';
 					

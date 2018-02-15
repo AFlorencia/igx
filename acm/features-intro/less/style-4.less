@@ -12,9 +12,12 @@
     }
 
     .features-item {
+
+      &.bg-white{background-color: @white;}
+
       float: none;
       margin: 0 auto (@t3-global-margin * 2);
-      padding: 0 @t3-global-margin;
+      padding: @t3-global-margin;
       text-align: left;
 
       // Control screen mobile
@@ -42,6 +45,7 @@
         margin-right: @t3-global-margin*1.5;
         margin-left: 0;
       }
+     
     }
   }
 }

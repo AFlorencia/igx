@@ -29,7 +29,7 @@
 					
 					<?php if($helper->get('data.font-icon', $i)) : ?>
 						<div class="font-icon">
-							<i class="<?php echo $helper->get('data.font-icon', $i) ; ?>"></i>
+							<i class="<?php echo $helper->get('data.font-icon', $i) ; ?> <?php echo $helper->get('data.icon-size', $i) ; ?>"></i>
 						</div>
 					<?php endif ; ?>
 	

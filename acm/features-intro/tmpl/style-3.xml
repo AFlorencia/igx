@@ -26,9 +26,11 @@
 			</field>
 		</fieldset>
 		
+		
 		<fieldset name="section-features" label="FEATURES_SECTION_LABEL" description="FEATURES_SECTION_DESC">
 			<field name="data" type="jalist">
 				<item name="font-icon" type="text" default="" label="FEATURES_FONT_AWESOME_LABEL" description="FEATURES_FONT_AWESOME_DESC" />
+				<item name="icon-size" type="text" default="" label="Icon size" description="FEATURES_FONT_AWESOME_DESC" />
 				<item name="img-icon" type="media" default="" label="FEATURES_IMAGE_LABEL" description="FEATURES_IMAGE_LABEL_DESC"  />
 				<item name="title" type="text" default="" size="40" label="FEATURES_TITLE_LABEL" description="FEATURES_TITLE_DESC" required="1" />
 				<item name="description" type="textarea" default="" label="FEATURES_DESCRIPTION_LABEL" description="FEATURES_DESCRIPTION_DESC" rows="5" cols="40" />

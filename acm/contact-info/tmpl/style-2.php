@@ -22,7 +22,12 @@
     
     <?php if($contacInfoImage || $contacInfoMap): ?>
     <div class="info-bg">
-    	<?php echo $contacInfoMap; ?>
+
+	<div class="embed-responsive embed-responsive-16by9 gmap-contact">
+         <div class="overlay"></div>
+<iframe class="embed-responsive-item" src="<?php echo $contacInfoMap; ?>" style="width:100%;"></iframe>
+</div>
+    	
     	<?php if($contacInfoImage): ?><img src="<?php echo $contacInfoImage; ?>" alt="" /><?php endif; ?>
     </div>
     <?php endif; ?>

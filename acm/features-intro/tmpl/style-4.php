@@ -13,16 +13,15 @@
 		<?php endif; ?>	
 	</h3>
 	<?php endif; ?>		
-	<div class="acm-features style-4 <?php echo $helper->get('features-style'); ?>">
-		<div class="container">
-			<div class="row">
+	<div class="acm-features style-4 <?php echo $helper->get('features-style'); ?> clearfix">
+		
 				<?php $count = $helper->getRows('data.title'); ?>
 				<?php for ($i=0; $i<$count; $i++) : ?>
 				
 				<?php if( (($i+1) % 2) == 1): ?>
-				<div class="features-item odd clearfix">
+				<div class="features-item odd clearfix <?php echo $helper->get('item-bg') ; ?>">
 				<?php else : ?>
-				<div class="features-item clearfix">
+				<div class="features-item clearfix <?php echo $helper->get('item-bg') ; ?>">
 				<?php endif; ?>
 					
 					<?php if($helper->get('data.font-icon', $i)) : ?>
@@ -47,6 +46,5 @@
 				</div>
 			<?php endfor ?>
 			</div>
-		</div>
-	</div>
+	
 </div>

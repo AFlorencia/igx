@@ -21,7 +21,7 @@
         
         <?php if( trim($heroIntro)) : ?>
         <div class="hero-intro">
-          <?php echo trim($heroIntro)); ?>
+          <?php echo trim($heroIntro); ?>
         </div>
         <?php endif; ?>
       </div>

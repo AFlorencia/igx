@@ -8,6 +8,7 @@
 	  <div class="container">
 			<div class="row">
 				<a href="<?php echo $ctaLink; ?>" title="<?php echo $module->title ?>"><?php echo $module->title ?><i class="<?php echo $ctaIcon; ?>"></i></a>
+				<p class="lead"><?php echo $helper->get('block-intro'); ?></p>
 			</div>
 	  </div>
 	</div>

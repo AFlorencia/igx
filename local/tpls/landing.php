@@ -46,7 +46,9 @@ $anchorclass = $this->params->get('Anchor class');
 
 
 </div>
+
  <?php 
+ 
  /* if ($this->params->get('back-to-top')==="1"): ?>
 <div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top">
  

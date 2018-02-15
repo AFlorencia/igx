@@ -7,7 +7,7 @@
 ?>
 <div class="section-inner <?php echo $helper->get('block-extra-class'); ?>">
 	<div class="acm-features style-5 <?php echo $helper->get('features-style'); ?>" <?php if($featuresImg): echo 'style="'.$featuresBackground.'"'; endif; ?>>
-		<div class="container product-features">
+		<div class="product-features">
 		
 		<header class="features-header">
 		  <h2 class="features-title">
@@ -24,20 +24,7 @@
 					$count_carousel = $helper->count('carousel-text'); 
 				?>
 				
-				<?php if($count_carousel): ?>
-		    <div class="rw-words">
-		      <div id="carousel-home" class="carousel slide" data-ride="carousel">
-					  <div class="carousel-inner">
-							
-							<?php for ($i=0; $i<$count_carousel; $i++) : ?>
-					    <div class="item <?php if($i==0): echo 'active'; endif; ?>">
-					      <p><?php echo $helper->get('carousel-text',$i) ?></p>
-					    </div>
-					    <?php endfor ?>
-					  </div>
-					</div>
-		    </div>
-		    <?php endif; ?>
+
 		  
 		  </h2>
 		</header>

@@ -10,7 +10,7 @@ defined('_JEXEC') or die;
 
 <?php if ($this->checkSpotlight('header-spotlight', 'header-1, header-2, social-menu')) : ?>
 	<!-- header-spotlight-->
-	<div class="header-spot head-search">
+	<div class="header-spot container">
 	
 		<?php $this->spotlight('header-spotlight', 'header-1, header-2, social-menu', array('style'=>'none, none, none')) ?>
 	</div>

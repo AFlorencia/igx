@@ -1,16 +1,7 @@
 <div class="section-inner <?php echo $helper->get('block-extra-class'); ?>" <?php if($helper->get('block-bg')) : ?>style="background-image: url("<?php echo $helper->get('block-bg'); ?>")"<?php endif; ?> >
-	<?php if($module->showtitle || $helper->get('block-intro')): ?>
-	<h3 class="section-title ">
-		<?php if($module->showtitle): ?>
-			<span><?php echo $module->title ?></span>
-		<?php endif; ?>
-		<?php if($helper->get('block-intro')): ?>
-			<p class="container-sm section-intro hidden-xs"><?php echo $helper->get('block-intro'); ?></p>
-		<?php endif; ?>	
-	</h3>
-	<?php endif; ?>
+
   
-  <div class="acm-slideshow container">
+  <div class="acm-slideshow">
   	<div id="acm-slideshow-<?php echo $module->id; ?>" class="carousel slide" data-ride="carousel">
   	<?php $count = $helper->getRows('data-s2.img') ?>
   	  <!-- Indicators -->
@@ -23,8 +14,17 @@
   	  <!-- Wrapper for slides -->
   	  <div class="carousel-inner">
   		<?php for ($i=0; $i < $count; $i++) :?>
-  		<div class="item <?php if($i<1) echo "active" ?>">
-  		  <img src="<?php echo $helper->get('data-s2.img', $i) ?>" alt="" />
+  		<div class="item <?php if($i<1) echo "active" ?>" style="background-image:url('<?php echo $helper->get('data-s2.img', $i) ?>')">
+			<?php if($module->showtitle || $helper->get('block-intro')): ?>
+	<h3 class="section-title ">
+		<?php if($module->showtitle): ?>
+			<span><?php echo $module->title ?></span>
+		<?php endif; ?>
+		<?php if($helper->get('block-intro')): ?>
+			<p class="container-sm section-intro hidden-xs"><?php echo $helper->get('block-intro'); ?></p>
+		<?php endif; ?>	
+	</h3>
+	<?php endif; ?>
   		</div>
   		<?php endfor ;?>
   	  </div>

@@ -18,8 +18,9 @@ $sitename  = $this->params->get('sitename');
 
 
 <!-- MAIN NAVIGATION -->
-<header class="nav">
-<nav id="t3-mainnav" class="wrap navbar navbar-default t3-mainnav navbar-fixed-top">
+<header class="nav navbar-fixed-top">
+<div class="topbar"><?php $this->loadBlock('header-spot'); ?></div>
+<nav id="t3-mainnav" class="wrap navbar navbar-default t3-mainnav">
 	<div class="container">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">

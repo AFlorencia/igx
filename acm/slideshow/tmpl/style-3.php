@@ -36,7 +36,7 @@
   			<div class="carousel-inner">
   				<?php for ($i=0; $i<$count; $i++) : ?>
   				<div class="item <?php if($i<1) echo "active"; ?>" style="background-image:url('<?php echo $helper->get('data.itembg', $i) ?>'); height:<?php echo $helper->get('data.item-height') ?>">
-  					<div class="container">
+  			<?php /*		<div class="container"> */ ?>
                 <?php if($helper->get('data.title', $i) || $helper->get('data.description', $i)): ?>
                   <div class="row">
                     <div class="col-sm-4">
@@ -50,7 +50,7 @@
                     </div>
                   </div>
                 <?php endif; ?>     
-            </div>
+          <?php /*  </div> */ ?>
   				</div>
   			 	<?php endfor ;?>
   			</div>

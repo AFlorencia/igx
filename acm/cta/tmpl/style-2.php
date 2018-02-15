@@ -21,7 +21,7 @@
 	          ?>
 	          <nav class="cta-showcase-actions">
 	            <?php for ($i=0; $i<$count; $i++) : ?>
-	              <a href="<?php echo $helper->get ('data.link',$i) ?>" target="_blank" class="<?php echo $helper->get ('data.class',$i) ?>"><?php echo $helper->get ('data.button',$i) ?></a>
+	              <a href="<?php echo $helper->get ('data.link',$i) ?>" target="_blank" class="<?php echo $helper->get ('data.button_class',$i) ?>"><?php echo $helper->get ('data.button',$i) ?></a>
 	            <?php endfor;?>
 	          </nav>
 	        </div>
