@@ -7,30 +7,28 @@
             <field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
             <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
 
-           
+            <field name="acm-style" type="list" default="style-light"
+                   global="1"
+                   label="CONTACT_STYLE_LABEL"
+                   description="CONTACT_STYLE_DESC">
+                <option value="style-dark">CONTACT_STYLE_DARK</option>
+                <option value="style-light">CONTACT_STYLE_LIGHT</option>
+            </field>
 
         </fieldset>
         
 
         <fieldset name="contact-info-style" label="Contact info style">  
             <field name="item-size" label="Item Size" default="inherit"/>
-            <field name="item-style" label="Item Style" >
-        <option value="rounded">Rounded Corners</option>
-        <option value="circle">Circle</option>
-        <option value="circle">Circle</option>
-         <option value="icon-small-shadow">Icon small Shadow</option>
-</field>
-
-            <field name="item-bg-color" type="color" label="Item Bg color" default="#25d366"/>
+            <field name="item-style" label="Item Style" default="default"/>
+            <field name="item-bg-color" type="color" label="Item Bg color" default="#3b5998"/>
             <field name="item-color" type="color" label="Item txt color" default="#fff"/>
-        <field name="icon-style" type="list" label="Icon Style" >
+         <field name="icon-style" type="list" label="Icon Style" >
 
         <option value="rounded">Rounded Corners</option>
         <option value="circle">Circle</option>
         <option value="circle">Circle</option>
-         <option value="icon-small-shadow">Icon small Shadow</option>
          </field>
-
 
         </fieldset>       
 

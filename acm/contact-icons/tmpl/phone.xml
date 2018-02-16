@@ -8,13 +8,12 @@
             <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
 
            
-
         </fieldset>
         
 
         <fieldset name="contact-info-style" label="Contact info style">  
             <field name="item-size" label="Item Size" default="inherit"/>
-            <field name="item-style" label="Item Style" >
+           <field name="item-style" label="Item Style" type="list">
         <option value="rounded">Rounded Corners</option>
         <option value="circle">Circle</option>
         <option value="circle">Circle</option>
@@ -23,14 +22,13 @@
 
             <field name="item-bg-color" type="color" label="Item Bg color" default="#25d366"/>
             <field name="item-color" type="color" label="Item txt color" default="#fff"/>
-        <field name="icon-style" type="list" label="Icon Style" >
+          <field name="icon-style" type="list" label="Icon Style" >
 
         <option value="rounded">Rounded Corners</option>
         <option value="circle">Circle</option>
         <option value="circle">Circle</option>
          <option value="icon-small-shadow">Icon small Shadow</option>
          </field>
-
 
         </fieldset>       
 

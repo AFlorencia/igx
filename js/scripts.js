@@ -36,7 +36,22 @@
     })*/
 
     
- 
+    jQuery(window).scroll(function () {	 
+
+        if(jQuery(document).scrollTop() > 20){
+      jQuery('header').addClass('small-nav');	 
+     //jQuery('.logo-small-top').show();   
+     
+     }
+     
+    else{
+     
+       jQuery('header').removeClass('small-nav');
+      // jQuery('.logo-small-top').hide();	  
+     } 
+  
+  
+   }); // END STICKY NAV
     
 
 })(jQuery); // End of use strict

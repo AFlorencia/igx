@@ -1,5 +1,14 @@
 @import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
 
+.contact-item{
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0.1em;
+
+}
+
 .social-btn  {
     
    
@@ -8,18 +17,8 @@
     margin: auto 5px;
     text-align: center;
     overflow:hidden;
-   /*
-
- color: #fff;
-background-color: #333;
-
- height: 30px;
-    line-height: 30px;
-   
-    width: 30px;
-    font-size: 15px;
- border-radius: 30px;
-*/
+    transition:all 350ms linear;
+  
 
 &.rounded{
 border-radius:8px;
@@ -46,9 +45,54 @@ border-radius:8px;
 &::before{
     .longShadow(darken(#25d366, 25%), 25, 5);
 }
+&:hover{
+    &::before{
+        text-shadow:none;
+    }
 }
-.icon-small-shadow{text-shadow:1px 1px 1px rgba(0,0,0,0.2);}
+
+
+
+}
+.icon-small-shadow{
+    text-shadow:1px 1px 1px rgba(0,0,0,0.2);
+    &:hover{
+        &::before{
+            text-shadow:none;
+        }
+    }
+
+}
+@bs-height-base: (@line-height-computed + @padding-base-vertical * 2);
+@bs-height-lg:   (floor(@font-size-large * @line-height-base) + @padding-large-vertical * 2);
+@bs-height-sm:   (floor(@font-size-small * 1.5) + @padding-small-vertical * 2);
+@bs-height-xs:   (floor(@font-size-small * 1.2) + @padding-small-vertical + 1);
+.btn-block.social-btn{
+width:auto;
+    position: relative;
+    padding-left: (@bs-height-base + @padding-base-horizontal);
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    > :first-child {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: @bs-height-base;
+      line-height: (@bs-height-base + 2);
+      font-size: 1em;
+      text-align: center;
+      border-right: 1px solid rgba(0, 0, 0, 0.2);
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+}
 
 @import "whatsapp.less";
-
-

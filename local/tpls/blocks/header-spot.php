@@ -9,7 +9,7 @@ defined('_JEXEC') or die;
 ?>
 
 
-<?php if ($this->checkSpotlight('header-spot', 'top-1, top-2, social-links')) : ?>
+<?php /*if ($this->checkSpotlight('header-spot', 'top-1, top-2, social-links')) : ?>
 	<!-- header-spotlight-->
 	<div class="top-spot container">
 	
@@ -17,4 +17,11 @@ defined('_JEXEC') or die;
 	</div>
 	
 	<!-- //header-spotlight-->
+<?php endif */?>
+
+
+<?php if ($this->countModules('social-links')) : ?>
+<div class="top-social container">
+<jdoc:include type="modules" name="<?php $this->_p('social-links') ?>" style="none" />
+</div>
 <?php endif ?>
