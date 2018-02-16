@@ -16,24 +16,25 @@
             </field>
 
         </fieldset>
-
+        
 
         <fieldset name="contact-info-style" label="Contact info style">  
-            <field name="item-size" label="Item Size" default=""/>
-            <field name="item-style" label="Item Style" default=""/>
+            <field name="item-size" label="Item Size" default="inherit"/>
+            <field name="item-style" label="Item Style" default="default"/>
             <field name="item-bg-color" type="color" label="Item Bg color" default="#25d366"/>
             <field name="item-color" type="color" label="Item txt color" default="#fff"/>
+         <field name="icon-style" label="Icon Style" default="default"/>
 
-        </fieldset>
-       
+        </fieldset>       
+
 
 
         <fieldset name="contact-info-items" label="CONTACT_INFO_ITEM_LABEL" description="CONTACT_INFO_ITEM_DESC">
             <field name="contact-info-item" type="jalist">
                 <item name="contact-info-name" size="30" type="text" default="" label="Name to show" description="" />
                 <item name="contact-info-icon" size="20" type="text" default="fa fa-whatsapp" label="Icon" description="CONTACT_FONT_AWESOME_DESC" />
-                <item name="contact-info-text" size="30" type="text" default="" label="Text to show" description="CONTACT_LOCALTION_NAME_DESC" requires="1" />
-                <item name="contact-info-value" type="text" default="" label="#Tel" description="CONTACT_LOCALTION_VALUE_DESC" />
+                <item name="contact-info-text" size="30" type="text" default="" label="# to show" description="CONTACT_LOCALTION_NAME_DESC" requires="1" />
+                <item name="contact-info-value" type="text" default="" label="# complete" description="CONTACT_LOCALTION_VALUE_DESC" />
             </field>
         </fieldset>
 

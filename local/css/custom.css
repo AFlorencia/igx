@@ -19,9 +19,6 @@ min-height: calc( 100vh - 66px );
 
 
 
-.t3-mainnav .container {
-    
-}
 
 body {
     padding-top: 66px;
@@ -37,9 +34,7 @@ body {
   
 }
 
-.navbar-collapse {
-    
-}
+
 
 .logo-img {
     max-width: 100%;

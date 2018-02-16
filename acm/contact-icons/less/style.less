@@ -1,2 +1,54 @@
 @import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+.social-btn  {
+    
+   
+   
+    display: inline-block;
+    margin: auto 5px;
+    text-align: center;
+    overflow:hidden;
+   /*
+
+ color: #fff;
+background-color: #333;
+
+ height: 30px;
+    line-height: 30px;
+   
+    width: 30px;
+    font-size: 15px;
+ border-radius: 30px;
+*/
+
+&.rounded{
+border-radius:8px;
+
+}
+&.circle{border-radius: 50%;}
+
+
+}
+.longShadow(@color, @size, @spread: 100, @flag: 1, @tmp: '') when (@size > 0) {
+    @percent: round(@flag / @size * 100) * @spread;
+    @shadowColor: fade(@color, @percent);
+    @shadow: ~"@{size}px @{size}px 1px @{shadowColor}";
+    @ends: ~"@{shadow}, @{tmp}";
+    @shadowString: ~"@{ends} 0px 0px 0px rgba(0,0,0,0.1)";
+    .longShadowLoop(@string, @index) when (@index < 1) {
+        text-shadow: @string;
+    }
+    .longShadowLoop(@shadowString, @size - 1);
+    .longShadow(@color, @size - 1, @spread, @flag + 1, @ends);
+}
+
+.icon-shadow{
+&::before{
+    .longShadow(darken(#25d366, 25%), 25, 5);
+}
+}
+.icon-small-shadow{text-shadow:1px 1px 1px rgba(0,0,0,0.2);}
+
 @import "whatsapp.less";
+
+
