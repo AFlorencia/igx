@@ -31,7 +31,6 @@ $anchorclass = $this->params->get('Anchor class');
 <jdoc:include type="head" />
 <?php $this->loadBlock('head') ?>
 </head>
-
 <body data-spy="scroll" data-target=".navbar">
 
 <div class="t3-wrapper"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
@@ -39,17 +38,16 @@ $anchorclass = $this->params->get('Anchor class');
 
 <?php $this->loadBlock('mainnav-land') ?>
  
-
+<?php $this->loadBlock('spot-top') ?>
 <?php $this->loadBlock('navhelper') ?>
-
+<?php $this->loadBlock('spot-bottom') ?>
 <?php $this->loadBlock('footer') ?>
 
 
 </div>
-
  <?php 
  
- /* if ($this->params->get('back-to-top')==="1"): ?>
+ if ($this->params->get('back-to-top')==="1"): ?>
 <div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top">
  
   <button class="btn btn-primary" title="Ir Arriba"><i class="fa fa-angle-up"></i></button>
@@ -76,7 +74,7 @@ $anchorclass = $this->params->get('Anchor class');
  
 
 <?php endif;
-*/ 
+
 ?>
 
 
@@ -107,7 +105,10 @@ $(document).on('click', '.t3-mainnav a', function(event) {
     });	
 	
 	
-
+    // Closes the Responsive Menu on Menu Item Click
+    $('.navbar-collapse ul li a').click(function(){ 
+            $('.navbar-toggle:visible').click();
+    });
 
 
 })(jQuery);

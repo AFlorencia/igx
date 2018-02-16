@@ -22,40 +22,44 @@ $sitename  = $this->params->get('sitename');
 <div class="topbar"><?php $this->loadBlock('header-spot'); ?></div>
 <nav id="t3-mainnav" class="wrap navbar navbar-default t3-mainnav">
 	<div class="container">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
 		
 		<?php if ($this->getParam('addon_offcanvas_enable')) : ?>
 				<?php $this->loadBlock ('off-canvas') ?>
 			<?php endif ?>
-		<div class="logo-<?php echo $logotype, ($this->params->get('enable_logoimage_sm','1')  ? ' logo-sm' : ' logo-sm-hide') ?> ">
-				<a href="<?php echo JUri::base() ?>" title="<?php echo strip_tags($sitename) ?>">
-						<?php if($logotype == 'image'): ?>
-						<img class="logo-img-big" src="<?php echo JUri::base(true) . '/' . $logoimage ?>" alt="<?php echo strip_tags($sitename) ?>" />
-								<?php if($logoimgsm) : ?>
-								<img class="logo-img-small" src="<?php echo JUri::base(true) . '/' . $logoimgsm ?>" alt="<?php echo strip_tags($sitename) ?>" />
-								<?php endif ?>	
-								<?php endif ?>					
-						
-								<?php if($logotype == 'text'): ?>
-								<span class="sitename"><?php echo $sitename ?></span>
-									<?php if($showslogan =='1'): ?>
-								<small class="site-slogan-show"><?php echo $slogan ?></small>
-								<?php endif ?>				
-								<?php endif ?>										
-									</a>
-								</div>
 		
-		</div>
-		<?php if ($this->getParam('navigation_collapse_enable')) : ?>
-			<div class="t3-navbar-collapse navbar-collapse collapse"></div>
-		<?php endif ?>
 
-		<div class="t3-navbar navbar-collapse collapse">
-			<jdoc:include type="<?php echo $this->getParam('navigation_type', 'megamenu') ?>" name="<?php echo $this->getParam('mm_type', 'mainmenu') ?>" />
-		</div>
+
+
+		 <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topnav">
+                    <span class="sr-only">Saltar a navegación</span><i class="fa fa-bars"></i>
+                </button>
+                <div class="navbar-brand">
+
+                    <div class="logo-top">
+                        <a href="<?php echo JUri::base() ?>" title="<?php echo strip_tags($sitename) ?>">
+                                <?php if($logotype == 'image'): ?>
+                                <img class="logo-img" src="<?php echo JUri::base(true) . '/' . $logoimage ?>" alt="<?php echo strip_tags($sitename) ?>" />
+                                        
+                                <?php endif ?>					
+                                
+                                        <?php if($logotype == 'text'): ?>
+                                        <span class="sitename"><?php echo $sitename ?></span>
+                                            <?php if($showslogan =='1'): ?>
+                                        <small class="site-slogan-show"><?php echo $slogan ?></small>
+                                        <?php endif ?>				
+                                        <?php endif ?>										
+                                            </a>
+                                        </div>
+               
+            </div>
+</div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse pull-right" id="topnav">
+                <jdoc:include type="<?php echo $this->getParam('navigation_type', 'megamenu') ?>" name="<?php echo $this->getParam('mm_type', 'mainmenu') ?>" />
+            </div>	
 			
-	</div>
+	
 </nav>
 </header>
 <!-- //MAIN NAVIGATION -->

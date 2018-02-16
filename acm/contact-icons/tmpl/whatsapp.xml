@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <title>Send Whatsapp msg</title>
+    <sampledata></sampledata>
+    <fields name="contact-info">
+        <fieldset name="contact-info-basic" label="CONTACT_INFO_BASIC_LABEL" description="CONTACT_INFO_BASIC_DESC">
+            <field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+            <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+
+            <field name="acm-style" type="list" default="style-light"
+                   global="1"
+                   label="CONTACT_STYLE_LABEL"
+                   description="CONTACT_STYLE_DESC">
+                <option value="style-dark">CONTACT_STYLE_DARK</option>
+                <option value="style-light">CONTACT_STYLE_LIGHT</option>
+            </field>
+
+        </fieldset>
+
+
+        <fieldset name="contact-info-style" label="Contact info style">  
+            <field name="item-size" label="Item Size" default=""/>
+            <field name="item-style" label="Item Style" default=""/>
+            <field name="item-bg-color" type="color" label="Item Bg color" default="#25d366"/>
+            <field name="item-color" type="color" label="Item txt color" default="#fff"/>
+
+        </fieldset>
+       
+
+
+        <fieldset name="contact-info-items" label="CONTACT_INFO_ITEM_LABEL" description="CONTACT_INFO_ITEM_DESC">
+            <field name="contact-info-item" type="jalist">
+                <item name="contact-info-name" size="30" type="text" default="" label="Name to show" description="" />
+                <item name="contact-info-icon" size="20" type="text" default="fa fa-whatsapp" label="Icon" description="CONTACT_FONT_AWESOME_DESC" />
+                <item name="contact-info-text" size="30" type="text" default="" label="Text to show" description="CONTACT_LOCALTION_NAME_DESC" requires="1" />
+                <item name="contact-info-value" type="text" default="" label="#Tel" description="CONTACT_LOCALTION_VALUE_DESC" />
+            </field>
+        </fieldset>
+
+    </fields>
+</form>

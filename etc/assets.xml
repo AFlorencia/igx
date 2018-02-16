@@ -45,9 +45,7 @@
 					<option value="T3-normal">t3-normal</option>
 					   <option value="sticky">Sticky</option>
 					
-				</field>
-
-				
+				</field>				
 				<field name="menualign"
 				       type="list"
 				       label="Alineación items de menú"
@@ -74,15 +72,12 @@
 
 				
 			</fieldset>
-			<fieldset name="component-styles" label="Layout Componente" addfieldpath="/plugins/system/t3/includes/depend">
-						
+			<fieldset name="component-styles" label="Layout Componente" addfieldpath="/plugins/system/t3/includes/depend">						
 								
 			<field name="leftcol" type="subform" formsource="templates/t3_bs3_blank/local/etc/left-col.xml" multiple="false" label="Left Column" description="Left Column... config" layout="joomla.form.field.subform.repeatable-table"/>
 			<field name="rightcol" type="subform" formsource="templates/t3_bs3_blank/local/etc/right-col.xml" multiple="false" label="Right Column" description="Right Column... config" layout="joomla.form.field.subform.repeatable-table"/>
 				<field name="topcmp" type="subform" formsource="templates/t3_bs3_blank/local/etc/cmp.xml" multiple="false" label="Cargar Arriba del componente estos módulos" description="..." layout="joomla.form.field.subform.repeatable-table"/>									
 			</fieldset>
-					
-			
 				<fieldset name="layout-styles" label="Crear Layout Mag" addfieldpath="/plugins/system/t3/includes/depend">
 						<field name="showinside" label="Mostrar dentro sitio"
 				      type="radio"
@@ -92,13 +87,7 @@
 		<field name="contacto" type="subform" formsource="templates/t3_bs3_blank/local/etc/columns.xml" multiple="true" label="Column" description="Columns" max="8" layout="joomla.form.field.subform.repeatable"/>
 					</fieldset>
 
- 		<fieldset name="jsfunctions" label="JS Functions" addfieldpath="/plugins/system/t3/includes/depend">
-			<field name="eqitems" type="text" label="Ajustar altos"/>
-			<field name="id-spot-top" type="text" label="# ID spot Top"/>
-			<field name="id-spot-bottom" type="text" label="# ID spot Bottom"/>
-			<field name="id-spot-middle" type="text" label="# ID spot Middle"/>
-		</fieldset> 
-			
+ 			
 		</fields>
 	</config>
 </assets>

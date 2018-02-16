@@ -6,7 +6,7 @@
  */
 
 defined('_JEXEC') or die;
-$spotbottom = $this->params->get('id-spot-bottom');
+$spotbottom = $this->params->get('bottomblockid');
 ?>
 
 <?php if ($this->checkSpotlight('spot-bottom', 'spot-bottom-1, spot-bottom-2, spot-bottom-3, spot-bottom-4')) : ?>

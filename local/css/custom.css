@@ -1,46 +1,26 @@
-@media (min-width: 768px){
-    .navbar-nav {
-     float:none;
-     text-align: center;
-     margin: 0;
-     margin: 0 auto;
-    }
-    
-    
-    .navbar-nav > li {
-        float: none;
-        display: inline-block;
-        box-sizing: inherit;
-    }
-    
-    
-    }
-    #section-644 .acm-hero{padding:0;}
-    
-    @media(max-width:767px){
-        
-        .uber-header .col-xs-12{
-            width:auto;
-            }
-        
-        
-    }
+
     
     .main-box {
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       width: 100vw;
-       padding: 0;
-       min-height: calc( 100vh - 66px );
-       background: #fff;
+       
+display: flex;
+       
+align-items: center;
+       
+justify-content: center;
+       
+width: 100vw;
+       
+padding: 0;
+       
+min-height: calc( 100vh - 66px );
+       
+
     }
 
 
 
 .t3-mainnav .container {
-    display: flex;
-    align-items: stretch;
+    
 }
 
 body {
@@ -49,4 +29,61 @@ body {
 
 .t3-navbar {
     display: flex;
+}
+
+.navbar-brand {
+    padding: 10px;
+    height: auto;
+  
+}
+
+.navbar-collapse {
+    
+}
+
+.logo-img {
+    max-width: 100%;
+}
+
+.navbar-header {
+   
+}
+
+
+
+
+.navbar-header {
+  
+   display: inl;
+}
+
+.navbar-toggle {
+    float: right;
+}    width: 100%;
+
+
+.logo-top {}
+
+@media(max-width:768px){
+.navbar-brand{}
+.navbar-collapse{}
+}
+
+@media(min-width: 768px){
+    .t3-mainnav .container{
+   
+}
+.navbar-brand{}
+.navbar-collapse.collapse{
+    
+    display: flex !important;
+    justify-content: stretch;
+    align-items: center;
+}
+
+}
+
+
+.navbar-default .navbar-nav > li > a {
+    line-height: 75px;
 }

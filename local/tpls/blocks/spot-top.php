@@ -6,15 +6,15 @@
  */
 
 defined('_JEXEC') or die;
-$spottop = $this->params->get('id-stop-top');
+$topspot = $this->params->get('topblockid');
 ?>
 
 <?php if ($this->checkSpotlight('spot-top', 'spot-top-1, spot-top-2, spot-top-3, spot-top-4')) : ?>
-	<!-- SPOTLIGHT 5 -->
-<div class="main-box" id="<?php echo $spottop; ?>">
+	
+<div class="main-box" id="<?php echo $topspot; ?>">
 	<div class="container ">
 		<?php $this->spotlight('spot-top', 'spot-top-1, spot-top-2, spot-top-3, spot-top-4', array('style'=>'none, none, none, none')) ?>
 	</div></div>
-	<!-- //SPOTLIGHT 5 -->
+	
 <?php endif ?>
 

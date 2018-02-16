@@ -13,3 +13,4 @@ defined('_JEXEC') or die;
 			<jdoc:include type="modules" name="<?php $this->_p('navhelper') ?>" style="spot" />
 		
 <?php endif ?>
+
