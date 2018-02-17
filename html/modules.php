@@ -33,6 +33,7 @@ defined('_JEXEC') or die('Restricted access');
  * Default Module Chrome that has sematic markup and has best SEO support
  */
 
+ 
 
 function modChrome_spot($module, &$params, &$attribs)
 { 
