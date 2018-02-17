@@ -111,34 +111,6 @@ function modChrome_fullSpot($module, &$params, &$attribs)
 	}
 }
 
-function modChrome_t3modalB($module, &$params, &$attribs)
-{
-
-	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
-
-	if (!empty ($module->content)) : ?>
-
-	<div class="moduletable <?php echo $params->get('moduleclass_sfx'); ?> modalmodule">
-		<div class="t3-module-title">
-			<a href="#module<?php echo $module->id ?>" role="button" class="btn" data-toggle="modal">
-				<h<?php echo $headerLevel; ?>><span><?php echo $module->title; ?></span></h<?php echo $headerLevel; ?>>
-			</a>
-		</div>
-		<div id="module<?php echo $module->id ?>" class="modal hide fade" aria-hidden="true">
-			<div class="modal-header">
-				<h<?php echo $headerLevel; ?>><span><?php echo $module->title; ?></span></h<?php echo $headerLevel; ?>>
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-
-			</div>
-			<div class="t3-module-body">
-				<?php echo $module->content; ?>
-			</div>
-		</div>
-	</div>
-	
-	<?php endif;  
-}
-
 
 
 function modChrome_t3modalB($module, &$params, &$attribs)
