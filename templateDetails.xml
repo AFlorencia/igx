@@ -32,6 +32,7 @@
 	<folder>etc</folder>
 	<folder>acm</folder>
 	<folder>js</folder>
+	<folder>html</html>
 		<folder>local/css</folder>
 		<folder>local/etc</folder>
 		<folder>local/html</folder>
