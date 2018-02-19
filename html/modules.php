@@ -37,6 +37,7 @@ defined('_JEXEC') or die('Restricted access');
 
 function modChrome_spot($module, &$params, &$attribs)
 { 
+
 	$badge          = preg_match ('/badge/', $params->get('moduleclass_sfx'))? '<span class="badge">&nbsp;</span>' : '';
 	$moduleTag      = htmlspecialchars($params->get('module_tag', 'div'));
 	$headerTag      = htmlspecialchars($params->get('header_tag', 'h3'));
@@ -46,8 +47,9 @@ function modChrome_spot($module, &$params, &$attribs)
 	$textcolor  = $params->get('textcolor');
 	$bootstrapSize  = $params->get('bootstrap_size');
 	$moduleClass    = !empty($bootstrapSize) ? ' col-md-' . (int) $bootstrapSize . '' : '12';
+	$modulecontentClass = $params->get('modulecontentClass');
 	$moduleClassSfx = htmlspecialchars($params->get('moduleclass_sfx'));
-	$isbox = htmlspecialchars($params->get('fullwidth'));
+	$isbox = htmlspecialchars($params->get('isbox'));
 	$moduleIntro    = $params->get('module-intro');
   $bgImage        = $params->get('module-background');
   $bgImageSize    = $params->get('module-background-size');
@@ -58,18 +60,32 @@ function modChrome_spot($module, &$params, &$attribs)
 		
 		$html ='<section id="'.$moduleId.'" class="main-box" '.$moduleBg.'>';
 
-if ($isbox==='1'){
-	$html .= '<div class="container">';
-}
-else{
+
+
+$titleClass="";
+
+if($isbox===0){
 	
-	$html .= '<div class="wrapper">';
+	$boxClass = 'wrapper';
 }
+
+if ($isbox==='1'){
+	$boxClass = 'container';
+}
+
+
+
+
+
+
+$html .= '<div class="'.$boxClass.'">';
+
+
 		$html .= '<div class="content">';
 					
 
 		if ($module->showtitle != 0) {
-			$html .= '<div class="module-title">';
+			$html .= '<div class=\"module-title {$headerClass}\">';
 		
 		
 			$html .='<'.$headerTag.'><span>'.$module->title.'</span></'.$headerTag.'>';
@@ -80,7 +96,7 @@ else{
 
 
 	
-		$html .= '<div class="module-ct '.$moduleClassSfx.'">'.$module->content.'</div>';
+		$html .= '<div class="module-ct '.$modulecontentClass.'">'.$module->content.'</div>';
 		$html .= "</div></div>";
 
 		$html .= '</section>'; //id

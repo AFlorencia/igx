@@ -7,10 +7,13 @@
       <field name="module-background-size" type="text" default="cover" label="TPL_MENU_ITEM_MODULE_BACKGROUNDSIZE_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUNDSIZE_DESC" />
       <field name="module-background-position" type="text" default="center center" label="TPL_MENU_ITEM_MODULE_BACKGROUNDPO_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUNDPO_DESC" />
 	  <field name="moduleID" type="text" default="" label="Nombre del Anchor" description="id para el link del menú que enlaza este módulo" />
-  <field name="fullwidth" type="radio"  description="Fluid o fixed container"
-				       value="0"
-				       global="0" default="0"><option value="1" >JYES</option><option value="0">JNO</option>   </field>
-            <field name="module-bg-color" type="text" default="" label="Color del fondo del módulo" description="color del fondo del módulo"/>
+<field name="isbox" type="radio" label="Poner en caja"> 
+<option value="1">Todo el contenido del módulo</option>
+<option value="2">Contenido menos título</option>
+
+<option option="0">Nada</option>
+</field>
+ <field name="modulecontentClass" type="text" default="" label="Clase del contenido del módulo" description="" />
     </fieldset>				
   </fields>
 </form>
