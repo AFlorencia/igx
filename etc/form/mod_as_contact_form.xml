@@ -10,10 +10,10 @@
  
             <field name="module-bg-color" type="text" default="" label="Color del fondo del módulo" description="color del fondo del módulo"/>
               <field name="isbox" type="radio" label="Poner en caja"> 
-<option value="1">Todo el contenido del módulo</option>
-<option value="2">Contenido menos título</option>
+<option value="1">Si</option>
 
-<option option="0">Nada</option>
+
+<option option="0">No</option>
 </field>
  <field name="modulecontentClass" type="text" default="" label="Clase del contenido del módulo" description="" />
 
