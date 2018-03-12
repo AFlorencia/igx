@@ -33,7 +33,7 @@ $menu = $app->getMenu();
 
    <?php $this->loadBlock('header-default-boxed') ?>
   <?php $this->loadBlock('mainnav-boxed') ?>
-    <?php endif;?>
+
 	
 <?php $this->loadBlock('navhelper-boxed') ?>
 <?php $this->loadBlock('fullslider-boxed') ?>
