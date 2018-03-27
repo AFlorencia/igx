@@ -18,8 +18,12 @@ $sitename  = $this->params->get('sitename');
 
 
 <!-- MAIN NAVIGATION -->
-<header class="nav navbar-fixed-top">
+<header class="nav navbar-fixed-top sticky-nav">
+
+<?php if ($this->countModules('header-spot')) : ?>
 <div class="topbar"><?php $this->loadBlock('header-spot'); ?></div>
+<?php endif ?>
+
 <nav id="t3-mainnav" class="wrap navbar navbar-default t3-mainnav">
 	<div class="container">
 		
@@ -31,9 +35,7 @@ $sitename  = $this->params->get('sitename');
 
 
 		 <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topnav">
-                    <span class="sr-only">Saltar a navegación</span><i class="fa fa-bars"></i>
-                </button>
+               
                 <div class="navbar-brand">
 
                     <div class="logo-top">
@@ -52,10 +54,13 @@ $sitename  = $this->params->get('sitename');
                                             </a>
                                         </div>
                
-            </div>
+            </div> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topnav">
+                    <span class="sr-only">Saltar a navegación</span><i class="fa fa-bars"></i>
+                </button>
 </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse pull-right" id="topnav">
+            <div class="collapse navbar-collapse" id="topnav">
                 <jdoc:include type="<?php echo $this->getParam('navigation_type', 'megamenu') ?>" name="<?php echo $this->getParam('mm_type', 'mainmenu') ?>" />
             </div>	
 			

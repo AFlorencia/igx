@@ -30,18 +30,15 @@ $menu = $app->getMenu();
 <div class="t3-wrapper"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
 <div class="container main-wrapper">
 
-<?php if ($this->params->get('headertype')=="acm"): ?>
-  <?php $this->loadBlock('header-h') ?>
-  <?php endif ?>
-  <?php if ($this->params->get('headertype')=="T3-normal"): ?>
+
+  <?php if ($this->params->get('headertype')=="default"): ?>
   <?php $this->loadBlock('header-default-boxed') ?>
   <?php $this->loadBlock('mainnav-boxed') ?>
     <?php endif;?>
+
   <?php if ($this->params->get('headertype')=="sticky"): ?>
-  <?php //echo 'Sticky solo en full width'; ?>
-  
-   <?php $this->loadBlock('header-default-boxed') ?>
-  <?php $this->loadBlock('mainnav-boxed') ?>
+ 
+  <?php $this->loadBlock('mainnav-land') ?>
     <?php endif;?>
 	
 <?php $this->loadBlock('navhelper-boxed') ?>

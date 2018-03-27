@@ -32,7 +32,15 @@ $menu = $app->getMenu();
 
  
  
+ <?php if ($this->params->get('headertype')=="default"): ?>
+  <?php $this->loadBlock('header-default') ?>
+  <?php $this->loadBlock('mainnav') ?>
+    <?php endif;?>
+
+  <?php if ($this->params->get('headertype')=="sticky"): ?>
+ 
   <?php $this->loadBlock('mainnav-land') ?>
+    <?php endif;?>
  
 
 
@@ -86,15 +94,17 @@ $menu = $app->getMenu();
 	jQuery(window).scroll(function () {	 
 
    	if(jQuery(document).scrollTop() > 0){
-	 jQuery('.t3-mainnav').addClass('navbar-fixed-top');	 
-	jQuery('.logo-small-top').show();   
+	 jQuery('.sticky-nav').addClass('small-nav');
+	 jQuery('body').addClass('small-padding');	 	 
+
 	
     }
 	
    else{
 	
-      jQuery('.t3-mainnav').removeClass('navbar-fixed-top');
-	  jQuery('.logo-small-top').hide();	  
+      jQuery('.sticky-nav').removeClass('small-nav');
+	  jQuery('body').removeClass('small-padding');	 	 
+	  
     } 
  
  

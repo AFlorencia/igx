@@ -6,6 +6,11 @@
  */
 
 defined('_JEXEC') or die;
+$macos  = $this->params->get('macos-color');
+$androidbg  = $this->params->get('android-bg');
+$androidtheme  = $this->params->get('android-theme');
+$metrotheme  = $this->params->get('metro-theme');
+$ios  = $this->params->get('ios-color');
 ?>
 
 <!-- META FOR IOS & HANDHELD -->
@@ -66,10 +71,10 @@ if (!$sitename) {
 
 <!-- You can add Google Analytics here or use T3 Injection feature -->
 
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=nocacheplease">
-<link rel="icon" type="image/png" href="favicon-32x32.png?v=nocacheplease" sizes="32x32">
-<link rel="icon" type="image/png" href="favicon-16x16.png?v=nocacheplease" sizes="16x16">
-<link rel="manifest" href="manifest.json?v=nocacheplease">
-<link rel="mask-icon" href="safari-pinned-tab.svg?v=nocacheplease" color="#5bbad5">
-<link rel="shortcut icon" href="favicon.ico?v=nocacheplease">
-<meta name="theme-color" content="#ffffff">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="mask-icon" href="safari-pinned-tab.svg" color="<?php echo $macos; ?>">
+<meta name="msapplication-TileColor" content="<?php echo $metrotheme; ?>">
+<meta name="theme-color" content="<?php echo $androidtheme; ?>">

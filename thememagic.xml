@@ -107,6 +107,15 @@ description="T3_TM_VARS_IMPORT_EXTERNAL_URLS_DESC" />
 		</fieldset>
 
 
+<fieldset name="landing" label="Landing Params">
+<field name="body-padding" type="text"  label="Body Padding" description="Body Padding value" default="60px"/>
+<field name="toggle-size" type="text"  label="Toggle Size" description="Toggle Size" default="40px"/>
+<field name="navbar-header-padding" type="text"  label="navbar-header-padding" description="" default="5px"/>
+<field name="navbar-header-height" type="text"  label="navbar-header-height" description="" default="@body-padding"/>
+<field name="nav-link-size" type="text"  label="Nav Link  Size" description="Nav Link  Size" default="@body-padding"/>
+
+</fieldset>
+
 		<fieldset name="plus_params" label="Parámetros Personalizados :: IG">
 			<field name="box-bg-color" type="color" class="t3tm-color" label="Color fondo de la caja" description="Color de fondo de la caja" />
 			<field name="gray-base" type="color" class="t3tm-color" label="Color Gris base #000" description="Color negro/gris base txt" />

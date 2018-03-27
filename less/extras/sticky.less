@@ -1,0 +1,112 @@
+    @import "../vars.less"; // Modify this for custom colors, font-sizes, etc
+body {
+    padding-top: @body-padding;
+}
+body.small-padding{
+    padding-top: 50px;
+}
+.sticky-nav {
+    @media(min-width: 320px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .container {
+        @media(max-width: 768px) {
+            width:100%;
+        }
+    }
+    .t3-mainnav {
+        border: none;
+        width: 100%;
+    }
+    @media(min-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar-brand {
+        padding: 0;
+        /*  line-height: @body-padding;*/
+        height: @body-padding;
+    }
+    .navbar-header {
+        line-height: @body-padding;
+        min-height: @body-padding;
+        padding: @navbar-header-padding - @navbar-header-padding;
+    }
+    .t3-mainnav>.container {}
+}
+
+.main-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    min-height: calc( 100vh - @body-padding );
+}
+
+@media(min-width: 768px) {
+    .navbar-default .navbar-nav>li>a {
+        line-height: @nav-link-size;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    #topnav {
+        float: right;
+        height: @navbar-header-height !important;
+        padding: (@body-padding - @navbar-header-height ) / 2
+    }
+}
+
+.logo-img {
+    max-width: 100%;
+}
+
+.navbar-toggle {
+    float: right;
+    width: 100%;
+}
+
+.navbar-default .navbar-toggle {
+    float: right;
+    border-width: 2px;
+    width: @toggle-size;
+    height: @toggle-size;
+   line-height: (@toggle-size - 10px) / 2;
+    font-size: 21px;
+    transition: all 350ms linear;
+    margin: (@body-padding - 10px) / 4;
+}
+
+.small-nav {
+    .navbar-header {
+        line-height: 50px;
+        min-height: 50px;
+        padding: 0px;
+    }
+    .navbar-brand{
+        height: 50px;
+
+        
+            .logo-img{
+                height:50px;
+                width: auto;
+            }
+        
+    }
+    #topnav {
+        height: 50px !important;
+        padding: 0;
+    }
+    @media (min-width: 768px) {
+        .navbar-default .navbar-nav>li>a {
+            line-height: 50px;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+}
