@@ -39,11 +39,7 @@ body.small-padding{
     }
     .t3-mainnav>.container {}
 }
-@media(max-width:480px){
- .logo-top{
-     max-width:280px;
-    }
-}
+
 .main-box {
     display: flex;
     align-items: center;
@@ -62,7 +58,9 @@ body.small-padding{
     #topnav {
         float: right;
         height: @navbar-header-height !important;
-        padding: (@body-padding - @navbar-header-height ) / 2
+        padding-top: (@body-padding - @navbar-header-height ) / 4;
+        padding-bottom: (@body-padding - @navbar-header-height ) / 4;
+        ;
     }
 }
 
