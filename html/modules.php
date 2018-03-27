@@ -61,7 +61,7 @@ function modChrome_spot($module, &$params, &$attribs)
 		$html ='<section id="'.$moduleId.'" class="main-box" '.$moduleBg.'>';
 
 
-
+$boxClass = 'wrapper';
 $titleClass="";
 
 if($isbox===0){
@@ -72,7 +72,6 @@ if($isbox===0){
 if ($isbox==='1'){
 	$boxClass = 'container';
 }
-
 
 
 
