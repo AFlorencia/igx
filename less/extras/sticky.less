@@ -29,8 +29,10 @@ body.small-padding{
     }
     .navbar-brand {
         padding: 0;
-        /*  line-height: @body-padding;*/
         height: @body-padding;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .navbar-header {
         line-height: @body-padding;
@@ -58,9 +60,13 @@ body.small-padding{
     #topnav {
         float: right;
         height: @navbar-header-height !important;
+
         padding-top: (@body-padding - @navbar-header-height ) / 4;
         padding-bottom: (@body-padding - @navbar-header-height ) / 4;
-        ;
+
+        padding-top: (@body-padding - @navbar-header-height ) / 2;
+        padding-bottom: (@body-padding - @navbar-header-height ) / 2;
+
     }
 }
 
