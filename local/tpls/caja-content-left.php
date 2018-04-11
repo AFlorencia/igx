@@ -30,15 +30,10 @@ $menu = $app->getMenu();
 <div class="t3-wrapper"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
 <div class="container main-wrapper">
 
- <?php if ($this->params->get('headertype')=="default"): ?>
   <?php $this->loadBlock('header-default-boxed') ?>
   <?php $this->loadBlock('mainnav-boxed') ?>
-    <?php endif;?>
 
-  <?php if ($this->params->get('headertype')=="sticky"): ?>
- 
-  <?php $this->loadBlock('mainnav-land') ?>
-    <?php endif;?>
+
 
 	
 <?php $this->loadBlock('navhelper-boxed') ?>
@@ -91,30 +86,7 @@ $menu = $app->getMenu();
 
 <?php endif;?>
 
-<?php if ($this->params->get('headertype')=="sticky"){ ?>
-<script type="text/javascript">
-	jQuery(document).ready(function(){
-	jQuery(window).scroll(function () {	 
 
-   	if(jQuery(document).scrollTop() > 0){
-	 jQuery('.t3-mainnav').addClass('navbar-fixed-top');	 
-	jQuery('.logo-small-top').show();   
-	
-    }
-	
-   else{
-	
-      jQuery('.t3-mainnav').removeClass('navbar-fixed-top');
-	  jQuery('.logo-small-top').hide();	  
-    } 
- 
- 
-  }); // END STICKY NAV
-  
-});
-
-</script>
-<?php } ?>
 </body>
 
 </html>
