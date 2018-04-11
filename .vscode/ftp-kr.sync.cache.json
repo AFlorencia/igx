@@ -1,0 +1,75 @@
+{
+  "ftp://ftp.intergraphix.com.ar:21@t3@intergraphix.com.ar": {
+    ".ftpquota": {
+      "type": "-",
+      "size": 15,
+      "lmtime": 0,
+      "modified": false
+    },
+    "LICENSE.txt": {
+      "type": "-",
+      "size": 18092,
+      "lmtime": 0,
+      "modified": false
+    },
+    "README.txt": {
+      "type": "-",
+      "size": 4872,
+      "lmtime": 0,
+      "modified": false
+    },
+    "administrator": {},
+    "bin": {},
+    "cache": {},
+    "cli": {},
+    "components": {},
+    "configuration.php": {
+      "type": "-",
+      "size": 2008,
+      "lmtime": 0,
+      "modified": false
+    },
+    "error_log": {
+      "type": "-",
+      "size": 1230,
+      "lmtime": 0,
+      "modified": false
+    },
+    "htaccess.txt": {
+      "type": "-",
+      "size": 3005,
+      "lmtime": 0,
+      "modified": false
+    },
+    "images": {},
+    "includes": {},
+    "index.php": {
+      "type": "-",
+      "size": 1420,
+      "lmtime": 0,
+      "modified": false
+    },
+    "language": {},
+    "layouts": {},
+    "libraries": {},
+    "media": {},
+    "modules": {},
+    "plugins": {},
+    "robots.txt.dist": {
+      "type": "-",
+      "size": 836,
+      "lmtime": 0,
+      "modified": false
+    },
+    "t3-assets": {},
+    "templates": {},
+    "tmp": {},
+    "web.config.txt": {
+      "type": "-",
+      "size": 1690,
+      "lmtime": 0,
+      "modified": false
+    }
+  },
+  "$version": 1
+}

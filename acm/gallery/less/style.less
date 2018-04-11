@@ -7,6 +7,14 @@
 @import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
 
 
+.translateY(@y) {
+  -webkit-transform: translateY(@y);
+      -ms-transform: translateY(@y); // IE9 only
+       -o-transform: translateY(@y);
+          transform: translateY(@y);
+}
+
+
 // ----------------------------------------
 // GALLERY STYLE
 // ----------------------------------------

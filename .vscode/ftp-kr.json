@@ -1,0 +1,23 @@
+{
+    "host": "ftp.intergraphix.com.ar",
+    "username": "t3@intergraphix.com.ar",
+    "password": "mango564CHA",
+    "remotePath": "",
+    "protocol": "ftp",
+    "port": 21,
+    "fileNameEncoding": "utf8",
+    "autoUpload": true,
+    "autoDelete": false,
+    "autoDownload": false,
+    "connectionTimeout" : 240000,
+    "refreshTime": 1000,
+    "showGreeting": true,
+    "logLevel": "VERBOSE",
+    
+    "ignore": [
+        ".git",
+        "/.vscode"
+    ]
+
+}
+
