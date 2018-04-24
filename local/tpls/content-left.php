@@ -37,10 +37,9 @@ $menu = $app->getMenu();
   <?php $this->loadBlock('mainnav') ?>
     <?php endif;?>
 
-  <?php if ($this->params->get('headertype')=="sticky"): ?>
- 
+  <?php if ($this->params->get('headertype')=="sticky"): ?> 
   <?php $this->loadBlock('mainnav-land') ?>
-    <?php endif;?>
+<?php endif;?>
  
 
 

@@ -4,19 +4,7 @@
 		<fields name="params" addfieldpath="/plugins/system/t3/includes/depend">
 
 			<fieldset name="extra_params" label="Extra Params" addfieldpath="/plugins/system/t3/includes/depend">			
-				<field name="showcomponent"
-				       type="list"
-				       label="Mostrar componente"
-				       description="Ocultar componente"
-				       value="1"
-				       class="t3-admin-textarea"
-				       global="1" >
-					   <option value="1">Siempre</option>
-					   <option value="2">Solo home</option>
-					   <option value="3">Todos menos home</option>
-					  
-					   </field>
-				
+			
 
 								
 				<field name="showslogan"
@@ -34,8 +22,8 @@
 				       size="7"
 				       type="list"
 				       global="1">
-					<option value="acm">Usar header ACM</option>
-					<option value="T3-normal">t3-normal</option>
+				
+					<option value="default">t3-normal</option>
 					   <option value="sticky">Sticky</option>
 					
 				</field>
