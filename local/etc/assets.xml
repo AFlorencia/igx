@@ -61,7 +61,7 @@
 		<field name="og_fb_id" type="text" helixgroup="blog_details" label="HELIX_ULTIMATE_BLOG_OPEN_GRAPH_FB_ID" showon="og:1" />
 		<field name="og_twitter_site" type="text" helixgroup="blog_details" label="HELIX_ULTIMATE_BLOG_OPEN_GRAPH_TWITTER_SITE" showon="og:1" />
 </div>
-
+</fieldset>
 			<fieldset name="component-styles" label="Layout Componente" addfieldpath="/plugins/system/t3/includes/depend">
 						
 								
