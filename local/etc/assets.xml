@@ -24,8 +24,7 @@
 				       global="1">
 				
 					<option value="default">t3-normal</option>
-					   <option value="sticky">Sticky</option>
-					
+					   <option value="sticky">Sticky</option>					
 				</field>
 
 				
@@ -50,20 +49,20 @@
 				       value="1"
 				       global="1" default="0"><option value="1" >JYES</option>
 					   <option value="0">JNO</option>
-					   </field>				
+					   </field>			
+</fieldset>
 
-				
+<fieldset name="social-share" label="Social Share" addfieldpath="/plugins/system/t3/includes/depend">
+				<field name="social_share" type="checkbox"  default="1" label="Compartir en redes" description="HELIX_ULTIMATE_BLOG_SOCIAL_SHARE_DESC" />
+		<field name="author_info" type="checkbox"  default="0" label="HELIX_ULTIMATE_BLOG_DETAILS_AUTHOR_INFO" description="HELIX_ULTIMATE_BLOG_DETAILS_AUTHOR_INFO_DESC" />
+		<field name="og" type="checkbox"  default="1" label="HELIX_ULTIMATE_BLOG_OPEN_GRAPH" description="HELIX_ULTIMATE_BLOG_OPEN_GRAPH_DESC" />
+		<field name="og_fb_id" type="text"  label="HELIX_ULTIMATE_BLOG_OPEN_GRAPH_FB_ID" showon="og:1" />
+		<field name="og_twitter_site" type="text"  label="HELIX_ULTIMATE_BLOG_OPEN_GRAPH_TWITTER_SITE" showon="og:1" />
 			</fieldset>
 
-<fieldset name="social">
-<field name="social_share" type="checkbox" helixgroup="blog_details" default="1" label="HELIX_ULTIMATE_BLOG_SOCIAL_SHARE" description="HELIX_ULTIMATE_BLOG_SOCIAL_SHARE_DESC" />
-		<field name="author_info" type="checkbox" helixgroup="blog_details" default="0" label="HELIX_ULTIMATE_BLOG_DETAILS_AUTHOR_INFO" description="HELIX_ULTIMATE_BLOG_DETAILS_AUTHOR_INFO_DESC" />
-		<field name="og" type="checkbox" helixgroup="blog_details" default="1" label="HELIX_ULTIMATE_BLOG_OPEN_GRAPH" description="HELIX_ULTIMATE_BLOG_OPEN_GRAPH_DESC" />
-		<field name="og_fb_id" type="text" helixgroup="blog_details" label="HELIX_ULTIMATE_BLOG_OPEN_GRAPH_FB_ID" showon="og:1" />
-		<field name="og_twitter_site" type="text" helixgroup="blog_details" label="HELIX_ULTIMATE_BLOG_OPEN_GRAPH_TWITTER_SITE" showon="og:1" />
-</div>
 
-</fieldset>
+
+
 			<fieldset name="component-styles" label="Layout Componente" addfieldpath="/plugins/system/t3/includes/depend">
 						
 								

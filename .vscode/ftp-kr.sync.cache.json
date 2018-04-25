@@ -1,5 +1,5 @@
 {
-  "ftp://ftp.intergraphix.com.ar:21@t3@intergraphix.com.ar": {
+  "ftp://190.7.56.83:21@t3@intergraphix.com.ar": {
     ".ftpquota": {
       "type": "-",
       "size": 15,
@@ -38,7 +38,7 @@
     },
     "error_log": {
       "type": "-",
-      "size": 1230,
+      "size": 8343,
       "lmtime": 0,
       "modified": false
     },
@@ -48,6 +48,7 @@
       "lmtime": 0,
       "modified": false
     },
+    "html": {},
     "images": {},
     "includes": {},
     "index.php": {
@@ -60,6 +61,7 @@
     "layouts": {},
     "less": {},
     "libraries": {},
+    "local": {},
     "media": {},
     "modules": {},
     "plugins": {},
