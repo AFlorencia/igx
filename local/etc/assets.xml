@@ -46,7 +46,12 @@
 				       value="1"
 				       global="1" default="0"><option value="1" >JYES</option>
 					   <option value="0">JNO</option>
-					   </field>			
+					   </field>		
+                       <field name="macos-color" type="color" class="t3tm-color" label="MAC OS COLOR" description="" />
+				<field name="android-bg" type="color" class="t3tm-color" label="Android BG COLOR" description="" />
+				<field name="android-theme" type="color" class="t3tm-color" label="Android THEME COLOR" description="" />
+				<field name="metro-theme" type="color" class="t3tm-color" label="Metro Theme  BG COLOR" description="" />
+				<field name="ios-color" type="color" class="t3tm-color" label="IOS COLOR" description="" />	
 </fieldset>
 
 <!--EXTRA PARAMS--->
