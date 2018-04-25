@@ -86,12 +86,7 @@
 					</fieldset>
 
 			
-	<fieldset name="jsfunctions" label="Landing Params" addfieldpath="/plugins/system/t3/includes/depend">
-			<field name="eqitems" type="text" label="Ajustar altos"/>
-			<field name="topblockid" type="text" label="# ID spot Top"/>
-			<field name="bottomblockid" type="text" label="# ID spot Bottom"/>
-			<field name="middleblockid" type="text" label="# ID spot Middle"/>
-		</fieldset> 		
+		
 			
 		</fields>
 	</config>
