@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <assets>
-	<scripts>
-		<file>
-			js/scripts.js
-		</file>
-	</scripts>
-	<stylesheets>
-		<file>
-			fonts/font-awesome/css/font-awesome.min.css
-		</file>
-	</stylesheets>
 	<config>
 		<fields name="params" addfieldpath="/plugins/system/t3/includes/depend">
-<!--EXTRA PARAMS--->
-			<fieldset name="extra_params" label="Extra Params" addfieldpath="/plugins/system/t3/includes/depend">								
+
+			<fieldset name="extra_params" label="Extra Params" addfieldpath="/plugins/system/t3/includes/depend">			
+				<field name="showcomponent"
+				       type="list"
+				       label="Mostrar componente"
+				       description="Ocultar componente"
+				       value="1"
+				       class="t3-admin-textarea"
+				       global="1" >
+					   <option value="1">Siempre</option>
+					   <option value="2">Solo home</option>
+					   <option value="3">Todos menos home</option>
+					  
+					   </field>
+				
+
+								
 				<field name="showslogan"
 				       type="radio"
 				       label="Mostrar Slogan"
@@ -29,9 +34,10 @@
 				       size="7"
 				       type="list"
 				       global="1">
-				
-					<option value="default">t3-normal</option>
-					   <option value="sticky">Sticky</option>					
+					<option value="acm">Usar header ACM</option>
+					<option value="T3-normal">t3-normal</option>
+					   <option value="sticky">Sticky</option>
+					
 				</field>
 
 				
@@ -56,27 +62,11 @@
 				       value="1"
 				       global="1" default="0"><option value="1" >JYES</option>
 					   <option value="0">JNO</option>
-					   </field>		
-                       <field name="macos-color" type="color" class="t3tm-color" label="MAC OS COLOR" description="" />
-				<field name="android-bg" type="color" class="t3tm-color" label="Android BG COLOR" description="" />
-				<field name="android-theme" type="color" class="t3tm-color" label="Android THEME COLOR" description="" />
-				<field name="metro-theme" type="color" class="t3tm-color" label="Metro Theme  BG COLOR" description="" />
-				<field name="ios-color" type="color" class="t3tm-color" label="IOS COLOR" description="" />	
-</fieldset>
+					   </field>
+				
 
-<!--EXTRA PARAMS--->
-<!--SOCIAL SHARE--->
-<fieldset name="social-share" label="Social Share" addfieldpath="/plugins/system/t3/includes/depend">
-				<field name="social_share" type="checkbox"  default="1" label="Compartir en redes" description="HELIX_ULTIMATE_BLOG_SOCIAL_SHARE_DESC" />
-		<field name="author_info" type="checkbox"  default="0" label="HELIX_ULTIMATE_BLOG_DETAILS_AUTHOR_INFO" description="HELIX_ULTIMATE_BLOG_DETAILS_AUTHOR_INFO_DESC" />
-		<field name="og" type="checkbox"  default="1" label="HELIX_ULTIMATE_BLOG_OPEN_GRAPH" description="HELIX_ULTIMATE_BLOG_OPEN_GRAPH_DESC" />
-		<field name="og_fb_id" type="text"  label="HELIX_ULTIMATE_BLOG_OPEN_GRAPH_FB_ID" showon="og:1" />
-		<field name="og_twitter_site" type="text"  label="HELIX_ULTIMATE_BLOG_OPEN_GRAPH_TWITTER_SITE" showon="og:1" />
+				
 			</fieldset>
-<!--SOCIAL SHARE--->
-
-
-
 			<fieldset name="component-styles" label="Layout Componente" addfieldpath="/plugins/system/t3/includes/depend">
 						
 								
@@ -96,8 +86,20 @@
 					</fieldset>
 
 			
-	
+	<fieldset name="jsfunctions" label="Landing Params" addfieldpath="/plugins/system/t3/includes/depend">
+			<field name="eqitems" type="text" label="Ajustar altos"/>
+			<field name="topblockid" type="text" label="# ID spot Top"/>
+			<field name="bottomblockid" type="text" label="# ID spot Bottom"/>
+			<field name="middleblockid" type="text" label="# ID spot Middle"/>
+		</fieldset> 		
 			
 		</fields>
 	</config>
+	<scripts>
+		<file>js/scripts.js</file>
+	</scripts>
+	
+	<stylesheets>
+		<file>fonts/font-awesome/css/font-awesome.min.css</file>
+	</stylesheets>
 </assets>
