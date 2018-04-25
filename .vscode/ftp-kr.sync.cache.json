@@ -38,9 +38,9 @@
     },
     "error_log": {
       "type": "-",
-      "size": 8343,
+      "size": 50333,
       "lmtime": 0,
-      "modified": false
+      "modified": true
     },
     "htaccess.txt": {
       "type": "-",

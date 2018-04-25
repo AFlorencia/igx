@@ -1,1 +1,95 @@
-nb
+<?xml version="1.0" encoding="utf-8"?>
+<assets>
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/t3/includes/depend">
+<!--EXTRA PARAMS--->
+			<fieldset name="extra_params" label="Extra Params" addfieldpath="/plugins/system/t3/includes/depend">								
+				<field name="showslogan"
+				       type="radio"
+				       label="Mostrar Slogan"
+				       description="Mostrar Slogan"
+				       value="1"
+				       global="1" default="0"><option value="1" >JYES</option>
+					   <option value="0">JNO</option>
+					   </field>
+					   
+				<field name="headertype"
+				       label="Tipo de cabecera"
+				       description="Tipo de cabecera (Sticky, stycky with logo, normal)"
+				       size="7"
+				       type="list"
+				       global="1">
+				
+					<option value="default">t3-normal</option>
+					   <option value="sticky">Sticky</option>					
+				</field>
+
+				
+				<field name="menualign"
+				       type="list"
+				       label="Alineación items de menú"
+				       description="Alineación items de menú (derecha, izquierda, centrada"
+				       size="7"
+				       class="t3-admin-textarea"
+				       global="1">
+					<option value="navbar-left">Izquierda</option>
+					<option value="navbar-right">Derecha</option>
+					<option value="navbar-center">Centrada</option>
+				</field>
+				
+			<field name="logocolsize" type="number" default="4" label="Tamaño de la columna del logotipo" description="Tamaño de la columna del logotipo" min="1" max="12" step="1" />
+				
+			<field name="back-to-top"
+				       type="radio"
+				       label="Mostrar botón ir arriba"
+				       description="Mostrar botón ir arriba"
+				       value="1"
+				       global="1" default="0"><option value="1" >JYES</option>
+					   <option value="0">JNO</option>
+					   </field>			
+</fieldset>
+
+<!--EXTRA PARAMS--->
+<!--SOCIAL SHARE--->
+<fieldset name="social-share" label="Social Share" addfieldpath="/plugins/system/t3/includes/depend">
+				<field name="social_share" type="checkbox"  default="1" label="Compartir en redes" description="HELIX_ULTIMATE_BLOG_SOCIAL_SHARE_DESC" />
+		<field name="author_info" type="checkbox"  default="0" label="HELIX_ULTIMATE_BLOG_DETAILS_AUTHOR_INFO" description="HELIX_ULTIMATE_BLOG_DETAILS_AUTHOR_INFO_DESC" />
+		<field name="og" type="checkbox"  default="1" label="HELIX_ULTIMATE_BLOG_OPEN_GRAPH" description="HELIX_ULTIMATE_BLOG_OPEN_GRAPH_DESC" />
+		<field name="og_fb_id" type="text"  label="HELIX_ULTIMATE_BLOG_OPEN_GRAPH_FB_ID" showon="og:1" />
+		<field name="og_twitter_site" type="text"  label="HELIX_ULTIMATE_BLOG_OPEN_GRAPH_TWITTER_SITE" showon="og:1" />
+			</fieldset>
+<!--SOCIAL SHARE--->
+
+
+
+			<fieldset name="component-styles" label="Layout Componente" addfieldpath="/plugins/system/t3/includes/depend">
+						
+								
+			<field name="leftcol" type="subform" formsource="templates/t3_bs3_blank/local/etc/left-col.xml" multiple="false" label="Left Column" description="Left Column... config" layout="joomla.form.field.subform.repeatable-table"/>
+			<field name="rightcol" type="subform" formsource="templates/t3_bs3_blank/local/etc/right-col.xml" multiple="false" label="Right Column" description="Right Column... config" layout="joomla.form.field.subform.repeatable-table"/>
+				<field name="topcmp" type="subform" formsource="templates/t3_bs3_blank/local/etc/cmp.xml" multiple="false" label="Cargar Arriba del componente estos módulos" description="..." layout="joomla.form.field.subform.repeatable-table"/>									
+			</fieldset>
+					
+			
+				<fieldset name="layout-styles" label="Crear Layout Mag" addfieldpath="/plugins/system/t3/includes/depend">
+						<field name="showinside" label="Mostrar dentro sitio"
+				      type="radio"
+				       description="..."
+				       value="0"
+				       global="0" default="0"><option value="1" >JYES</option><option value="0">JNO</option>   </field>
+		<field name="contacto" type="subform" formsource="templates/t3_bs3_blank/local/etc/columns.xml" multiple="true" label="Column" description="Columns" max="8" layout="joomla.form.field.subform.repeatable"/>
+					</fieldset>
+
+			
+	
+			
+		</fields>
+	</config>
+	<scripts>
+		<file>js/scripts.js</file>
+	</scripts>
+	
+	<stylesheets>
+		<file>fonts/font-awesome/css/font-awesome.min.css</file>
+	</stylesheets>
+</assets>
