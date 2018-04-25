@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <assets>
+	<scripts>
+		<file>
+			js/scripts.js
+		</file>
+	</scripts>
+	<stylesheets>
+		<file>
+			fonts/font-awesome/css/font-awesome.min.css
+		</file>
+	</stylesheets>
 	<config>
 		<fields name="params" addfieldpath="/plugins/system/t3/includes/depend">
 <!--EXTRA PARAMS--->
@@ -90,11 +100,4 @@
 			
 		</fields>
 	</config>
-	<scripts>
-		<file>js/scripts.js</file>
-	</scripts>
-	
-	<stylesheets>
-		<file>fonts/font-awesome/css/font-awesome.min.css</file>
-	</stylesheets>
 </assets>
