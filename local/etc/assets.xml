@@ -64,11 +64,8 @@
 					   <option value="0">JNO</option>
 					   </field>
 				
-
-				
-			</fieldset>
 			<!--SOCIAL SHARE--->
-<fieldset name="social-share" label="Social Share" addfieldpath="/plugins/system/t3/includes/depend">
+
 <field name="social_share" 
        type="radio"
 				       description="..."
