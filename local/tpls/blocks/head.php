@@ -16,13 +16,7 @@ $ios  = $this->params->get('ios-color');
 <!-- META FOR IOS & HANDHELD -->
 <?php if ($this->getParam('responsive', 1)): ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
-	<style type="text/stylesheet">
-		@-webkit-viewport   { width: device-width; }
-		@-moz-viewport      { width: device-width; }
-		@-ms-viewport       { width: device-width; }
-		@-o-viewport        { width: device-width; }
-		@viewport           { width: device-width; }
-	</style>	
+	
 	<script type="text/javascript">
 		//<![CDATA[
 		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
@@ -53,7 +47,7 @@ $this->addHead();
 <?php
 // CUSTOM CSS
 if (is_file(T3_TEMPLATE_PATH . '/css/custom.css')) {
-	$this->addStyleSheet(T3_TEMPLATE_URL . '/css/custom.css');
+	//$this->addStyleSheet(T3_TEMPLATE_URL . '/css/custom.css');
 }
 	$app = JFactory::getApplication();
 	$sitename = $app->getCfg('sitename');
@@ -62,6 +56,8 @@ if (!$sitename) {
 }
 
 ?>
+
+<link rel="stylesheet" href="templates/t3_bs3_blank/local/css/custom.css?<?php echo time(); ?>">
 
 <!-- Le HTML5 shim and media query for IE8 support -->
 <!--[if lt IE 9]>
