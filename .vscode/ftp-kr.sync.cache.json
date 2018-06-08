@@ -38,10 +38,11 @@
     },
     "error_log": {
       "type": "-",
-      "size": 55145,
+      "size": 215882,
       "lmtime": 0,
       "modified": true
     },
+    "etc": {},
     "htaccess.txt": {
       "type": "-",
       "size": 3005,
