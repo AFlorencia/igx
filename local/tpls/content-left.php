@@ -34,7 +34,7 @@ $menu = $app->getMenu();
  
  <?php if ($this->params->get('headertype')=="default"): ?>
   <?php $this->loadBlock('header-default') ?>
-  <?php $this->loadBlock('mainnav') ?>
+  <?php //$this->loadBlock('mainnav') ?>
     <?php endif;?>
 
   <?php if ($this->params->get('headertype')=="sticky"): ?> 
