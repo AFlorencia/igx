@@ -13,20 +13,33 @@ $slogan    = $this->params->get('slogan', '');
 $navbaralign = $this->params->get('menualign');
 $navposition = $this->params->get('headertype');
 $sitename  = $this->params->get('sitename');
+<<<<<<< HEAD
 $logosize = $this->params->get('logocolsize', 'number');
 $othercolsize = 12-$logosize;
+=======
+
+>>>>>>> 5b5783aa06772566c865ac81306648041ec2c504
 ?>
 
 
 <!-- MAIN NAVIGATION -->
+<<<<<<< HEAD
 <header class="nav-logo">
+=======
+<header class="nav sticky-nav">
+>>>>>>> 5b5783aa06772566c865ac81306648041ec2c504
 
 <?php if ($this->countModules('header-spot')) : ?>
 <div class="topbar"><?php $this->loadBlock('header-spot'); ?></div>
 <?php endif ?>
 
+<<<<<<< HEAD
 <nav id="t3-mainnav" class="wrap navbar navbar-custom t3-mainnav">
 	<div class="nav-wrap row">
+=======
+<nav id="t3-mainnav" class="wrap navbar navbar-default t3-mainnav">
+	<div class="container">
+>>>>>>> 5b5783aa06772566c865ac81306648041ec2c504
 		
 		<?php if ($this->getParam('addon_offcanvas_enable')) : ?>
 				<?php $this->loadBlock ('off-canvas') ?>
@@ -35,7 +48,11 @@ $othercolsize = 12-$logosize;
 
 
 
+<<<<<<< HEAD
 		 <div class="navbar-header page-scroll col-xs-12 col-sm-<?php echo $logosize ?>">
+=======
+		 <div class="navbar-header page-scroll">
+>>>>>>> 5b5783aa06772566c865ac81306648041ec2c504
                
                 <div class="navbar-brand">
 
@@ -61,7 +78,11 @@ $othercolsize = 12-$logosize;
                 </button>
 </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
+<<<<<<< HEAD
             <div class="collapse navbar-collapse col-xs-12 col-sm-<?php echo $othercolsize ?> " id="topnav">
+=======
+            <div class="collapse navbar-collapse" id="topnav">
+>>>>>>> 5b5783aa06772566c865ac81306648041ec2c504
                 <jdoc:include type="<?php echo $this->getParam('navigation_type', 'megamenu') ?>" name="<?php echo $this->getParam('mm_type', 'mainmenu') ?>" />
             </div>	
 			

@@ -35,7 +35,11 @@
 				       type="list"
 				       global="1">
 					<option value="acm">Usar header ACM</option>
+<<<<<<< HEAD
 					<option value="T3-normal">t3-normal</option>
+=======
+					<option value="default">t3-normal</option>
+>>>>>>> 5b5783aa06772566c865ac81306648041ec2c504
 					   <option value="sticky">Sticky</option>
 					
 				</field>
