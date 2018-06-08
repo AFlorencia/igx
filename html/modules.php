@@ -53,14 +53,20 @@ function modChrome_spot($module, &$params, &$attribs)
 	$moduleIntro    = $params->get('module-intro');
   $bgImage        = $params->get('module-background');
   $bgImageSize    = $params->get('module-background-size');
+  
+  	$customTitle		= $params->get('custom-title');
+  	$headerLevel =  $params->get('header-level');
   $bgImagePo      = $params->get('module-background-position','center center');
   $moduleBg       = $bgImage ? 'style="background-image: url(' . JUri::base(true) . '/' . $bgImage . '); background-repeat: no-repeat; background-position: '.$bgImagePo.'; background-size: '.$bgImageSize.'"' : '';
+  
+ 
+  
 	if (!empty ($module->content)) {
 		
 		
 		$html ='<section id="'.$moduleId.'" class="main-box '.$moduleClassSfx.'" '.$moduleBg.'>';
 
-
+$boxClass = "wrapper";
 
 $titleClass="";
 
@@ -74,7 +80,10 @@ if ($isbox==='1'){
 }
 
 
-
+ 	if (!empty ($customTitle))
+  	{
+  	   	$html .='<'.$headerLevel.'><span>'.$module->title.'</span></'.$headerLevel.'>';
+  	}
 
 
 
