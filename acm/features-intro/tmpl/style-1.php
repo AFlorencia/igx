@@ -4,7 +4,9 @@
 	$featuresBackground  = 'background-image: url("'.$featuresImg.'"); background-repeat: no-repeat; background-size: cover; background-position: center center;';
 	$count      = $helper->getRows('data.title');
 	$col        = $helper->get('columns');
-?>
+	$colzise	= 12 / $col;
+
+	?>
 
 
 <div class="section-inner <?php echo $helper->get('block-extra-class'); ?>" <?php if($featuresImg): echo 'style="'.$featuresBackground.'"'; endif; ?>>
@@ -17,12 +19,13 @@
 			
 			<div class="<?php if(!$fullWidth): ?> row <?php else: ?> clearfix <?php endif; ?> ">
 			<?php
+
 			
 			for ($i=0; $i < $count; $i++) :
-        //  if ($i%$col==0) echo '<div class="row">'; 
+          if ($i%$col==0) echo '<div class="row">'; 
 				?>
 			
-				<div class="features-item col-sm-4">
+				<div class="features-item col-sm-<?php echo $colzise; ?>">
 					<div class="f-item">
 					<?php if($helper->get('data.title', $i)) : ?>
 						<h3><?php echo $helper->get('data.title', $i) ?></h3>
@@ -43,7 +46,7 @@
 						<p><?php echo $helper->get('data.description', $i) ?></p>
 					<?php endif ; ?>
 				</div></div>
-				<?php // if ( ($i%$col==($col-1)) || $i==($count-1) )  echo '</div>'; ?>
+				<?php  if ( ($i%$col==($col-1)) || $i==($count-1) )  echo '</div>'; ?>
 			<?php endfor ?>
 			</div>
 		<?php if(!$fullWidth): ?></div><?php endif; ?>
