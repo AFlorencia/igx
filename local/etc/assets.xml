@@ -33,10 +33,7 @@
 				       description="Tipo de cabecera (Sticky, stycky with logo, normal)"
 				       size="7"
 				       type="list"
-				       global="1">
-					<option value="acm">Usar header ACM</option>
-
-					<option value="T3-normal">t3-normal</option>
+				       global="1">				
 
 					<option value="default">t3-normal</option>
 
