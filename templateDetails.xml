@@ -43,8 +43,8 @@
 	</files>
 	
 	<languages folder="language">
-			<language tag="en-GB">en-GB/en-GB.tpl_t3_bs3_blank.sys.ini</language>
-	
+			<language tag="en-GB">en-GB/en-GB.tpl_uber.ini</language>
+			<language tag="en-GB">en-GB/en-GB.tpl_uber.sys.ini</language>	
 	</languages>
 
 	<positions>
