@@ -43,8 +43,8 @@
 	</files>
 	
 	<languages folder="language">
-			<language tag="en-GB">en-GB/en-GB.tpl_uber.ini</language>
-			<language tag="en-GB">en-GB/en-GB.tpl_uber.sys.ini</language>	
+			<language tag="es-ES">es-ES/es-ES.mod_ja_acm.ini</language>
+			<language tag="es-ES">es-ES/es-ES.mod_ja_acm.sys.ini</language>	
 	</languages>
 
 	<positions>
