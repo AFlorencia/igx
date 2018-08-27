@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
 	<fields name="params">
-		<fieldset name="custom-field" label="Estilos personalizados" description="">
+		<fieldset name="custom-field" label="JA Extra Fields" description="">
 			<field name="module-intro" type="textarea" default="" label="TPL_MENU_ITEM_MODULE_INTRO_LABEL" description="TPL_MENU_ITEM_MODULE_INTRO_DESC" filter="RAW" />
       <field name="module-background" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
       <field name="module-background-size" type="text" default="cover" label="TPL_MENU_ITEM_MODULE_BACKGROUNDSIZE_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUNDSIZE_DESC" />
       <field name="module-background-position" type="text" default="center center" label="TPL_MENU_ITEM_MODULE_BACKGROUNDPO_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUNDPO_DESC" />
-	  <field name="moduleID" type="text" default="" label="Nombre del Anchor" description="id para el link del menú que enlaza este módulo" />
- 
-            <field name="module-bg-color" type="text" default="" label="Color del fondo del módulo" description="color del fondo del módulo"/>
-	<field name="showimg" type="radio"
-						default="0"
-						label="Usar imagen de relleno"
-						description="">
-            <option value="0">SI</option>
-						<option value="1">NO</option>
-</field>
-<field name="txtsize" label="Tamaño del texto" type="text" default="20"/>
-<field name="bgcolor" type="color" label="Color del fondo" />
     </fieldset>
 				
   </fields>
