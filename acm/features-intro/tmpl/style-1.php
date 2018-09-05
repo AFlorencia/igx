@@ -16,7 +16,10 @@
 			<?php if($helper->get('features-description')) : ?>
 				<h2 class="features-description"><?php echo $helper->get('features-description'); ?></h2>
 			<?php endif ; ?>
-			
+
+			<?php if($helper->get('block-intro')): ?>
+			<div class="container-sm section-intro"><?php echo $helper->get('block-intro'); ?></div>
+		<?php endif; ?>	
 		
 			<?php
 
