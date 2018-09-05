@@ -9,7 +9,13 @@
 	  <field name="moduleID" type="text" default="" label="Nombre del Anchor" description="id para el link del menú que enlaza este módulo" />
  
             <field name="module-bg-color" type="text" default="" label="Color del fondo del módulo" description="color del fondo del módulo"/>
-	<field name="showimg" 
+	<field name="isbox" type="radio" label="Poner en caja"> 
+<option value="1">Si</option>
+
+
+<option option="0">No</option>
+</field>
+			<field name="showimg" 
 
 						label="Usar imagen de relleno"
                          type="radio"
