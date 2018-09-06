@@ -203,16 +203,7 @@
 					useglobal="true"
 					size="3"
 				/>
-				<field
-					name="thumbWidth"
-					type="text"
-					label="Ancho de la miniatura"
-					/>
-				<field
-					name="thumbHeight"
-					type="text"
-					label="Alto de la miniatura"
-					/>
+
 				<field
 					name="num_links"
 					type="text"

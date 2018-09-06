@@ -90,7 +90,7 @@ $afterDisplayContent = trim(implode("\n", $results));
 	$counter = 0;
 	?>
 <div class="pack-box">
-	
+	<div class="image-box"></div>
 	<?php if (!empty($this->intro_items)) : ?>
 		<?php foreach ($this->intro_items as $key => &$item) : ?>
 			<?php $rowcount = ((int) $key % (int) $this->columns) + 1; ?>
