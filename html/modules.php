@@ -64,7 +64,7 @@ function modChrome_spot($module, &$params, &$attribs)
 	if (!empty ($module->content)) {
 		
 		
-		$html ='<section id="'.$moduleId.'" class="main-box '.$moduleClassSfx.'" '.$moduleBg.'>';
+		$html ='<section id="'.$moduleId.'" class="main-box '.$moduleId.'" '.$moduleBg.'>';
 
 $boxClass = "wrapper";
 
@@ -87,7 +87,7 @@ if ($isbox==='1'){
 
 
 
-$html .= '<div class="'.$moduleId.'">';
+$html .= '<div class="'.$boxClass.'">';
 
 
 		$html .= '<div class="content">';
