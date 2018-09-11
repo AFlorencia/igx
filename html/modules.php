@@ -87,7 +87,7 @@ if ($isbox==='1'){
 
 
 
-$html .= '<div class="'.$boxClass.'">';
+$html .= '<div class="'.$moduleId.'">';
 
 
 		$html .= '<div class="content">';
