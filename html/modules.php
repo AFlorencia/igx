@@ -64,7 +64,7 @@ function modChrome_spot($module, &$params, &$attribs)
 	if (!empty ($module->content)) {
 		
 		
-		$html ='<section id="'.$moduleId.'" class="main-box '.$moduleId.'" '.$moduleBg.'>';
+		$html ='<section id="'.$moduleId.'" class="main-box '.$moduleClassSfx.'" '.$moduleBg.'>';
 
 $boxClass = "wrapper";
 
@@ -217,24 +217,30 @@ function modChrome_t3modalB($module, &$params, &$attribs)
 
 	if (!empty ($module->content)) : ?>
 
-	<div class="moduletable <?php echo $params->get('moduleclass_sfx'); ?> modalmodule">
-		<div class="t3-module-title">
-			<a href="#module<?php echo $module->id ?>" role="button" class="btn" data-toggle="modal">
-				<h<?php echo $headerLevel; ?>><span><?php echo $module->title; ?></span></h<?php echo $headerLevel; ?>>
-			</a>
-		</div>
-		<div id="module<?php echo $module->id ?>" class="modal hide fade" aria-hidden="true">
-			<div class="modal-header">
-				<h<?php echo $headerLevel; ?>><span><?php echo $module->title; ?></span></h<?php echo $headerLevel; ?>>
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 
-			</div>
-			<div class="t3-module-body">
-				<?php echo $module->content; ?>
-			</div>
-		</div>
-	</div>
 	
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<?php echo $params->get('moduleclass_sfx'); ?>">
+<?php echo $module->title; ?>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="<?php echo $params->get('moduleclass_sfx'); ?>" tabindex="-1" role="dialog" aria-labelledby="<?php echo $module->title; ?>">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="<?php echo $params->get('moduleclass_sfx'); ?>_title"><?php echo $params->get('moduleclass_sfx'); ?></h4>
+      </div>
+      <div class="modal-body">
+      <?php echo $module->content; ?>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+
 	<?php endif;  
 }
 
