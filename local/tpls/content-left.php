@@ -50,7 +50,7 @@ $menu = $app->getMenu();
 <?php $this->loadBlock('spotlight-2') ?>
 <?php $this->loadBlock('spotlight-3') ?>
 <?php $this->loadBlock('home') ?>
-<?php $this->loadBlock('home-full') ?>
+
 <?php	$this->loadBlock('mainbody-content-left');?>
 
 
