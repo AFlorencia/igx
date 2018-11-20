@@ -30,8 +30,83 @@ $anchorclass = $this->params->get('Anchor class');
 <head>
 <jdoc:include type="head" />
 <?php $this->loadBlock('head') ?>
+
+
+ <?php  if($this->params->get('preload')==="1"){ ?>
+ <style>
+div#preloader {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: <?php echo $this->params->get('preloadcolor'); ?>;
+    position: absolute;
+    background: <?php echo $this->params->get('preloadbgcolor'); ?>;
+    z-index: 99999;
+    top: 0;
+}
+.svg-path{
+
+}
+@media(max-width: 480px){
+    #preloader svg{
+ 
+    overflow: visible;
+    transform: scale(0.5);
+}
+}
+.preloadme {
+  
+}
+
+body.loading {
+    padding: 0;
+    overflow: hidden;
+}
+
+.svg-icon {
+	-webkit-animation: rotate-center 1.2s linear infinite both;
+	        animation: rotate-center 1.2s linear infinite both;
+}
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+<?php  if($this->params->get('preloadcss')==="1"){ ?>
+
+<?php echo $this->params->get('preloadcss'); ?>
+
+<? } ?>
+</style>
+<?php }  ?>
+
 </head>
-<body data-spy="scroll" data-target=".navbar">
+
+<body data-spy="scroll" data-target=".navbar" class="loading">
+
+ <?php  if ($this->params->get('preload')==="1"){ ?>
+<div id="preloader">
+  <?php $this->loadBlock('preload'); ?>
+</div>
+ <?php } ?>
 
 <div class="t3-wrapper"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
 
@@ -41,46 +116,53 @@ $anchorclass = $this->params->get('Anchor class');
 <?php $this->loadBlock('spot-top') ?>
 <?php $this->loadBlock('navhelper') ?>
 <?php $this->loadBlock('spot-bottom') ?>
+<?php	$this->loadBlock('mainbody-content-left');?>
+
 <?php $this->loadBlock('footer') ?>
 
 
 </div>
- <?php 
- 
- if ($this->params->get('back-to-top')==="1"): ?>
-<div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top">
- 
-  <button class="btn btn-primary" title="Ir Arriba"><i class="fa fa-angle-up"></i></button>
- 
-</div>
-</div>
+<?php
+$delay = $this->params->get('preloadtime') - 100;
+if ($this->params->get('preload')==="1"){ 
+  
+  
+  ?>
 <script type="text/javascript">
+jQuery(window).on('load', function() { // makes sure the whole site is loaded 
+  
+  jQuery('#preloader').delay(<?php echo $delay; ?>).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+  jQuery('body').delay(<?php echo $this->params->get('preloadtime'); ?>).css({'overflow':'visible'});
  
- (function($) {
+
+
+  jQuery('.preloadme').fadeIn();
+  jQuery('body').removeClass('loading');
  
+});
+</script>
+<?php } ?>
+
+ <?php  if ($this->params->get('back-to-top')==="1") { ?>
+<div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top"> 
+  <button class="btn btn-primary" title="Ir Arriba"><i class="fa fa-angle-up"></i></button> 
+</div>
+</div>
+
+<script type="text/javascript"> 
+ (function($) { 
  // Back to top
-
  $('#back-to-top').on('click', function(){
-
 	 $('html, body').animate({scrollTop: 0}, 500);
-
 	 return false;
-
  });
 
 })(jQuery);
  
-</script>
- 
-
-<?php endif;
-
-?>
+</script> 
+<?php  } ?>
 
 
-
-<script type="text/javascript" src="<?php echo T3_TEMPLATE_URL ?>/js/easing.js"></script>
-<script type="text/javascript" src="<?php echo T3_TEMPLATE_URL ?>/js/scripts.js"></script>
 
 <script>
 
@@ -88,15 +170,13 @@ $anchorclass = $this->params->get('Anchor class');
 (function ($) {	
 
 
-
 $('.nav li').click(function() {
 	
 	$(this).siblings('li').removeClass('active'); 
 	$(this).addClass('active'); });
 
-$(document).on('click', '.t3-mainnav a', function(event) {
-        var $anchor = $(this);
-
+$(document).on('click', '.t3-mainnav a, .f-item a', function(event) {
+          var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: ($($anchor.attr('href')).offset().top - 50)
 		}, 1250, 'easeInOutExpo');
@@ -109,6 +189,8 @@ $(document).on('click', '.t3-mainnav a', function(event) {
     $('.navbar-collapse ul li a').click(function(){ 
             $('.navbar-toggle:visible').click();
     });
+
+
 
 
 })(jQuery);

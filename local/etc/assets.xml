@@ -65,10 +65,10 @@
 					   <option value="0">JNO</option>
 					   </field>
 				
-<field name="android-bg" type="color" label="Android Color" />
+
 				
 			</fieldset>
-
+<!-- TODO FOR BLOGS
 <fieldset name="social" label="Social">
 
 <field name="social_share" type="checkbox" helixgroup="blog_details" default="1" label="HELIX_ULTIMATE_BLOG_SOCIAL_SHARE" description="HELIX_ULTIMATE_BLOG_SOCIAL_SHARE_DESC" />
@@ -77,9 +77,9 @@
 		<field name="og_fb_id" type="text" helixgroup="blog_details" label="HELIX_ULTIMATE_BLOG_OPEN_GRAPH_FB_ID" showon="og:1" />
 		<field name="og_twitter_site" type="text" helixgroup="blog_details" label="HELIX_ULTIMATE_BLOG_OPEN_GRAPH_TWITTER_SITE" showon="og:1" />
 
-</fieldset>
+</fieldset>  -->
 
-
+<!-- TODO FOR BLOGS
 			<fieldset name="component-styles" label="Layout Componente" addfieldpath="/plugins/system/t3/includes/depend">
 						
 								
@@ -87,7 +87,7 @@
 			<field name="rightcol" type="subform" formsource="templates/t3_bs3_blank/local/etc/right-col.xml" multiple="false" label="Right Column" description="Right Column... config" layout="joomla.form.field.subform.repeatable-table"/>
 				<field name="topcmp" type="subform" formsource="templates/t3_bs3_blank/local/etc/cmp.xml" multiple="false" label="Cargar Arriba del componente estos módulos" description="..." layout="joomla.form.field.subform.repeatable-table"/>									
 			</fieldset>
-					
+			
 			
 				<fieldset name="layout-styles" label="Crear Layout Mag" addfieldpath="/plugins/system/t3/includes/depend">
 						<field name="showinside" label="Mostrar dentro sitio"
@@ -98,8 +98,25 @@
 		<field name="contacto" type="subform" formsource="templates/t3_bs3_blank/local/etc/columns.xml" multiple="true" label="Column" description="Columns" max="8" layout="joomla.form.field.subform.repeatable"/>
 					</fieldset>
 
-			
-		
+-->					
+		<fieldset name="preload" label="Preloader">
+
+<field name="preload"  type="radio"
+				       label="Mostrar preloader"
+				       value="1"
+				       global="1" default="0">
+                       <option value="1" >JYES</option>
+					   <option value="0">JNO</option>
+					   </field>
+
+<field name="preloadtext" type="text" label="Texto del preloader" default="Cargando" showon="preload:1" />                     
+
+<field name="preloadtime" type="text" label="Tiempo de precarga (ms)" showon="preload:1" default="500" />
+<field name="preloadcolor" type="color" label="Color del texto" default="#333" />
+<field name="preloadbgcolor" type="color" label="Color del fondo" default="#fff" />
+<field name="svgpreload" type="textarea" label="SVG de la precarga" showon="preload:1" filter="raw"/>
+<field name="preloadcss" type="textarea" label="CSS personalizado para el preloader" showon="preload:1" filter="raw"/>
+</fieldset>  -->
 			
 		</fields>
 	</config>

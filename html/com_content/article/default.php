@@ -34,6 +34,51 @@ $icons = !empty($this->print) || $canEdit || $params->get('show_print_icon') || 
 // Check if associations are implemented. If they are, define the parameter.
 $assocParam = (JLanguageAssociations::isEnabled() && $params->get('show_associations'));
 JHtml::_('behavior.caption');
+//add facebook tags
+$doc = JFactory::getDocument();
+$fbog .= '<meta property="og:url" content="http://'.($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']).'"/>'."\n";
+$fbog = '<meta property="og:type" content="article"/>'."\n";
+$fbog .= '<meta property="og:site_name" content="AtmabHava"/>'."\n";
+$fbog .= '<meta property="og:title" content="'.$this->item->title.'"/>'."\n";
+
+
+
+//$fbog .= '<meta property="og:author" content="1112147599"/>'."\n";
+$fbog .= '<meta property="og:locale" content="es_ES">'."\n";
+if (isset($images->image_fulltext) && !empty($images->image_fulltext)) {
+ $fbog .= '<meta property="og:image" content="'.JURI::base().$images->image_fulltext.'" />' ."\n";
+/*
+$fbog .='<meta property="og:image" content="http://example.com/ogp.jpg" />';
+$fbog .='<meta property="og:image:secure_url" content="https://secure.example.com/ogp.jpg" /> ';
+$fbog .='<meta property="og:image:type" content="image/jpeg" /> ';
+$fbog .='<meta property="og:image:width" content="400" /> ';
+$fbog .='<meta property="og:image:height" content="300" />';
+*/
+}
+if (isset($images->image_fulltext) && !empty($images->image_fulltext)) {
+ $fbog .= '<meta property="og:image:url" content="'.JURI::base().$images->image_fulltext.'" />' ."\n";
+
+$fbog .='<meta property="og:image" content="'.JURI::base().$images->image_fulltext.'" />';
+//$fbog .='<meta property="og:image:secure_url" content="https://secure.example.com/ogp.jpg" /> ';
+$fbog .='<meta property="og:image:type" content="image/jpeg" /> ';
+$fbog .='<meta property="og:image:width" content="400" /> ';
+$fbog .='<meta property="og:image:height" content="300" />';
+
+}
+$fbog .= '<meta property="fb:admins" content="1112147599">'."\n";
+$fbog .= '<meta property="article:published_time" content="'.JHtml::_('date', $this->item->publish_up, JText::_('DATE_FORMAT_LC4')).'" />'."\n";
+$fbog .= '<meta property="article:modified_time" content="'.JHtml::_('date', $this->item->modified, JText::_('DATE_FORMAT_LC4')).'" />' ."\n";
+if ($this->item->publish_down != '0000-00-00 00:00:00') {
+ $fbog .= '<meta property="article:expiration_time" content="'.JHtml::_('date', $this->item->publish_down, JText::_('DATE_FORMAT_LC4')).'" />' ."\n";
+}else{
+ $fbog .= '<meta property="article:expiration_time" content="3000-01-01" />' ."\n";
+}
+$fbog .= '<meta property="article:section" content="'.$this->escape($this->item->category_title).'" />' ."\n";
+if ($this->item->tags->itemTags != null) {
+ $this->item->rawtagLayout = new JLayoutFile('joomla.content.rawtags');
+ $fbog .= '<meta property="article:tag" content="'.$this->item->rawtagLayout->render($this->item->tags->itemTags).'" />' ."\n";
+}
+$doc->addCustomTag($fbog);
 ?>
 
 <!-- Page header -->
