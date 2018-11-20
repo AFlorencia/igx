@@ -13,7 +13,7 @@ $slogan    = $this->params->get('slogan', '');
 $navbaralign = $this->params->get('menualign');
 $navposition = $this->params->get('headertype');
 $sitename  = $this->params->get('sitename');
-
+$showslogan = $this->params->get('showslogan','0');
 ?>
 
 
