@@ -48,8 +48,8 @@
         line-height: (@toggle-size - 10px) / 2;
         font-size: 21px;
         transition: all 350ms linear;
-        margin: (@body-padding - 10px) / 4;
-        margin: 0 15px;
+    //    margin: (@body-padding - 10px) / 4;
+    //    margin: 0 15px;
         grid-area: toggle;
     }
 
@@ -77,7 +77,7 @@
             display: grid;
             align-items: center;
             grid-template-areas: "nav-header topnav";
-            grid-template-columns: 25% 75%;
+            grid-template-columns:  @grid-template-columns-header;
         }
         .small-nav .navbar-default .navbar-nav>li>a {
             padding-top: 0;
@@ -100,7 +100,7 @@
             }
         }
         .navbar-toggle {
-            margin: 5px;
+           // margin: 5px;
         }
     }
 
