@@ -113,6 +113,7 @@ description="T3_TM_VARS_IMPORT_EXTERNAL_URLS_DESC" />
 <field name="navbar-header-padding" type="text"  label="navbar-header-padding" description="" default="5px"/>
 <field name="navbar-header-height" type="text"  label="navbar-header-height" description="" default="@body-padding"/>
 <field name="nav-link-size" type="text"  label="Nav Link  Size" description="Nav Link  Size" default="@body-padding"/>
+<field name="grid-template-columns-header" type="text"  label="Nav Link  Size" description="Nav Link  Size" default="25% 75%"/>
 
 </fieldset>
 
