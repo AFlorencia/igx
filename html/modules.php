@@ -409,3 +409,84 @@ function modChrome_popover($module, &$params, &$attribs)
 	</div>
 	<?php endif;  
 }
+
+
+function modChrome_spot_map($module, &$params, &$attribs)
+{ 
+
+	$badge          = preg_match ('/badge/', $params->get('moduleclass_sfx'))? '<span class="badge">&nbsp;</span>' : '';
+	$moduleTag      = htmlspecialchars($params->get('module_tag', 'div'));
+	$headerTag      = htmlspecialchars($params->get('header_tag', 'h3'));
+	$headerClass    = $params->get('header_class');
+	$moduleId		= $params->get('moduleID');
+	$modulebgcolor  = $params->get('module-bg-color');
+	$textcolor  = $params->get('textcolor');
+	$bootstrapSize  = $params->get('bootstrap_size');
+	$moduleClass    = !empty($bootstrapSize) ? ' col-md-' . (int) $bootstrapSize . '' : '12';
+	$modulecontentClass = $params->get('modulecontentClass');
+	$moduleClassSfx = htmlspecialchars($params->get('moduleclass_sfx'));
+	$isbox = htmlspecialchars($params->get('isbox'));
+	$moduleIntro    = $params->get('module-intro');
+  $bgImage        = $params->get('module-background');
+  $bgImageSize    = $params->get('module-background-size');
+  
+  	$customTitle		= $params->get('custom-title');
+  	$headerLevel =  $params->get('header-level');
+  $bgImagePo      = $params->get('module-background-position','center center');
+  $moduleBg       = $bgImage ? 'style="background-image: url(' . JUri::base(true) . '/' . $bgImage . '); background-repeat: no-repeat; background-position: '.$bgImagePo.'; background-size: '.$bgImageSize.'"' : '';
+  $gmap = $params->get('gmap');
+ 
+  
+	if (!empty ($module->content)) {
+		
+		
+		$html ='<section id="'.$moduleId.'" class="main-box '.$moduleClassSfx.' '.$moduleId.'" '.$moduleBg.'>';
+
+$boxClass = "wrapper";
+
+$titleClass="";
+
+if($isbox===0){
+	
+	$boxClass = 'wrapper';
+}
+
+if ($isbox==='1'){
+	$boxClass = 'container';
+}
+
+
+ 	if (!empty ($customTitle))
+  	{
+  	   	$html .='<'.$headerLevel.'><span>'.$module->title.'</span></'.$headerLevel.'>';
+  	}
+
+
+
+$html .= '<div class="'.$boxClass.'">';
+
+
+		$html .= '<div class="content">';
+					
+
+		if ($module->showtitle != 0) {
+			$html .= '<div class="module-title">';
+		
+		
+			$html .='<'.$headerTag.'><span>'.$module->title.'</span></'.$headerTag.'>';
+		
+			$html .= '</div>';
+		}
+
+
+
+	
+		$html .= '<div class="module-ct '.$modulecontentClass.'" id="item-box-'.$module->id.'"><div class="embed-responsive embed-responsive-16by9 gmap">
+		<iframe class="embed-responsive-item" src="'.$params->get('gmap').'" style="width:100%;"></iframe>
+		</div></div>';
+		$html .= "</div></div>";
+
+		$html .= '</section>'; //id
+		echo $html;
+	}
+}
