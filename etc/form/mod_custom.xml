@@ -31,6 +31,11 @@
 <field name="width" type="text" label="Ancho" />
 <field name="height" type="text" label="Alto" />
     </fieldset>
-				
+
+<fieldset name="gmap" label="Google Map">
+<field name="gmap" label="Google URL" type="text" />
+</fieldset>
+
+
   </fields>
 </form>
