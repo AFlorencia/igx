@@ -32,7 +32,7 @@ $anchorclass = $this->params->get('Anchor class');
 <?php $this->loadBlock('head') ?>
 
 
- <?php  if($this->params->get('preload')==="1"){ ?>
+ <?php  if($this->params->get('preload')==1){ ?>
  <style>
 div#preloader {
     width: 100%;
@@ -90,19 +90,26 @@ body.loading {
             transform: rotate(360deg);
   }
 }
-<?php  if($this->params->get('preloadcss')==="1"){ ?>
 
-<?php echo $this->params->get('preloadcss'); ?>
+<?php
+ if($this->params->get('preloadcss')==1){ 
+//echo '<style>';
+echo $this->params->get('preloadcss');
+//echo '</style>';
+ }
+ ?>
+
+
+</style>
 
 <? } ?>
-</style>
-<?php }  ?>
+
 
 </head>
 
 <body data-spy="scroll" data-target=".navbar" class="loading">
 
- <?php  if ($this->params->get('preload')==="1"){ ?>
+ <?php  if ($this->params->get('preload')==1){ ?>
 <div id="preloader">
   <?php $this->loadBlock('preload'); ?>
 </div>
@@ -194,6 +201,55 @@ $(document).on('click', '.t3-mainnav a, .f-item a', function(event) {
 
 
 })(jQuery);
+
+AOS.init();
+
+</script>
+<script type="text/javascript">
+
+
+  
+
+
+jQuery('#planes').waypoint(function() {
+	  
+	       setTimeout(function(){
+
+        jQuery('.progress .progress-bar').each(function() {
+            var me = jQuery(this);
+            var perc = me.attr("data-percentage");
+
+            //TODO: left and right text handling
+
+            var current_perc = 0;
+
+            var progress = setInterval(function() {
+                if (current_perc>=perc) {
+                    clearInterval(progress);
+                } else {
+                    current_perc +=1;
+                    me.css('width', (current_perc)+'%');
+                }
+
+              //  me.text((current_perc)+'%');
+
+            }, 10);
+
+        });
+
+    },200);
+	jQuery(this).css('color','red');
+	//console.log('focused');
+	  
+  });
+
+	 
+	   jQuery('.progress .progress-bar').each(function() {
+		     var me = jQuery(this);
+		   me.css('width', 0+'%');
+	   
+	   });
+ 
 
 </script>
 
