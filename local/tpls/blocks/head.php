@@ -74,3 +74,18 @@ if (!$sitename) {
 <link rel="mask-icon" href="safari-pinned-tab.svg" color="<?php echo $macos; ?>">
 <meta name="msapplication-TileColor" content="<?php echo $metrotheme; ?>">
 <meta name="theme-color" content="<?php echo $androidtheme; ?>">
+<?php 
+$doc = JFactory::getDocument();
+if($this->params->get('easing')==1){
+	$doc->addScript (T3_TEMPLATE_URL.'/js/easing.js');
+}
+
+if($this->params->get('aos')==1){
+	$doc->addScript (T3_TEMPLATE_URL.'/js/aos.js');
+	echo'<script>';
+echo 'AOS.init();';
+echo '</script>';
+	$doc->addStyleSheet (T3_TEMPLATE_URL.'/css/aos.css');
+	}
+
+?>
