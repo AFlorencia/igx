@@ -4,22 +4,42 @@ $fullWidth = $helper->get('full-width');
 $featuresBackground  = 'background-image: url("'.$featuresImg.'"); background-repeat: no-repeat; background-size: cover; background-position: center center;';
 $count      = $helper->getRows('data.title');
 $col        = $helper->get('columns');
-$colzise	= 12 / $col;
+
+$aos ='';
+if($helper->get('animate')==1){
+$aos = ' data-aos="'.$helper->get('animations').'" data-aos-easing="'.$helper->get('easing').'"';
+}
 ?>
 <div class="acm-features <?php echo $helper->get('features-style'); ?> style-1">
 
 <?php if($helper->get('features-description')) : ?>
 <h2 class="features-description"><?php echo $helper->get('features-description'); ?></h2>
 <?php endif ; ?>
+<div class="flex-row">
+<?php
+$doc = JFactory::getDocument();
+// Add styles
+$gridGap = "";
+$colWidth = "";
+$cols = $helper->get('columns');
+$gap =$helper->get('gap');
 
+$gridGap = $gap * $cols;
+$colWidth = (1140 - $gridGap) / $cols;
+$style = '.flex-row {'.
+         'grid-template-columns: repeat(auto-fill, minmax('.$colWidth.'px, 1fr));'.
+         'grid-gap: '.$gap.'px;'.
+           '}'; 
+$doc->addStyleDeclaration($style);
+?>
 <?php
 
 for ($i=0; $i < $count; $i++) :
-//if ($i%$col==0) echo '<div class="row">'; 
+
 ?>
 
-<div class="features-item col-sm-<?php echo $colzise; ?>">
-<div class="f-item">
+<div class="features-item"<?php echo $aos; ?>>
+
 <?php if($helper->get('data.title', $i)) : ?>
 <h3>
 <?php if($helper->get('data.link', $i))	{ ?>
@@ -56,8 +76,8 @@ for ($i=0; $i < $count; $i++) :
 <?php if($helper->get('data.description', $i)) : ?>
 <p><?php echo $helper->get('data.description', $i) ?></p>
 <?php endif ; ?>
-</div></div>
+</div>
 <?php  if ( ($i%$col==($col-1)) || $i==($count-1) )  echo '</div>'; ?>
 <?php endfor ?>
-
+</div>
 </div>
