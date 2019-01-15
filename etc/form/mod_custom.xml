@@ -36,6 +36,35 @@
 <field name="gmap" label="Google URL" type="text" />
 </fieldset>
 
+		<fieldset name="aos" label="Animación on Scroll - AOS">
+	<field name="animate" type="radio" label="Habilitar AOS" default="0">
+	<option value="0">JNO</option>
+	<option value="1">JYES</option>
+</field>
+		<field name="animations" type="list" label="Animación" default="fade">
+<option value="fade">Fade</option>
+<option value="fade-up">Fade Up</option>
+<option value="fade-down">Fade Down</option>
+<option value="fade-right">Fade Right</option>
+<option value="fade-left">Fade Left</option>
+<option value="zoom-in">Zoom In</option>
+<option value="zoom-out">zoom Out</option>
+<option value="slide-up">Slide Up</option>
+<option value="flip-up">Flip Up</option>
+<option value="flip-down">Flip Down</option>
+<option value="flip-right">Flip Right</option>
+<option value="flip-left">Flip Left</option>
+</field>
+
+<field name="easing" label="Easing" type="list" default="linear">
+<option value="linear">linear </option> 
+<option value="ease">ease </option> 
+<option value="ease-in">ease-in </option> 
+<option value="ease-out">ease-out</option>
+</field>
+
+
+		</fieldset>
 
   </fields>
 </form>
