@@ -182,7 +182,14 @@ if($this->params->get('aos')==1){
 	echo'<script>';
 echo 'AOS.init();';
 echo '</script>';
-	}
+  }
+  if($this->params->get('eh')==1){
+	$doc->addScript (T3_TEMPLATE_URL.'/js/jquery.matchHeight.js');
+}
+if($this->params->get('commonscripts')==1){
+	$doc->addScript (T3_TEMPLATE_URL.'/js/scripts.js');
+}
+
 ?>
 </body>
 </html>
