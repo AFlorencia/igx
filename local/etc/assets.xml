@@ -2,7 +2,6 @@
 <assets>
 	<config>
 		<fields name="params" addfieldpath="/plugins/system/t3/includes/depend">
-
 			<fieldset name="extra_params" label="Extra Params" addfieldpath="/plugins/system/t3/includes/depend">			
 				<field name="showcomponent"
 				       type="list"
@@ -13,11 +12,8 @@
 				       global="1" >
 					   <option value="1">Siempre</option>
 					   <option value="2">Solo home</option>
-					   <option value="3">Todos menos home</option>
-					  
-					   </field>
-				
-
+					   <option value="3">Todos menos home</option>					  
+					   </field>				
 								
 				<field name="showslogan"
 				       type="radio"
@@ -34,13 +30,10 @@
 				       size="7"
 				       type="list"
 				       global="1">				
-
 					<option value="default">t3-normal</option>
-
 					   <option value="sticky">Sticky</option>
 					
 				</field>
-
 				
 				<field name="menualign"
 				       type="list"
@@ -64,12 +57,10 @@
 				       global="1" default="0"><option value="1" >JYES</option>
 					   <option value="0">JNO</option>
 					   </field>
-
 				
 			</fieldset>
 				
 <fieldset name="preload" label="Preloader">
-
 <field name="preload"  type="radio"
 				       label="Mostrar preloader"
 				       value="1"
@@ -77,18 +68,13 @@
                        <option value="1" >JYES</option>
 					   <option value="0">JNO</option>
 					   </field>
-
 <field name="preloadtext" type="text" label="Texto del preloader" default="Cargando" showon="preload:1" />                     
-
 <field name="preloadtime" type="text" label="Tiempo de precarga (ms)" showon="preload:1" default="500" />
 <field name="preloadcolor" type="color" label="Color del texto" default="#333" />
 <field name="preloadbgcolor" type="color" label="Color del fondo" default="#fff" />
 <field name="svgpreload" type="textarea" label="SVG de la precarga" showon="preload:1" filter="raw"/>
 <field name="preloadcss" type="textarea" label="CSS personalizado para el preloader" showon="preload:1" filter="raw"/>
 </fieldset>  
-
-
-
 <fieldset name="jsCss" label="JS - CSS Adicionales - Icon">
 	<field name="easing" type="radio" label="easing.js" default="0">
 	<option value="0">JNO</option>
@@ -110,9 +96,7 @@
 <field name="android" label="Android" type="color"/>
 <field name="metro" label="Metro" type="color"/>
 </fieldset>
-
 <fieldset name="social" label="Social">
-
 		<field name="social" type="list" default="0" label="Hablitar Social Share" >
 	<option value="0">JNO</option>
 	<option value="1">JYES</option>
@@ -122,9 +106,7 @@
 			<option value="2">Abajo del artículo</option>
 			<option value="3">Ambas</option>
 		</field>
-
 		<field name="fbid" type="text" label="Facebook App Id" showon="social:1" />
-		
 		<field name="og_twitter_site" type="text" helixgroup="blog_details" label="twitter site" showon="social_share:1" />
 </fieldset>  	
 		</fields>
