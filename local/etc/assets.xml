@@ -110,7 +110,23 @@
 <field name="android" label="Android" type="color"/>
 <field name="metro" label="Metro" type="color"/>
 </fieldset>
-			
+
+<fieldset name="social" label="Social">
+
+		<field name="social" type="list" default="0" label="Hablitar Social Share" >
+	<option value="0">JNO</option>
+	<option value="1">JYES</option>
+		</field>
+		<field name="social_position" type="radio"  default="1" label="Posición del sharer"  showon="social:1">
+			<option value="1">Abajo del info</option>
+			<option value="2">Abajo del artículo</option>
+			<option value="3">Ambas</option>
+		</field>
+
+		<field name="fbid" type="text" label="Facebook App Id" showon="social:1" />
+		
+		<field name="og_twitter_site" type="text" helixgroup="blog_details" label="twitter site" showon="social_share:1" />
+</fieldset>  	
 		</fields>
 	</config>
 	
