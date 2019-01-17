@@ -131,7 +131,7 @@ jQuery(window).on('load', function() { // makes sure the whole site is loaded
  <?php  if ($this->params->get('back-to-top')=="1") { ?>
 <div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top"> 
   <button class="btn btn-primary" title="Ir Arriba"><i class="fa fa-angle-up"></i></button> 
-</div>
+
 </div>
 <script type="text/javascript"> 
  (function($) { 
