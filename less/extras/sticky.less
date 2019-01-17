@@ -42,14 +42,15 @@
 
     .navbar-default .navbar-toggle {
         float: right;
-        border-width: 2px;
+        border-width: 0;
+        border-radius: 0;
         width: @toggle-size;
         height: @toggle-size;
         line-height: (@toggle-size - 10px) / 2;
         font-size: 21px;
         transition: all 350ms linear;
     //    margin: (@body-padding - 10px) / 4;
-    //    margin: 0 15px;
+        margin: 0 ;
         grid-area: toggle;
     }
 
@@ -57,7 +58,7 @@
         max-width: 100%;
     }
 
-    @media(min-width: 768px) {
+    @media(min-width: @grid-float-breakpoint) {
         .navbar-default .navbar-nav>li>a {
             line-height: @nav-link-size;
             padding-top: 0;
@@ -92,7 +93,7 @@
             padding: 0px;
         }
         .navbar-brand {
-            height: 50px;
+            height: 40px;
             .logo-img {
                 height: 40px;
                 width: auto;
@@ -122,3 +123,68 @@
     .small-nav .navbar-header img {
         height: 40px;
     }
+
+    
+        
+    @media(max-width:@grid-float-breakpoint){
+        body{padding-top: 50px;}
+        .sticky-nav .navbar-header{
+            line-height: 50px;
+            min-height: 50px;
+        }
+        .t3-mainnav .container{
+          //  padding:0;
+         }
+       .navbar-toggle {
+           
+            height: 40px;
+            padding: 0px;
+            margin: 0;
+        }
+         .sticky-nav .navbar-brand {
+            height: 50px;
+            margin: 0;
+            .logo-img {
+                height: 40px;
+                width: auto;
+                margin: 5px;
+            }
+        }
+        .container > .navbar-collapse{
+           // margin: 0;
+        }
+        }
+        
+        @media(min-width: @grid-float-breakpoint){
+       
+        
+        .navbar-collapse.collapse{
+            
+            display: flex !important;
+            justify-content: stretch;
+            align-items: center;
+        }
+        
+        }
+        
+        
+        
+        .btn-block.social-btn > :first-child {
+            display: flex;
+            position: static;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-item {
+            display: inline;
+        }
+        
+        .top-social.container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0.5em;
+        }
+      
+      
