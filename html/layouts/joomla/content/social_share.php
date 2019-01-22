@@ -9,10 +9,11 @@
 defined ('JPATH_BASE') or die();
 
 $url = JRoute::_(ContentHelperRoute::getArticleRoute($displayData->id . ':' . $displayData->alias, $displayData->catid, $displayData->language));
-$root = JURI::base();
-$root = new JURI($root);
+$root = JURI::base();	$root = JURI::base();
+$root = new JURI($root);	$root = new JURI($root);
 $url = $root->getScheme() . '://' . $root->getHost() . $url;
-$params = JFactory::getApplication()->getTemplate(true)->params;
+$params = JFactory::getApplication()->getTemplate(true)->params;	
+
 JHtml::_('bootstrap.tooltip');
 //print_r($params);
 
@@ -20,20 +21,7 @@ JHtml::_('bootstrap.tooltip');
 
 JLoader::register('MailtoHelper', JPATH_SITE . '/components/com_mailto/helpers/mailto.php');
 
-$text      = "Email this to a friend";
-$uri      = JUri::getInstance();
-$base     = $uri->toString(array('scheme', 'host', 'port'));
-$template = JFactory::getApplication()->getTemplate();
-$link     = $base . JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid, $article->language), false);
-$url      = 'index.php?option=com_mailto&tmpl=component&template=' . $template . '&link=' . MailtoHelper::addLink($link);
 
-$status = 'width=400,height=350,top=400,left=400,menubar=yes,resizable=yes';
-
-$attribs['title']   = JText::_('JGLOBAL_EMAIL_TITLE');
-$attribs['onclick'] = "window.open(this.href,'win2','" . $status . "'); return false;";
-$attribs['rel']     = 'nofollow';
-
-$emailToLink = JHtml::_('link', JRoute::_($url), $text, $attribs);
 /****************************** */
 
 
