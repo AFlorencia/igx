@@ -38,7 +38,7 @@ for ($i=0; $i < $count; $i++) :
 
 ?>
 
-<div class="features-item"<?php echo $aos; ?>>
+<div class="features-item flex-<?php echo $i; ?>"<?php echo $aos; ?> >
 
 <?php if($helper->get('data.title', $i)) : ?>
 <h3>
