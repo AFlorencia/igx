@@ -4,7 +4,7 @@
     "use strict"; // Start of use strict
 
     
-    $(document).on('click', 't3.mainnav a', function(event) {
+    $(document).on('click', '.t3-mainnav a', function(event) {
         var $anchor = $(this);
         $(this).parent('li').addClass('active');
       $('.t3-mainnav li').not( $(this).parent('li') ).removeClass('active');
