@@ -2,7 +2,6 @@
 <assets>
 	<config>
 		<fields name="params" addfieldpath="/plugins/system/t3/includes/depend">
-
 			<fieldset name="extra_params" label="Extra Params" addfieldpath="/plugins/system/t3/includes/depend">			
 				<field name="showcomponent"
 				       type="list"
@@ -13,11 +12,8 @@
 				       global="1" >
 					   <option value="1">Siempre</option>
 					   <option value="2">Solo home</option>
-					   <option value="3">Todos menos home</option>
-					  
-					   </field>
-				
-
+					   <option value="3">Todos menos home</option>					  
+					   </field>				
 								
 				<field name="showslogan"
 				       type="radio"
@@ -34,13 +30,10 @@
 				       size="7"
 				       type="list"
 				       global="1">				
-
 					<option value="default">t3-normal</option>
-
 					   <option value="sticky">Sticky</option>
 					
 				</field>
-
 				
 				<field name="menualign"
 				       type="list"
@@ -65,42 +58,9 @@
 					   <option value="0">JNO</option>
 					   </field>
 				
-
+			</fieldset>
 				
-			</fieldset>
-<!-- TODO FOR BLOGS
-<fieldset name="social" label="Social">
-
-<field name="social_share" type="checkbox" helixgroup="blog_details" default="1" label="HELIX_ULTIMATE_BLOG_SOCIAL_SHARE" description="HELIX_ULTIMATE_BLOG_SOCIAL_SHARE_DESC" />
-		<field name="author_info" type="checkbox" helixgroup="blog_details" default="0" label="HELIX_ULTIMATE_BLOG_DETAILS_AUTHOR_INFO" description="HELIX_ULTIMATE_BLOG_DETAILS_AUTHOR_INFO_DESC" />
-		<field name="og" type="checkbox" helixgroup="blog_details" default="1" label="HELIX_ULTIMATE_BLOG_OPEN_GRAPH" description="HELIX_ULTIMATE_BLOG_OPEN_GRAPH_DESC" />
-		<field name="og_fb_id" type="text" helixgroup="blog_details" label="HELIX_ULTIMATE_BLOG_OPEN_GRAPH_FB_ID" showon="og:1" />
-		<field name="og_twitter_site" type="text" helixgroup="blog_details" label="HELIX_ULTIMATE_BLOG_OPEN_GRAPH_TWITTER_SITE" showon="og:1" />
-
-</fieldset>  -->
-
-<!-- TODO FOR BLOGS
-			<fieldset name="component-styles" label="Layout Componente" addfieldpath="/plugins/system/t3/includes/depend">
-						
-								
-			<field name="leftcol" type="subform" formsource="templates/t3_bs3_blank/local/etc/left-col.xml" multiple="false" label="Left Column" description="Left Column... config" layout="joomla.form.field.subform.repeatable-table"/>
-			<field name="rightcol" type="subform" formsource="templates/t3_bs3_blank/local/etc/right-col.xml" multiple="false" label="Right Column" description="Right Column... config" layout="joomla.form.field.subform.repeatable-table"/>
-				<field name="topcmp" type="subform" formsource="templates/t3_bs3_blank/local/etc/cmp.xml" multiple="false" label="Cargar Arriba del componente estos módulos" description="..." layout="joomla.form.field.subform.repeatable-table"/>									
-			</fieldset>
-			
-			
-				<fieldset name="layout-styles" label="Crear Layout Mag" addfieldpath="/plugins/system/t3/includes/depend">
-						<field name="showinside" label="Mostrar dentro sitio"
-				      type="radio"
-				       description="..."
-				       value="0"
-				       global="0" default="0"><option value="1" >JYES</option><option value="0">JNO</option>   </field>
-		<field name="contacto" type="subform" formsource="templates/t3_bs3_blank/local/etc/columns.xml" multiple="true" label="Column" description="Columns" max="8" layout="joomla.form.field.subform.repeatable"/>
-					</fieldset>
-
--->					
-		<fieldset name="preload" label="Preloader">
-
+<fieldset name="preload" label="Preloader">
 <field name="preload"  type="radio"
 				       label="Mostrar preloader"
 				       value="1"
@@ -108,21 +68,50 @@
                        <option value="1" >JYES</option>
 					   <option value="0">JNO</option>
 					   </field>
-
 <field name="preloadtext" type="text" label="Texto del preloader" default="Cargando" showon="preload:1" />                     
-
 <field name="preloadtime" type="text" label="Tiempo de precarga (ms)" showon="preload:1" default="500" />
 <field name="preloadcolor" type="color" label="Color del texto" default="#333" />
 <field name="preloadbgcolor" type="color" label="Color del fondo" default="#fff" />
 <field name="svgpreload" type="textarea" label="SVG de la precarga" showon="preload:1" filter="raw"/>
 <field name="preloadcss" type="textarea" label="CSS personalizado para el preloader" showon="preload:1" filter="raw"/>
-</fieldset>  -->
-			
+</fieldset>  
+<fieldset name="jsCss" label="JS - CSS Adicionales - Icon">
+	<field name="easing" type="radio" label="easing.js" default="0">
+	<option value="0">JNO</option>
+	<option value="1">JYES</option>
+</field>
+	<field name="aos" type="radio" label="aos.js" default="0">
+	<option value="0">JNO</option>
+	<option value="1">JYES</option>
+</field>
+	<field name="eh" type="radio" label="matchHeight.js" default="0">
+	<option value="0">JNO</option>
+	<option value="1">JYES</option>
+</field>
+	<field name="commonscripts" type="radio" label="scripts.js" default="0">
+	<option value="0">JNO</option>
+	<option value="1">JYES</option>
+</field>
+<field name="safari" label="Safari Color" type="color"/>
+<field name="android" label="Android" type="color"/>
+<field name="metro" label="Metro" type="color"/>
+</fieldset>
+<fieldset name="social" label="Social">
+		<field name="social" type="list" default="0" label="Hablitar Social Share" >
+	<option value="0">JNO</option>
+	<option value="1">JYES</option>
+		</field>
+		<field name="social_position" type="radio"  default="1" label="Posición del sharer"  showon="social:1">
+			<option value="1">Abajo del info</option>
+			<option value="2">Abajo del artículo</option>
+			<option value="3">Ambas</option>
+		</field>
+		<field name="fbid" type="text" label="Facebook App Id" showon="social:1" />
+		<field name="og_twitter_site" type="text" helixgroup="blog_details" label="twitter site" showon="social_share:1" />
+</fieldset>  	
 		</fields>
 	</config>
-	<scripts>
-		<file>js/scripts.js</file>
-	</scripts>
+	
 	
 	<stylesheets>
 		<file>fonts/font-awesome/css/font-awesome.min.css</file>

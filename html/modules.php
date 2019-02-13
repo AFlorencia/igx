@@ -59,7 +59,10 @@ function modChrome_spot($module, &$params, &$attribs)
   $bgImagePo      = $params->get('module-background-position','center center');
   $moduleBg       = $bgImage ? 'style="background-image: url(' . JUri::base(true) . '/' . $bgImage . '); background-repeat: no-repeat; background-position: '.$bgImagePo.'; background-size: '.$bgImageSize.'"' : '';
   
- 
+  $aos ='';
+  if($params->get('animate')==1){
+  $aos = ' data-aos="'.$params->get('animations').'" data-aos-easing="'.$params->get('easing').'"';
+  }
   
 	if (!empty ($module->content)) {
 		
@@ -82,7 +85,7 @@ if ($isbox==='1'){
 
  	if (!empty ($customTitle))
   	{
-  	   	$html .='<'.$headerLevel.'><span>'.$module->title.'</span></'.$headerLevel.'>';
+  	   	$html .='<'.$headerLevel.$aos.'><span>'.$module->title.'</span></'.$headerLevel.'>';
   	}
 
 
@@ -94,7 +97,7 @@ $html .= '<div class="'.$boxClass.'">';
 					
 
 		if ($module->showtitle != 0) {
-			$html .= '<div class="module-title">';
+			$html .= '<div class="module-title"'.$aos.'>';
 		
 		
 			$html .='<'.$headerTag.'><span>'.$module->title.'</span></'.$headerTag.'>';
@@ -105,7 +108,7 @@ $html .= '<div class="'.$boxClass.'">';
 
 
 	
-		$html .= '<div class="module-ct '.$modulecontentClass.'" id="item-box-'.$module->id.'">'.$module->content.'</div>';
+		$html .= '<div class="module-ct '.$modulecontentClass.'" id="item-box-'.$module->id.'"'.$aos.'>'.$module->content.'</div>';
 		$html .= "</div></div>";
 
 		$html .= '</section>'; //id

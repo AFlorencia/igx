@@ -58,7 +58,7 @@
         max-width: 100%;
     }
 
-    @media(min-width: @grid-float-breakpoint) {
+    @media(min-width: 768px) {
         .navbar-default .navbar-nav>li>a {
             line-height: @nav-link-size;
             padding-top: 0;
@@ -126,15 +126,11 @@
 
     
         
-    @media(max-width:@grid-float-breakpoint){
-        body{padding-top: 50px;}
+    @media(max-width:768px){
         .sticky-nav .navbar-header{
             line-height: 50px;
             min-height: 50px;
         }
-        .t3-mainnav .container{
-          //  padding:0;
-         }
        .navbar-toggle {
            
             height: 40px;
@@ -150,13 +146,12 @@
                 margin: 5px;
             }
         }
-        .container > .navbar-collapse{
-           // margin: 0;
-        }
         }
         
-        @media(min-width: @grid-float-breakpoint){
-       
+        @media(min-width: 768px){
+            .t3-mainnav .container{
+           
+        }
         
         .navbar-collapse.collapse{
             

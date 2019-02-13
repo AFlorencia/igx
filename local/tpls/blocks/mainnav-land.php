@@ -64,7 +64,7 @@ $showslogan = $this->params->get('showslogan','0');
                 <jdoc:include type="<?php echo $this->getParam('navigation_type', 'megamenu') ?>" name="<?php echo $this->getParam('mm_type', 'mainmenu') ?>" />
             </div>	
 			
-	
+</div>
 </nav>
 </header>
 <!-- //MAIN NAVIGATION -->
