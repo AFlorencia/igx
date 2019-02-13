@@ -88,6 +88,22 @@
 	<option value="0">JNO</option>
 	<option value="1">JYES</option>
 </field>
+<field name="customgalleryjs" type="radio" label="CGallery.js" default="0">
+	<option value="0">JNO</option>
+	<option value="1">JYES</option>
+</field>
+
+<field name="fancyboxjs" type="radio" label="FancyBoxJS" default="0">
+	<option value="0">JNO</option>
+	<option value="1">JYES</option>
+</field>
+<field name="fancyboxcss" type="radio" label="FancyBoxCSS" default="0">
+	<option value="0">JNO</option>
+	<option value="1">JYES</option>
+</field>
+
+
+
 	<field name="commonscripts" type="radio" label="scripts.js" default="0">
 	<option value="0">JNO</option>
 	<option value="1">JYES</option>

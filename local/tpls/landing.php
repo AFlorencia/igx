@@ -189,6 +189,9 @@ echo '</script>';
 if($this->params->get('commonscripts')==1){
 	$doc->addScript (T3_TEMPLATE_URL.'/js/scripts.js');
 }
+if($this->params->get('customgalleryjs')==1){
+	$doc->addScript (T3_TEMPLATE_URL.'/js/CGallery.js');
+}
 
 ?>
 </body>

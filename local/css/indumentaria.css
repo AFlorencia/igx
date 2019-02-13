@@ -1,0 +1,9 @@
+.colores{
+    display: flex;
+}
+.colores h4{
+    width: 100%;
+}
+.colores .panel{}
+.colores .panel-heading{}
+.colores .panel-body{}

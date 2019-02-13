@@ -60,7 +60,7 @@ $theme = JFactory::getApplication()->getTemplate(true)->params->get('theme', '')
 						?></div>
 					
 					<div class="error-message"><h2><?php echo $this->error->getMessage(); ?></h2></div>
-					
+					<jdoc:include type="debug" />
 					<div id="errorboxbody">
 						<p><?php echo JText::_('JERROR_LAYOUT_PLEASE_TRY_ONE_OF_THE_FOLLOWING_PAGES'); ?></p>
 					</div>

@@ -56,7 +56,7 @@ if (empty ($this->item->catslug)) {
 	<article>
   
 
-	<?php echo JLayoutHelper::render('joomla.content.intro_image_nf', $this->item); ?>
+	<?php //echo JLayoutHelper::render('joomla.content.intro_image_nf', $this->item); ?>
     <?php if ($params->get('show_title')) : ?>
 			<?php echo JLayoutHelper::render('joomla.content.item_title', array('item' => $this->item, 'params' => $params, 'title-tag'=>'h2')); ?>
     <?php endif; ?>

@@ -54,7 +54,7 @@ if( $params->get('social') ==1) : ?>
 				</li>
 
 				*/ ?>
-			<li>	<a class="whatsapp hasTooltip" title="Enviar por Whatsapp" onclick="window.open('https://api.whatsapp.com/send?text=<?php echo $url; ?>','Whatsapp','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="/ https://api.whatsapp.com/send?text=<?php echo $url; ?>">
+			<li>	<a class="whatsapp hasTooltip" title="Enviar por Whatsapp" onclick="window.open('https://api.whatsapp.com/send?text=<?php echo $url; ?>','Whatsapp','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://api.whatsapp.com/send?text=<?php echo $url; ?>">
 <span class="fa fa-whatsapp"></span>
 </a></li>
 

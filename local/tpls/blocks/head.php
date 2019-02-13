@@ -67,3 +67,12 @@ if($this->params->get('aos')==1){
 	$doc->addStyleSheet (T3_TEMPLATE_URL.'/css/aos.css');
 	}
 ?>
+<?php $doc = JFactory::getDocument();
+if($this->params->get('customgallerycss')==1){
+	$doc->addStyleSheet (T3_TEMPLATE_URL.'/css/CGallery.css');
+	}
+
+	if($this->params->get('fancyboxcss')==1){
+		$doc->addStyleSheet (T3_TEMPLATE_URL.'/css/jquery.fancybox.min.css');
+		}
+?>
