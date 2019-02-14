@@ -160,9 +160,14 @@ if (empty ($this->item->catslug)) {
        
     
         $images = json_decode($this->item->images);
-        if (empty($images->image_fulltext)) return ;
+        if (empty($images->image_fulltext)) {
+
+
+        } ;
         
        
+
+
         ?>
         
          
@@ -271,18 +276,24 @@ if (empty ($this->item->catslug)) {
         <h3>Descripción</h3>
             <?php echo $this->item->text; ?>
         </section>
+ <?php echo $this->item->jcfields['ubicacion']->value; ?>
 
-
-<?php if($this->item->jcfields['talles']->value) {?>
+<?php if($this->item->jcfields['ubicacion']->value) {?>
 <section class="map-location">
-            <h3 class="<?php echo $this->item->jcfields['talles']->label; ?>"> </h3>
+            <h3 class="<?php echo $this->item->jcfields['ubicacion']->label; ?>"> </h3>
                
-                <?php echo $this->item->jcfields['ubicacion']->value; ?>
+               
            
 
 </section>            <?php } ?>
 
-
+<ol>
+<?php
+foreach ($this->item->dpfields as $field) {
+	echo '<li><b>'.$field->label.'</b>'.$field->value.'</li>';
+}
+?>
+</ol>
 
     <?php if($tparams->get('social_position') ==2 || $tparams->get('social_position')==3){ ?>
     <div class="article-social-share bottom">
@@ -305,3 +316,4 @@ $('.detalle, .galeria-box').matchHeight();
 })(jQuery);
 
 </script>
+propiedades

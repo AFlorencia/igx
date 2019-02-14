@@ -160,7 +160,7 @@ if (empty ($this->item->catslug)) {
        
     
         $images = json_decode($this->item->images);
-        if (empty($images->image_fulltext)) return ;        
+          
        
         ?>
         

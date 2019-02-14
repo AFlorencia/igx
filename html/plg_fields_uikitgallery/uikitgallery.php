@@ -63,7 +63,7 @@ $thumbImage = JURI::base() .$img_XS;
 </div>
 <?php
 $doc = JFactory::getDocument();
-$itemsWidth = floor(100 / $i);
+$itemsWidth = floor(100 / $i) - 1;
 $style = '.thumbnails-row {'.
 'grid-template-columns: repeat(auto-fill, minmax('.$itemsWidth.'%, 1fr));'.
 'grid-gap: 5px;'.
