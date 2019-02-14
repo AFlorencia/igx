@@ -156,19 +156,7 @@ if (empty ($this->item->catslug)) {
   
         <div class="col-sm-7">
         <div class="galeria-box">
-        <?php 
-       
-    
-        $images = json_decode($this->item->images);
-          
-       
-        ?>
-        
-         
-        
-        
-        
-      
+        <?php  $images = json_decode($this->item->images); ?>
         <?php if($this->item->jcfields['galeria']->value) {?>
      <div class="galeria" id="detail-gallery">  <?php echo $this->item->jcfields['galeria']->value; ?></div>
         <?php } else{ ?>
