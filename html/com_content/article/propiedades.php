@@ -273,6 +273,16 @@ if (empty ($this->item->catslug)) {
         </section>
 
 
+<?php if($this->item->jcfields['talles']->value) {?>
+<section class="map-location">
+            <h3 class="<?php echo $this->item->jcfields['talles']->label; ?>"> </h3>
+               
+                <?php echo $this->item->jcfields['ubicacion']->value; ?>
+           
+
+</section>            <?php } ?>
+
+
 
     <?php if($tparams->get('social_position') ==2 || $tparams->get('social_position')==3){ ?>
     <div class="article-social-share bottom">

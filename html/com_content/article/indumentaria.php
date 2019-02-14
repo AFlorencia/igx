@@ -160,8 +160,7 @@ if (empty ($this->item->catslug)) {
        
     
         $images = json_decode($this->item->images);
-        if (empty($images->image_fulltext)) return ;
-        
+        if (empty($images->image_fulltext)) return ;        
        
         ?>
         
@@ -174,7 +173,7 @@ if (empty ($this->item->catslug)) {
      <div class="galeria" id="detail-gallery">  <?php echo $this->item->jcfields['galeria']->value; ?></div>
         <?php } else{ ?>
             
- <div class="article-image-full" id="gallery-main-image" style="">
+ <div class="article-image-full" id="gallery-main-image">
             <a href="<?php echo htmlspecialchars($images->image_fulltext); ?>" data-fancybox="gallery">
             <span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
               <img               
