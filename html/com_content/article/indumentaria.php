@@ -151,10 +151,11 @@ if (empty ($this->item->catslug)) {
 <?php echo $this->item->event->afterDisplayTitle; ?>
 <?php endif; ?>
 
-<section class="article-intro clearfix">
+<section class="article-intro clearfix catalog-box">
     <div class="row">
   
         <div class="col-sm-7">
+        <div class="galeria-box">
         <?php 
        
     
@@ -164,42 +165,56 @@ if (empty ($this->item->catslug)) {
        
         ?>
         
-          <div class="article-image-full" id="gallery-main-image">
-            <span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-              <img
-                <?php if ($images->image_fulltext_caption): ?>
-                  <?php echo 'class="caption"' . ' title="' . htmlspecialchars($images->image_fulltext_caption) . '"'; ?>
-                <?php endif; ?>
-                src="<?php echo htmlspecialchars($images->image_fulltext); ?>"
-                alt="<?php echo htmlspecialchars($images->image_fulltext_alt); ?>" itemprop="url" />
-              <meta itemprop="height" content="auto" />
-              <meta itemprop="width" content="auto" />
-            </span>
-          </div>
+         
         
         
         
       
         <?php if($this->item->jcfields['galeria']->value) {?>
      <div class="galeria" id="detail-gallery">  <?php echo $this->item->jcfields['galeria']->value; ?></div>
-        <?php } ?>
+        <?php } else{ ?>
+            
+ <div class="article-image-full" id="gallery-main-image" style="">
+            <a href="<?php echo htmlspecialchars($images->image_fulltext); ?>" data-fancybox="gallery">
+            <span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+              <img               
+                src="<?php echo htmlspecialchars($images->image_fulltext); ?>"
+                alt="<?php echo htmlspecialchars($images->image_fulltext_alt); ?>" itemprop="url"/>
+              <meta itemprop="height" content="auto" />
+              <meta itemprop="width" content="auto" />
+            </span></a>
+          </div>
+
+     <?php   }   ?>
+     </div>
         </div>
    
         <div class="col-sm-5">
-
-            <section class="article-content clearfix" itemprop="articleBody">
-                <?php echo $this->item->introtext; ?>
-            </section>
+<div class="detalle">
+            
  
             <?php // CAMPOS PERSONALIZADOS ?>
+
+            <?php if($this->item->jcfields['codigo']->value) {?>
+            <h4 class="<?php echo $this->item->jcfields['codigo']->name; ?>">
+            <?php echo $this->item->jcfields['codigo']->label; ?>: <?php echo $this->item->jcfields['codigo']->value; ?></h4>
+            <?php } ?>
+
+
+
             <?php if($this->item->jcfields['precio']->value) {?>
             <h4 class="<?php echo $this->item->jcfields['precio']->name; ?>">
                 $<?php echo $this->item->jcfields['precio']->value; ?></h4>
             <?php } ?>
 
+
+            <section class="article-content clearfix" itemprop="articleBody">
+                <?php echo $this->item->introtext; ?>
+            </section>
+
             <?php if($this->item->jcfields['talles']->value) {?>
             <h4 class="<?php echo $this->item->jcfields['talles']->name; ?>">
-                <strong><?php echo $this->item->jcfields['talles']->name; ?>:</strong>
+                <strong>Talles:</strong>
                 <?php echo $this->item->jcfields['talles']->value; ?>
             </h4>
             <?php } ?>
@@ -208,14 +223,15 @@ if (empty ($this->item->catslug)) {
                ?>
             <div class="colores">
                 <h4>Colores</h4>
+                <div class="colors-list">
                 <?php 
         if(is_array($this->item->jcfields['colores']->rawvalue)){
                 $colores = explode(',',$this->item->jcfields['colores']->value);
                 $p = 0;
                 foreach ($this->item->jcfields['colores']->rawvalue as $item) {
                         echo'<div class="panel">';
-                        echo' <div class="panel-heading" style="background-color:'.$item.'"> &nbsp; </div>';
-                        echo'<div class="panel-body"> '.$colores[$p].'</div>';
+                        echo' <div class="panel-heading" style="background-color:'.$item.'">'.$colores[$p].' </div>';
+                      //  echo'<div class="panel-body"> '.$colores[$p].'</div>';
                         echo'</div>';
 
                         $p++;
@@ -227,6 +243,7 @@ if (empty ($this->item->catslug)) {
                 echo '</div>'; ?>
            
                 <?php } ?> 
+                </div>
               </div>
             <!--end colores-->
             <?php        }           ?>
@@ -241,6 +258,7 @@ if (empty ($this->item->catslug)) {
         
 <?php  ?>
 </div>
+</div>
  </div>
  
    
@@ -250,6 +268,7 @@ if (empty ($this->item->catslug)) {
 <!-- item detail-->       
 <hr/>
         <section class="article-content clearfix" itemprop="articleBody">
+        <h3>Descripción</h3>
             <?php echo $this->item->text; ?>
         </section>
 
@@ -265,3 +284,14 @@ if (empty ($this->item->catslug)) {
     </div>
 <?php // Content is generated by content plugin event "onContentAfterDisplay" ?>
 <?php echo $this->item->event->afterDisplayContent; ?>
+
+
+<script>
+
+
+(function ($) {	
+$('.detalle, .galeria-box').matchHeight();
+
+})(jQuery);
+
+</script>

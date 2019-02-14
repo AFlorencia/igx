@@ -92,7 +92,10 @@
 	<option value="0">JNO</option>
 	<option value="1">JYES</option>
 </field>
-
+<field name="customgallerycss" type="radio" label="CGallery.css" default="0">
+	<option value="0">JNO</option>
+	<option value="1">JYES</option>
+</field>
 <field name="fancyboxjs" type="radio" label="FancyBoxJS" default="0">
 	<option value="0">JNO</option>
 	<option value="1">JYES</option>

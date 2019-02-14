@@ -1,22 +1,29 @@
  
 (function($) {
- 
- 
-    $(document).on('click', '#detail-gallery li a', function(event) {
+
+    $(document).ready(function(){
+    var imageHeight = $('#main-image img').height();
+    var newHeight = imageHeight*.6;
+
+    $('#main-image').css('height',newHeight);
+    console.log('Load'+imageHeight);
+    });
+
+    $(window).resize(function() {
+        var imageHeight = $('#main-image img').height();
+        console.log('Resize'+imageHeight);
+    
+    });
+
+
+    $(document).on('click', '.image-thumbnail a', function(event) {
         var targetImg = $(this).attr('href');
         console.log(targetImg);
-
-
-        $('#gallery-main-image img').fadeTo(500,0.50, function() {
-
-            $('#gallery-main-image img').addClass('loading-img');
-            
-
-            $('#gallery-main-image img').attr('src', targetImg).fadeTo(500,1);
-        });
- event.preventDefault(); 
+        $('#main-image a img').fadeTo(500,0.50, function() {                    
+        $('#main-image a img').attr('src', targetImg).fadeTo(500,1);
         
-//$('#gallery-main-image img').fadeOut('slow').attr('src', targetImg).fadeIn('slow');
+             });
+        event.preventDefault();         
        
     });
     

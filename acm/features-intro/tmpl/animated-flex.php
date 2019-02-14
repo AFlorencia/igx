@@ -33,7 +33,6 @@ $gap =$helper->get('gap');
 $gridGap = $gap * $cols;
 $colWidth = (1140 - $gridGap) / $cols;
 $style = '.flex-row {'.
-<<<<<<< HEAD
 'grid-template-columns: repeat(auto-fill, minmax('.$colWidth.'px, 1fr));'.
 'grid-gap: '.$gap.'px;'.
 '}'; 
@@ -44,20 +43,6 @@ $doc->addStyleDeclaration($style);
 <?php for ($i=0; $i < $count; $i++) : ?>
 
 <div class="features-item"<?php echo $aos; ?>>
-=======
-         'grid-template-columns: repeat(auto-fill, minmax('.$colWidth.'px, 1fr));'.
-         'grid-gap: '.$gap.'px;'.
-           '}'; 
-$doc->addStyleDeclaration($style);
-?>
-<?php
-
-for ($i=0; $i < $count; $i++) :
-
-?>
-
-<div class="features-item flex-<?php echo $i; ?>"<?php echo $aos; ?> >
->>>>>>> 6b14e667a8a96e3a68f07b21cc1e318e01a29885
 
 <?php if($helper->get('data.title', $i)) : ?>
 <h3>
