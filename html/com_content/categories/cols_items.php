@@ -31,8 +31,11 @@ if ($this->maxLevelcat != 0 && count($this->items[$this->parent->id]) > 0) :
 
 		<div class="category-item<?php echo $class; ?> item_<?php echo $i; ?>">
 		<?php $class = ''; ?>
-		
-			<?php if ($this->params->get('show_description_image') && $item->getParams()->get('image')) : ?>			
+		MMMM
+			<?php if ($this->params->get('show_description_image') && $item->getParams()->get('image')) : ?>
+
+
+
 			<a href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($item->id, $item->language)); ?>" class="img-link">
 <?php
 // RESIZE IMAGE TO THUMBNAIL
@@ -61,7 +64,8 @@ $quality = 60;
 	<?php /*		<img src="<?php echo $imgTh; ?>" alt="<?php echo htmlspecialchars($item->getParams()->get('image_alt'), ENT_COMPAT, 'UTF-8'); ?>" /> */ ?>
 			<img src="<?php echo $item->getParams()->get('image'); ?>" alt="<?php echo htmlspecialchars($item->getParams()->get('image_alt'), ENT_COMPAT, 'UTF-8'); ?>" />
 			
-			</a><?php endif; ?>
+			</a>
+			<?php endif; ?>
 
 
 				<h3 class="page-header item-title">

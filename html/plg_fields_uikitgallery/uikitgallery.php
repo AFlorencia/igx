@@ -19,7 +19,7 @@ $class = $fieldParams->get('container_class');
 jimport('joomla.filesystem.folder');
 jimport('joomla.filesystem.file');
 $filter = '.\.jpg$';
-$images = JFolder::files('images/' . $path);
+$images = JFolder::files('images/' . $path, '.jpg');
 $i = "";
 ?>
 
