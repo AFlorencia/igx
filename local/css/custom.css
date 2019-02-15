@@ -1,2 +1,7 @@
 @import 'indumentaria.css';
 @import 'properties.css';
+
+
+.category-item img {
+    max-width: 100%;
+}

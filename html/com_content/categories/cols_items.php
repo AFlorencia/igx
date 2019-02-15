@@ -31,7 +31,7 @@ if ($this->maxLevelcat != 0 && count($this->items[$this->parent->id]) > 0) :
 
 		<div class="category-item<?php echo $class; ?> item_<?php echo $i; ?>">
 		<?php $class = ''; ?>
-		MMMM
+	
 			<?php if ($this->params->get('show_description_image') && $item->getParams()->get('image')) : ?>
 
 
@@ -42,27 +42,16 @@ if ($this->maxLevelcat != 0 && count($this->items[$this->parent->id]) > 0) :
 
 $img_path = $item->getParams()->get('image');
 
-$image = new JImage($img_path);
-$image->setThumbnailGenerate(false);
+
+$thimage = new JImage($img_path);
+$thimage->setThumbnailGenerate(false);
 $scale_method = JImage::SCALE_INSIDE;
-
-
-$imgTh = $image->createThumbs('360x360', $scale_method)[0]->getPath();
-//$imgTh = $image->crop('100','100','50','50', true);
-// PARAMS TO GET IMAGE DIMENSIONS AND FILENAME
-
-$properties = JImage::getImageFileProperties($item->getParams()->get('image'));
-$height = $properties->height;
-$width = $properties->width;
-$rH = 100;
-$rW = 100;
-$lC = round($width/2); // Desde el centro X
-$bC = $height;
-$quality = 60;
+$img_XS = $thimage->createThumbs('500X500', $scale_method)[0]->getPath();
+$thumbImage = JURI::base() .$img_XS;
 
 ?>
 	<?php /*		<img src="<?php echo $imgTh; ?>" alt="<?php echo htmlspecialchars($item->getParams()->get('image_alt'), ENT_COMPAT, 'UTF-8'); ?>" /> */ ?>
-			<img src="<?php echo $item->getParams()->get('image'); ?>" alt="<?php echo htmlspecialchars($item->getParams()->get('image_alt'), ENT_COMPAT, 'UTF-8'); ?>" />
+			<img src="<?php echo $thumbImage; ?>" alt="<?php echo htmlspecialchars($item->getParams()->get('image_alt'), ENT_COMPAT, 'UTF-8'); ?>" />
 			
 			</a>
 			<?php endif; ?>
@@ -79,3 +68,5 @@ $quality = 60;
 		<?php endif; ?>
 	<?php $i++; endforeach; ?>
 <?php endif; ?>
+
+
