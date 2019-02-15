@@ -151,12 +151,9 @@ if (empty ($this->item->catslug)) {
         
        
         ?>
-
-
-
                         <?php if($this->item->jcfields['galeria']->value) {?>
-                        <div class="galeria" id="detail-gallery"> <?php echo $this->item->jcfields['galeria']->value; ?>
-                        </div>
+                     <?php echo $this->item->jcfields['galeria']->value; ?>
+                     
                         <?php } else{ ?>
                         <div class="article-image-full" id="gallery-main-image" style="">
                             <a href="<?php echo htmlspecialchars($images->image_fulltext); ?>" data-fancybox="gallery">
@@ -176,44 +173,35 @@ if (empty ($this->item->catslug)) {
                             <?php if($this->item->jcfields['ambientes']->value) {?>
                                 <span class="ambientes hasTooltip" title=" <?php echo $this->item->jcfields['ambientes']->label; ?>">
                                 <svg class="rs-icon">
-                                    <use
-                                        xlink:href="../<?php echo T3Path::getUrl('images/rs-icons.svg', '', true); ?>#flat-plan">
+                 <use xlink:href="../<?php echo T3Path::getUrl('images/rs-icons.svg', '', true); ?>#flat-plan"/>
                                 </svg>
                                 <?php echo $this->item->jcfields['ambientes']->value; ?>
                             </span>
                             <?php } ?>
-
                             <?php if($this->item->jcfields['banos']->value) {?>
                                 <span class="banos hasTooltip" title=" <?php echo $this->item->jcfields['banos']->label; ?>">
                                 <svg class="rs-icon">
-                                    <use
-                                        xlink:href="../<?php echo T3Path::getUrl('images/rs-icons.svg', '', true); ?>#bathroom">
+<use xlink:href="../<?php echo T3Path::getUrl('images/rs-icons.svg', '', true); ?>#bathroom"/>
                                 </svg>
                                 <?php echo $this->item->jcfields['banos']->value; ?>
                             </span>
                             <?php } ?>
-
-
                             <?php if($this->item->jcfields['superficie']->value) {?>
                                 <span class="superficie hasTooltip" title=" <?php echo $this->item->jcfields['superficie']->label; ?>">
                                 <svg class="rs-icon">
-                                    <use
-                                        xlink:href="../<?php echo T3Path::getUrl('images/rs-icons.svg', '', true); ?>#size">
+<use xlink:href="../<?php echo T3Path::getUrl('images/rs-icons.svg', '', true); ?>#size"/>
                                 </svg>
                                 <?php echo $this->item->jcfields['superficie']->value; ?>
                             </span>
                             <?php } ?>
-
                             <?php if($this->item->jcfields['dormitorios']->value) {?>
                             <span class="dormitorios hasTooltip" title=" <?php echo $this->item->jcfields['dormitorios']->label; ?>">
                                 <svg class="rs-icon">
-                                    <use
-                                        xlink:href="../<?php echo T3Path::getUrl('images/rs-icons.svg', '', true); ?>#bed">
+ <use xlink:href="../<?php echo T3Path::getUrl('images/rs-icons.svg', '', true); ?>#bed"/>
                                 </svg>
                                 <?php echo $this->item->jcfields['dormitorios']->value; ?>
                             </span>
                             <?php } ?>
-
                         </div>
                                 <div class="bottom-info">
                                 <?php if($this->item->jcfields['tipo-de-propiedad']->value) {?>
@@ -224,7 +212,6 @@ if (empty ($this->item->catslug)) {
                         </div>
 <?php } ?>
                                 </div>
-
                     </div>
                 </div>
                 <div class="col-sm-5">
@@ -256,8 +243,6 @@ if (empty ($this->item->catslug)) {
                         <h4 class="<?php echo $this->item->jcfields['precio']->name; ?>">
                             $<?php echo $this->item->jcfields['precio']->value; ?></h4>
                         <?php } ?>
-
-
                         <jdoc:include type="modules" name="ask_embed" style="none" />
                         <?php if($tparams->get('social_position') ==1 || $tparams->get('social_position')==3){ ?>
                         <div class="article-social-share top">
@@ -265,21 +250,16 @@ if (empty ($this->item->catslug)) {
                         </div>
                         <? } ?>
                         <?php  ?>
-
                         <?php if($this->item->jcfields['estado']->value) {?>
             <h4 class="estado estado-<?php echo $this->item->jcfields['estado']->value; ?>">
               
                 <?php //echo $this->item->jcfields['estado']->label; ?>
                 <?php echo $this->item->jcfields['estado']->value; ?>
-
             </h4>
             <?php } ?>
-
-
                     </div>
                 </div>
             </div>
-
         </section>
         <!-- item detail-->
         <hr />
@@ -308,4 +288,3 @@ if (empty ($this->item->catslug)) {
     $('.detalle, .galeria-box').matchHeight();
 })(jQuery);
 </script>
-PROPIEDADES

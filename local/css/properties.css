@@ -90,3 +90,26 @@ h4.precio {
     color: #f00;
     letter-spacing: 1px;
 }
+
+
+
+.estado.estado-Reservado {
+    background: red;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.ubicacion-texto {
+}
+
+.bottom-info >div {
+    padding: 4px 12px;
+    background: #eee;
+    border: 1px solid #999;
+}
+
+.estado-Disponible {
+    background: green;
+    color: #fff;
+}
