@@ -2,8 +2,8 @@
 (function($) {
 
     $(document).ready(function(){
-    var imageHeight = $('#main-image img').height();
-    var newHeight = imageHeight*.6;
+    var imageHeight = $('#main-image').height();
+    var newHeight = imageHeight*.8;
 
     $('#main-image').css('height',newHeight);
     console.log('Load'+imageHeight);
