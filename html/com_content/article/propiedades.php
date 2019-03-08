@@ -173,7 +173,7 @@ if (empty ($this->item->catslug)) {
                             <?php if($this->item->jcfields['ambientes']->value) {?>
                                 <span class="ambientes hasTooltip" title=" <?php echo $this->item->jcfields['ambientes']->label; ?>">
                                 <svg class="rs-icon">
-                 <use xlink:href="../<?php echo T3Path::getUrl('images/rs-icons.svg', '', true); ?>#flat-plan"/>
+                 <use xlink:href="<?php echo JURI::base(true) . '/images/rs-icons.svg'; ?>#flat-plan"/>
                                 </svg>
                                 <?php echo $this->item->jcfields['ambientes']->value; ?>
                             </span>
@@ -181,7 +181,7 @@ if (empty ($this->item->catslug)) {
                             <?php if($this->item->jcfields['banos']->value) {?>
                                 <span class="banos hasTooltip" title=" <?php echo $this->item->jcfields['banos']->label; ?>">
                                 <svg class="rs-icon">
-<use xlink:href="../<?php echo T3Path::getUrl('images/rs-icons.svg', '', true); ?>#bathroom"/>
+<use xlink:href="<?php echo JURI::base(true) . '/images/rs-icons.svg'; ?>#bathroom"/>
                                 </svg>
                                 <?php echo $this->item->jcfields['banos']->value; ?>
                             </span>
@@ -189,7 +189,7 @@ if (empty ($this->item->catslug)) {
                             <?php if($this->item->jcfields['superficie']->value) {?>
                                 <span class="superficie hasTooltip" title=" <?php echo $this->item->jcfields['superficie']->label; ?>">
                                 <svg class="rs-icon">
-<use xlink:href="../<?php echo T3Path::getUrl('images/rs-icons.svg', '', true); ?>#size"/>
+<use xlink:href="<?php echo JURI::base(true) . '/images/rs-icons.svg'; ?>#size"/>
                                 </svg>
                                 <?php echo $this->item->jcfields['superficie']->value; ?>
                             </span>
@@ -197,7 +197,7 @@ if (empty ($this->item->catslug)) {
                             <?php if($this->item->jcfields['dormitorios']->value) {?>
                             <span class="dormitorios hasTooltip" title=" <?php echo $this->item->jcfields['dormitorios']->label; ?>">
                                 <svg class="rs-icon">
- <use xlink:href="../<?php echo T3Path::getUrl('images/rs-icons.svg', '', true); ?>#bed"/>
+ <use xlink:href="<?php echo JURI::base(true) . '/images/rs-icons.svg'; ?>#bed"/>
                                 </svg>
                                 <?php echo $this->item->jcfields['dormitorios']->value; ?>
                             </span>

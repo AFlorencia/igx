@@ -18,11 +18,22 @@ $class = $fieldParams->get('container_class');
 // read the .jpg from the selected directory
 jimport('joomla.filesystem.folder');
 jimport('joomla.filesystem.file');
-$filter = '.\.jpg$';
-$images = JFolder::files('images/' . $path, '.jpg');
+
+
+$allowedExtensions = array('jpg','png','gif','jpeg');
+    // Also allow filetypes in uppercase
+    $allowedExtensions = array_merge($allowedExtensions, array_map('strtoupper', $allowedExtensions));
+    // Build the filter. Will return something like: "jpg|png|JPG|PNG|gif|GIF"
+    $filter = implode('|',$allowedExtensions);
+    $filter = "^.*\.(" . implode('|',$allowedExtensions) .")$";
+
+
+//$filter = '.\.jpg$';
+$images = JFolder::files('images/' . $path, $filter);
+
+
 $i = "";
 ?>
-
 <div class="galeria" id="detail-gallery">
 
 <div id="main-image" class="main-image"><a href="<?php echo 'images/'.$path.'/'.$images[0]; ?>" data-fancybox="gallery">
