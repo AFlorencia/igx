@@ -1,7 +1,7 @@
 #carousel-custom {
     margin-top: 0;
     width: 100%;
-    /* height: 700px; */
+   
   }
   #carousel-custom .carousel-indicators {
     margin: 10px 0 0;
@@ -21,8 +21,7 @@
     width: auto;
   }
   #carousel-custom .carousel-indicators li img {
-    display: block;
-    /* opacity: 0.5; */
+    display: block; 
     border-radius: 15px;
   }
   #carousel-custom .carousel-indicators li.active img {
@@ -73,8 +72,7 @@
     background-position: top center;
   }
   .carousel-inner .item a {
-    display: flex;
-    height: 100%;
+    display: flex;  
     position: relative;
     height: 100%;
     width: 100%;
@@ -83,7 +81,7 @@
     text-decoration: none;
   }
   .carousel-inner .item a .fa{
-      /* display: none; */
+     
       transition: opacity 0.3s linear;
       display: flex;
       opacity: 0;
