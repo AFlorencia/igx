@@ -92,7 +92,7 @@ body {
 .error {
 	width: 100%;
 	padding: 50px 0 100px;
-	background: #1b1b1b;
+	background: #039be5;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
