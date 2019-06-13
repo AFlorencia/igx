@@ -16,12 +16,20 @@ $class = $fieldParams->get('container_class');
 // read the .jpg from the selected directory
 jimport('joomla.filesystem.folder');
 jimport('joomla.filesystem.file');
-$filter = '.\.jpg$';
-$images = JFolder::files('images/' . $path, '.jpg');
+
+$allowedExtensions = array('jpg','png','gif', 'jpeg');
+    // Also allow filetypes in uppercase
+    $allowedExtensions = array_merge($allowedExtensions, array_map('strtoupper', $allowedExtensions));
+    // Build the filter. Will return something like: "jpg|png|JPG|PNG|gif|GIF"
+    $filter = implode('|',$allowedExtensions);
+    $filter = "^.*\.(" . implode('|',$allowedExtensions) .")$";
+
+$images = JFolder::files('images/' . $path, $filter);
 $i = 0;
 $j = 0;
 $active ='';
 $h = 0;
+
 ?>
   <div id="carousel-custom" class="carousel slide" data-ride="carousel">
 

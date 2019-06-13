@@ -77,7 +77,10 @@ if ($this->item->publish_down != '0000-00-00 00:00:00') {
 if ($this->item->tags->itemTags != null) {
         $this->item->rawtagLayout = new JLayoutFile('joomla.content.rawtags');
         $fbog .= '<meta property="article:tag" content="'.$this->item->rawtagLayout->render($this->item->tags->itemTags).'" />' ."\n";
-}$fbog .= '<meta property="og:description" content="'.$this->item->text.'">'."\n";
+}
+
+$fbog .= '<meta property="og:description" content="'.strip_tags($this->item->text).'">'."\n";
+
 $doc->addCustomTag($fbog);
 // update catslug if not exists - compatible with 2.5
 if (empty ($this->item->catslug)) {
@@ -97,7 +100,7 @@ if (empty ($this->item->catslug)) {
 <!-- Page header -->
 <?php if ($this->params->get('show_page_heading')) : ?>
 <div class="page-header">
-    <h1> <?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
+    <h1> <span><?php echo $this->escape($this->params->get('page_heading')); ?></span></h1>
 </div>
 <?php endif; ?>
 <!-- // Page header -->
@@ -106,6 +109,9 @@ if (empty ($this->item->catslug)) {
     <?php if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->paginationposition && $this->item->paginationrelative) {
         echo $this->item->pagination;
 } ?>
+	<?php //if (!empty($this->item->pagination) && $this->item->pagination && $this->item->paginationposition && $this->item->paginationrelative) :
+		echo $this->item->pagination; ?>
+	<?php //endif; ?>
     <!-- Article -->
     <article itemscope itemtype="http://schema.org/Article">
         <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://google.com/article" />
@@ -154,7 +160,7 @@ if (empty ($this->item->catslug)) {
 <section class="article-intro clearfix catalog-box">
     <div class="row">
   
-        <div class="col-sm-7">
+        <div class="col-sm-8">
         <div class="galeria-box">
         <?php  $images = json_decode($this->item->images); ?>
         <?php if($this->item->jcfields['galeria']->value) {?>
@@ -176,64 +182,41 @@ if (empty ($this->item->catslug)) {
      </div>
         </div>
    
-        <div class="col-sm-5">
+        <div class="col-sm-4">
 <div class="detalle">
             
  
             <?php // CAMPOS PERSONALIZADOS ?>
-
-            <?php if($this->item->jcfields['codigo']->value) {?>
-            <h4 class="<?php echo $this->item->jcfields['codigo']->name; ?>">
-            <?php echo $this->item->jcfields['codigo']->label; ?>: <?php echo $this->item->jcfields['codigo']->value; ?></h4>
-            <?php } ?>
-
-
-
             <?php if($this->item->jcfields['precio']->value) {?>
             <h4 class="<?php echo $this->item->jcfields['precio']->name; ?>">
-                $<?php echo $this->item->jcfields['precio']->value; ?></h4>
+            <?php echo $this->item->jcfields['precio']->label; ?>: <?php echo $this->item->jcfields['precio']->value; ?></h4>
+            <?php } ?>
+
+            <?php if($this->item->jcfields['ano']->value) {?>
+            <h4 class="<?php echo $this->item->jcfields['ano']->name; ?>">
+            <?php echo $this->item->jcfields['ano']->label; ?>: <?php echo $this->item->jcfields['ano']->value; ?></h4>
             <?php } ?>
 
 
-            <section class="article-content clearfix" itemprop="articleBody">
-                <?php echo $this->item->introtext; ?>
-            </section>
 
-            <?php if($this->item->jcfields['talles']->value) {?>
-            <h4 class="<?php echo $this->item->jcfields['talles']->name; ?>">
-                <strong>Talles:</strong>
-                <?php echo $this->item->jcfields['talles']->value; ?>
+            <?php if($this->item->jcfields['modelo']->value) {?>
+            <h4 class="<?php echo $this->item->jcfields['modelo']->name; ?>">
+                Modelo:<?php echo $this->item->jcfields['modelo']->value; ?></h4>
+            <?php } ?>
+
+
+          
+
+            <?php if($this->item->jcfields['kilometrajes']->value) {?>
+            <h4 class="<?php echo $this->item->jcfields['kilometrajes']->name; ?>">
+                <strong>Kilometraje:</strong>
+                <?php echo $this->item->jcfields['kilometrajes']->value; ?>
             </h4>
             <?php } ?>
 
-            <?php  if ($this->item->jcfields['colores']){
-               ?>
-            <div class="colores">
-                <h4>Colores</h4>
-                <div class="colors-list">
-                <?php 
-        if(is_array($this->item->jcfields['colores']->rawvalue)){
-                $colores = explode(',',$this->item->jcfields['colores']->value);
-                $p = 0;
-                foreach ($this->item->jcfields['colores']->rawvalue as $item) {
-                        echo'<div class="panel">';
-                        echo' <div class="panel-heading" style="background-color:'.$item.'">'.$colores[$p].' </div>';
-                      //  echo'<div class="panel-body"> '.$colores[$p].'</div>';
-                        echo'</div>';
-
-                        $p++;
-                }	}
-                if(is_string($this->item->jcfields['colores']->rawvalue)){
-                echo'<div class="panel ">';
-                echo '<div class="panel-heading"> '.$this->item->jcfields['colores']->value.'</div>';
-                echo '<div class="panel-body"  style="background-color:'.$this->item->jcfields['colores']->rawvalue.'">&nbsp;</div>';
-                echo '</div>'; ?>
-           
-                <?php } ?> 
-                </div>
-              </div>
-            <!--end colores-->
-            <?php        }           ?>
+  <section class="article-content clearfix" itemprop="articleBody">
+                <?php echo $this->item->introtext; ?>
+            </section>
 
                 <jdoc:include type="modules" name="consultas" style="none" /> 
             <?php if($tparams->get('social_position') ==1 || $tparams->get('social_position')==3){ ?>
