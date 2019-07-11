@@ -49,14 +49,7 @@
 				
 			<field name="logocolsize" type="number" default="4" label="Tamaño de la columna del logotipo" description="Tamaño de la columna del logotipo" min="1" max="12" step="1" />
 				
-			<field name="back-to-top"
-				       type="radio"
-				       label="Mostrar botón ir arriba"
-				       description="Mostrar botón ir arriba"
-				       value="1"
-				       global="1" default="0"><option value="1" >JYES</option>
-					   <option value="0">JNO</option>
-					   </field>
+			
 				
 			</fieldset>
 				
@@ -116,6 +109,33 @@
 <field name="metro" label="Metro" type="color"/>
 </fieldset>
 <fieldset name="social" label="Social">
+
+	<field name="btn-style" type="list" default="0" label="Btn Style" >
+	<option value="">Tabs</option>
+	<option value="round">Round</option>
+		</field>
+
+<field name="back-to-top"
+				       type="radio"
+				       label="Mostrar botón ir arriba"
+				       description="Mostrar botón ir arriba"
+				       value="1"
+				       global="1" default="0"><option value="1" >JYES</option>
+					   <option value="0">JNO</option>
+					   </field>
+	<field name="whatsappshow"
+				       type="radio"
+				       label="Mostrar Whatsapp"
+				       description="Mostrar Whatsapp"
+				       value="1"
+				       global="1" default="0">
+					   <option value="1" >JYES</option>
+					   <option value="0">JNO</option>
+
+
+
+</field>
+<field name="whatsappnr" type="text" label="Nro de Whatsapp" showon="whatsapp:1" />
 		<field name="social" type="list" default="0" label="Hablitar Social Share" >
 	<option value="0">JNO</option>
 	<option value="1">JYES</option>

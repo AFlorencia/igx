@@ -60,6 +60,7 @@
       <field name="hero-btn2-text" type="text" size="50" default="" label="HERO_BUTTON2_TEXT_LABEL" description="HERO_BUTTON2_TEXT_DESC"></field>
       <field name="hero-btn2-link" type="text" size="50" default="" label="HERO_BUTTON2_LINK_LABEL" description="HERO_BUTTON2_LINK_DESC"></field>      
       <field name="hero-bg" type="media" default="" label="HERO_BACKGROUND_LABEL" description="HERO_BACKGROUND_DESC"></field>
+      <field name="hero-bg-small" type="media" default="" label="BG Small" description="HERO_BACKGROUND_DESC"></field>
     </fieldset>
   </fields>
 </form>

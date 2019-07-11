@@ -18,6 +18,7 @@ defined('_JEXEC') or die;
 $app = JFactory::getApplication();
 $menu = $app->getMenu();
 $anchorclass = $this->params->get('Anchor class');
+$doc = JFactory::getDocument();
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" class='<jdoc:include type="pageclass" />'>
@@ -128,12 +129,18 @@ jQuery(window).on('load', function() { // makes sure the whole site is loaded
 });
 </script>
 <?php } ?>
- <?php  if ($this->params->get('back-to-top')=="1") { ?>
-<div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top"> 
-  <button class="btn btn-primary" title="Ir Arriba"><i class="fa fa-angle-up"></i></button> 
 
-</div>
-<script type="text/javascript"> 
+
+
+<?php if ($this->params->get('back-to-top') =="1"){ ?>
+           
+  <?php $doc->addStylesheet(T3_TEMPLATE_URL.'/css/bottom.css'); ?>
+
+           <div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top affix-top">
+         
+               <button class="btn btn-primary <?php echo $this->params->get('btn-style'); ?>" title="Ir Arriba"><i class="fa fa-angle-up"></i></button>
+           </div>
+           <script type="text/javascript"> 
  (function($) { 
  // Back to top
  $('#back-to-top').on('click', function(){
@@ -143,7 +150,15 @@ jQuery(window).on('load', function() { // makes sure the whole site is loaded
 })(jQuery);
  
 </script> 
-<?php  } ?>
+       <?php } ?>
+       
+       <?php if ($this->params->get('whatsappshow')==="1"){ ?>
+           <div id="whatsapp-bottom" class="whatsappbox">
+       <a class="btn btn-whatsapp  <?php echo $this->params->get('btn-style'); ?>" title="WhatsApp" target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $this->params->get('whatsappnr'); ?>"><i class="fa fa-whatsapp"></i></a> </div>
+           <?php }?>
+
+
+
 
 <script>
 
@@ -173,7 +188,7 @@ $(document).on('click', '.t3-mainnav a, .f-item a', function(event) {
 
 </script>
 <?php 
-$doc = JFactory::getDocument();
+
 if($this->params->get('easing')==1){
 	$doc->addScript (T3_TEMPLATE_URL.'/js/easing.js');
 }

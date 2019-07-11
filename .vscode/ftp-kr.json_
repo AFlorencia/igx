@@ -1,0 +1,22 @@
+/*{
+    "host": "ftp.intergraphix.com.ar",
+    "username": "t3@intergraphix.com.ar",
+    "password": "6@vt)(H1F^;$",
+    "remotePath": "",
+    "protocol": "ftp",
+    "port": 21,
+    "fileNameEncoding": "utf8",
+    "ignoreRemoteModification": true,
+    "autoUpload": true,
+    "autoDelete": false,
+    "autoDownloadAlways": 0,
+    "autoDownload": false,
+    "connectionTimeout" : 240000,
+    "createSyncCache": false,
+    "refreshTime":6000,
+    "ignore": [
+        ".git",
+        "/.vscode"
+    ]
+}
+*/

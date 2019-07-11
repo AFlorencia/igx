@@ -12,19 +12,23 @@
 // ----------------------------------------
 .acm-hero {
   background-repeat: no-repeat;
-  background-position: left top;
-  padding: (@t3-global-padding * 2) 0;
+  background-position: center top;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: ~"calc(100vh - 50px)";
+ // padding: (@t3-global-padding * 2) 0;
 
   // Tablet view
   @media screen and (min-width: @screen-xs-min) {
-    padding: (@t3-global-padding * 4) 0;
+   // padding: (@t3-global-padding * 4) 0;
   }
 
   // Desktop view
   @media screen and (min-width: @screen-md) {
     background-size: cover;
     background-position: center center;
-    padding: (@t3-global-padding * 10) 0;
+  //  padding: (@t3-global-padding * 10) 0;
   }
 
   @media screen and (max-width: @screen-xs-max) {
@@ -36,8 +40,8 @@
     
     @media screen and (max-width: @screen-sm-max) {
       .hero-content { 
-        padding-top: @grid-gutter-width;
-        padding-bottom: @grid-gutter-width
+      //  padding-top: @grid-gutter-width;
+//        padding-bottom: @grid-gutter-width
       }
     }
 

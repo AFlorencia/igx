@@ -9,11 +9,27 @@
   $btnSecondText  = $helper->get('hero-btn2-text');
   $btnSecondLink  = $helper->get('hero-btn2-link');
   $heroBg         = $helper->get('hero-bg');
-	$heroScreen			= $helper->get('hero-screen');
-?>
+  $heroBgSmall    = $helper->get('hero-bg-small');
+  $heroScreen			= $helper->get('hero-screen');
+  
 
-<div class="section-inner <?php echo $helper->get('block-extra-class'); ?>">
-  <div class="acm-hero <?php echo ($heroStyle .' '. $heroTextPos. ' '. $heroTextAlign.' '. $heroScreen); ?> <?php if( trim($heroHeading) ) echo ' show-intro'; ?>" style="background-image: url(<?php echo trim($heroBg); ?>);">
+  $doc = JFactory::getDocument();
+
+  $styles = '#hero-'.$module->id.' .acm-hero{'; 
+  $styles .= 'background-image: url('.trim($heroBg).');}';
+  $styles .= '@media(max-width:768px) and (orientation:portrait){';
+  $styles .= '#hero-'.$module->id.' .acm-hero{';
+  $styles .= 'background-image: url('.trim($heroBgSmall).');}';
+  $styles .= '}';
+  $doc->addStyleDeclaration($styles);
+//echo $styles;
+
+
+  ?>
+
+
+<div class="section-inner <?php echo $helper->get('block-extra-class'); ?>" id="hero-<?php echo$module->id; ?>">
+  <div class="acm-hero <?php echo ($heroStyle .' '. $heroTextPos. ' '. $heroTextAlign.' '. $heroScreen); ?> <?php if( trim($heroHeading) ) echo ' show-intro'; ?>">
     <div class="container">
       <div class="hero-content<?php echo $helper->get('hero-effect'); ?>">
       
