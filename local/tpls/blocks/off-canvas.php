@@ -6,19 +6,19 @@
  */
 
 defined('_JEXEC') or die;
+$app = JFactory::getApplication();
+						$sitename = $app->getCfg('sitename');
 ?>
 <?php
 	if (!$this->getParam('addon_offcanvas_enable')) return ;
 ?>
-<button class="btn btn-primary off-canvas-toggle hidden-lg hidden-md<?php $this->_c('off-canvas') ?>" type="button" data-pos="left" data-nav="#t3-off-canvas" data-effect="<?php echo $this->getParam('addon_offcanvas_effect', 'off-canvas-effect-4') ?>">
-  <i class="fa fa-bars"></i>
-</button>
+
 
 <!-- OFF-CANVAS SIDEBAR -->
 <div id="t3-off-canvas" class="t3-off-canvas <?php $this->_c('off-canvas') ?>">
 
   <div class="t3-off-canvas-header">
-    <h2 class="t3-off-canvas-header-title"><?php echo JText::_('TPL_SIDE_BAR') ?></h2>
+    <h2 class="t3-off-canvas-header-title"><?php echo $sitename; ?></h2>
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
   </div>
 
