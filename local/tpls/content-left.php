@@ -14,6 +14,7 @@
 defined('_JEXEC') or die;
 $app = JFactory::getApplication();
 $menu = $app->getMenu();
+$doc = JFactory::getDocument();
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>"
