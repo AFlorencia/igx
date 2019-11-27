@@ -1,4 +1,4 @@
-#back-to-top, #whatsapp-bottom, #eye-bottom {
+#back-to-top, #whatsapp-bottom{
     right: 0;
     position: fixed;
     z-index: 999;
@@ -10,14 +10,8 @@
 #back-to-top {
     bottom: 115px;
 }
-#eye-bottom{
-    bottom: 0px;
-    width: 62px;
-    display: none;
-    align-items: center;
-    right: 0;
-}
-#back-to-top .btn, #whatsapp-bottom .btn, .btn-xss {
+
+#back-to-top .btn, #whatsapp-bottom .btn {
     width: 52px;
     height: 52px;
     display: flex;
@@ -45,14 +39,7 @@
     align-items: center;
     justify-content: center;
 }
-.btn-xss{
-    background: #000;
-    width: 20px;
-    height: 20px;
-    margin-bottom: 10px;
-    padding: 0;
-    border-radius: 4px;
-}
+
 #whatsapp-bottom .btn {
     background: #25d366;
 }
@@ -64,12 +51,4 @@
 .btn-xss .fa {
     font-size: 15px;
 }
-.btn .fa-eye:before{ content:'\f06e'; color:#fff;}
-.eyeOff.btn .fa-eye:before{content:'\f070';color: red;}
 
-.divOn{}
-.divOff{}
-
-#eye-bottom.divOn {
-    display: flex;
-}

@@ -56,7 +56,7 @@ $menu = $app->getMenu();
     </div>
     <?php if ($this->params->get('back-to-top') =="1"){ ?>
 
-    <?php $doc->addStylesheet(T3_TEMPLATE_URL.'/css/bottom.css'); ?>
+        <?php $doc->addStylesheet(T3_TEMPLATE_URL.'/css/bottom.css'); ?>
 
     <div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top affix-top">
 
