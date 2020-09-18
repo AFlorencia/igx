@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params">
+		<fieldset name="custom-field" label="Estilos personalizados" description="">
+			<field name="module-intro" type="textarea" default="" label="TPL_MENU_ITEM_MODULE_INTRO_LABEL" description="TPL_MENU_ITEM_MODULE_INTRO_DESC" filter="RAW" />
+      <field name="module-background" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
+      <field name="module-background-size" type="text" default="cover" label="TPL_MENU_ITEM_MODULE_BACKGROUNDSIZE_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUNDSIZE_DESC" />
+      <field name="module-background-position" type="text" default="center center" label="TPL_MENU_ITEM_MODULE_BACKGROUNDPO_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUNDPO_DESC" />
+	  <field name="moduleID" type="text" default="" label="Nombre del Anchor" description="id para el link del menú que enlaza este módulo" />
+ 
+            <field name="module-bg-color" type="text" default="" label="Color del fondo del módulo" description="color del fondo del módulo"/>
+	<field name="isbox" type="radio" label="Poner en caja"> 
+<option value="1">Si</option>
+
+
+<option option="0">No</option>
+</field>
+			<field name="showimg" 
+
+						label="Usar imagen de relleno"
+                         type="radio"
+				       value="1"
+				       global="0" default="0">
+                       <option value="1" >JYES</option>
+					   <option value="0">JNO</option>
+					   </field>					
+<field name="txtsize" label="Tamaño del texto" type="text" default="20"/>
+<field name="bgcolor" type="color" label="Color del fondo" />
+<field name="textcolor" type="color" label="Color del texto" />
+<field name="txt" type="text" label="Texto de la imagen" />
+<field name="width" type="text" label="Ancho" />
+<field name="height" type="text" label="Alto" />
+    </fieldset>
+
+<fieldset name="gmap" label="Google Map">
+<field name="gmap" label="Google URL" type="text" />
+</fieldset>
+
+		<fieldset name="aos" label="Animación on Scroll - AOS">
+	<field name="animate" type="radio" label="Habilitar AOS" default="0">
+	<option value="0">JNO</option>
+	<option value="1">JYES</option>
+</field>
+		<field name="animations" type="list" label="Animación" default="fade">
+<option value="fade">Fade</option>
+<option value="fade-up">Fade Up</option>
+<option value="fade-down">Fade Down</option>
+<option value="fade-right">Fade Right</option>
+<option value="fade-left">Fade Left</option>
+<option value="zoom-in">Zoom In</option>
+<option value="zoom-out">zoom Out</option>
+<option value="slide-up">Slide Up</option>
+<option value="flip-up">Flip Up</option>
+<option value="flip-down">Flip Down</option>
+<option value="flip-right">Flip Right</option>
+<option value="flip-left">Flip Left</option>
+</field>
+
+<field name="easing" label="Easing" type="list" default="linear">
+<option value="linear">linear </option> 
+<option value="ease">ease </option> 
+<option value="ease-in">ease-in </option> 
+<option value="ease-out">ease-out</option>
+</field>
+
+
+		</fieldset>
+
+  </fields>
+</form>
