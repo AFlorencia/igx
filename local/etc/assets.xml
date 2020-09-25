@@ -2,27 +2,8 @@
 <assets>
 	<config>
 		<fields name="params" addfieldpath="/plugins/system/t3/includes/depend">
-			<fieldset name="extra_params" label="Extra Params" addfieldpath="/plugins/system/t3/includes/depend">			
-				<field name="showcomponent"
-				       type="list"
-				       label="Mostrar componente"
-				       description="Ocultar componente"
-				       value="1"
-				       class="t3-admin-textarea"
-				       global="1" >
-					   <option value="1">Siempre</option>
-					   <option value="2">Solo home</option>
-					   <option value="3">Todos menos home</option>					  
-					   </field>				
-								
-				<field name="showslogan"
-				       type="radio"
-				       label="Mostrar Slogan"
-				       description="Mostrar Slogan"
-				       value="1"
-				       global="1" default="0"><option value="1" >JYES</option>
-					   <option value="0">JNO</option>
-					   </field>
+			<fieldset name="extra_params" label="Cabecera Extra Params" addfieldpath="/plugins/system/t3/includes/depend">			
+			
 					   
 				<field name="headertype"
 				       label="Tipo de cabecera"
@@ -31,7 +12,7 @@
 				       type="list"
 				       global="1">				
 					<option value="default">t3-normal</option>
-					   <option value="sticky">Sticky</option>
+					<option value="sticky">Sticky</option>
 					
 				</field>
 				
@@ -47,9 +28,6 @@
 					<option value="navbar-center">Centrada</option>
 				</field>
 				
-			<field name="logocolsize" type="number" default="4" label="Tamaño de la columna del logotipo" description="Tamaño de la columna del logotipo" min="1" max="12" step="1" />
-				
-			
 				
 			</fieldset>
 				
@@ -68,6 +46,8 @@
 <field name="svgpreload" type="textarea" label="SVG de la precarga" showon="preload:1" filter="raw"/>
 <field name="preloadcss" type="textarea" label="CSS personalizado para el preloader" showon="preload:1" filter="raw"/>
 </fieldset>  
+
+
 <fieldset name="jsCss" label="JS - CSS Adicionales - Icon">
 	<field name="easing" type="radio" label="easing.js" default="0">
 	<option value="0">JNO</option>
@@ -149,10 +129,65 @@
 		<field name="og_twitter_site" type="text" helixgroup="blog_details" label="twitter site" showon="social_share:1" />
 </fieldset>  	
 		</fields>
+
+	<fieldset name="contact-data" label="Datos de contato">
+	<field name="address-line-1" label="Dirección 1 (Calle, dpto)" />
+	<field name="address-line-2" label="Dirección 2 (Provincia)"/>
+	<field name="address-line-3" label="Dirección 2 (País (C.P.))" />
+
+	<field name="phone-1" label="Tel Fijo 1"/>
+	<field name="phone-2" label="Tel Fijo 2"/>
+	<field name="phone-3" label="Tel Fijo 3"/>
+
+	<field name="m-phone-1" label="Tel Móvil 1"/>
+	<field name="m-phone-2" label="Tel Móvil 2"/>
+	<field name="m-phone-3" label="Tel Móvil 3"/>
+
+
+	<field name="whatsapp-1" label="Whatsapp 1"/>
+	<field name="whatsapp-2" label="Whatsapp 2"/>
+	<field name="whatsapp-3" label="Whatsapp 3"/>
+
+
+	</fieldset>
+
+
+
+<fieldset name="contact-data" label="Datos de contato">
+	<field name="address-line-1" label="Dirección 1 (Calle, dpto)" />
+	<field name="address-line-2" label="Dirección 2 (Provincia)"/>
+	<field name="address-line-3" label="Dirección 2 (País (C.P.))" />
+
+	<field name="phone-1" label="Tel Fijo 1"/>
+	<field name="phone-2" label="Tel Fijo 2"/>
+	<field name="phone-3" label="Tel Fijo 3"/>
+
+	<field name="m-phone-1" label="Tel Móvil 1"/>
+	<field name="m-phone-2" label="Tel Móvil 2"/>
+	<field name="m-phone-3" label="Tel Móvil 3"/>
+
+
+	<field name="whatsapp-1" label="Whatsapp 1"/>
+	<field name="whatsapp-2" label="Whatsapp 2"/>
+	<field name="whatsapp-3" label="Whatsapp 3"/>
+
+
+	<field name="email-1" label="Email 1"/>
+	<field name="email-2" label="Email 2"/>
+	<field name="email-3" label="Email 3"/>
+
+
+	</fieldset>
+
+
+	<fieldset name="redes" label="Redes Sociales">
+
+
+
+	</fieldset>
+
+
 	</config>
 	
-	
-	<stylesheets>
-		<file>fonts/font-awesome/css/font-awesome.min.css</file>
-	</stylesheets>
+
 </assets>
