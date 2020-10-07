@@ -142,10 +142,8 @@ description="T3_TM_VARS_IMPORT_EXTERNAL_URLS_DESC" />
 <field name="modaltitlebg" type="color" class="t3tm-color" label="Modal Title Bg" description="Modal Title Bg" default="@brand-primary"/>
 <field name="modaltitletxt" type="color" class="t3tm-color" label="Modal Title color" description="Modal Title color" default="#fff" />
 <field name="modal-backdrop-bg" type="color" class="t3tm-color" label="Modal Backdrop bg" description="Modal background" default="#000"/>
-<field name="modal-backdrop-opacity" type="text"  label="Modal Backdrop bg" description="Modal background opacity" default="0.5"/>
-			
+<field name="modal-backdrop-opacity" type="text"  label="Modal Backdrop bg" description="Modal background opacity" default="0.5"/>			
 		</fieldset>
-		
 
 	</fields>
 </form>
