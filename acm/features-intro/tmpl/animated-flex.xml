@@ -80,12 +80,7 @@
 				<item name="title" type="text" default="" size="40" label="Títuto" description="FEATURES_TITLE_DESC" required="1" />
 				<item name="description" type="textarea" default="" label="Descripción" description="FEATURES_DESCRIPTION_DESC" rows="5" cols="40" />
 				<item name="font-icon" type="text" default="" label="SVG Icon" description="FEATURES_FONT_AWESOME_DESC" />
-				<item name="link" type="text" default="" label="Link" description="2x 3x" />
-				<item name="place" type="text" default="" size="40" label="Sucursal" description="FEATURES_TITLE_DESC" required="1" />
-
-				<item name="players" type="int" default="" label="Players" description="FEATURES_FONT_AWESOME_DESC" />
-				<item name="diff" type="int" default="" label="Dificultad" description="FEATURES_FONT_AWESOME_DESC" />
-				<item name="fear" type="int" default="" label="Miedo" description="FEATURES_FONT_AWESOME_DESC" />
+				
 				
 			</field>
 			
